@@ -4,7 +4,7 @@ import { ContactContainer } from './Styles/Contact.style';
 const Contact = () => {
   return (
     <ContactContainer id='contact'>
-
+      Contact me
     </ContactContainer>
   );
 };

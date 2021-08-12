@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
 export const Main = styled.div`
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 `;

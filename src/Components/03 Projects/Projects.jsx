@@ -4,7 +4,7 @@ import { ProjectsContainer } from './Styles/Projects.style.js';
 const Projects = () => {
   return (
     <ProjectsContainer id='projects'>
-
+      My Projects
     </ProjectsContainer>
   );
 };

@@ -5,7 +5,7 @@ export var navBarScroll = () => {
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("navbar").style.top = "0";
     } else {
-      document.getElementById("navbar").style.top = "-10vh";
+      document.getElementById("navbar").style.top = "-120px";
     }
     prevScrollpos = currentScrollPos;
   };

@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
-import { LandingContainer, MyNameDiv, MyName } from './Styles/Landing.style';
+import { LandingContainer, Terminal, MyNameDiv, MyName } from './Styles/Landing.style';
 import anime from 'animejs';
 
 const Landing = () => {
   return (
     <LandingContainer>
-      <MyNameDiv className='nameDiv'><MyName>SEIJI MATSUMOTO</MyName></MyNameDiv>
+      <Terminal className='nameDiv'>
+        <MyNameDiv>
+          <MyName>SEIJI MATSUMOTO...</MyName>
+        </MyNameDiv>
+      </Terminal>
     </LandingContainer>
   );
 };
