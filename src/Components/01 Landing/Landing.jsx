@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { LandingContainer, Bg, Terminal, MyNameDiv, MyName } from './Styles/Landing.style';
+import { LandingContainer, Bg, Terminal, TextDiv, MyName } from './Styles/Landing.style';
 import anime from 'animejs';
 
 const Landing = (props) => {
@@ -7,9 +7,7 @@ const Landing = (props) => {
     <LandingContainer id='landing'>
       <Bg></Bg>
       <Terminal className='nameDiv'>
-        <MyNameDiv>
-          <MyName>Seiji Matsumoto...</MyName>
-        </MyNameDiv>
+          <TextDiv><MyName>Seiji Matsumoto...</MyName></TextDiv>
       </Terminal>
     </LandingContainer>
   );

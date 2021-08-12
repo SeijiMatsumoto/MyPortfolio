@@ -29,7 +29,6 @@ export const Bg = styled.div`
   -webkit-filter: blur(8px);
   z-index: 0;
   position: absolute;
-  object-fit: stretch;
 `;
 
 export const Terminal = styled.div`
@@ -44,19 +43,20 @@ export const Terminal = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 1;
-`;
+  `;
 
-export const MyNameDiv = styled.div``;
+export const TextDiv = styled.div`
+`;
 
 const typing = keyframes`
   from { width: 0 }
   to { width: 100% }
-`;
+  `;
 
 const blink = keyframes`
   from, to { border-color: transparent }
   50% { border-color: #FF4C29; }
-`;
+  `;
 
 export const MyName = styled.h1`
   font-size: 60px;
