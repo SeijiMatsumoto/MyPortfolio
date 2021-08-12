@@ -7,7 +7,6 @@ export const LandingContainer = styled.div`
   padding: 0px;
   height: 100vh;
   width: 100vw;
-  /* background-color : #082032; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,32 +42,93 @@ export const Terminal = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 1;
-  `;
+`;
 
 export const TextDiv = styled.div`
 `;
 
-const typing = keyframes`
-  from { width: 0 }
-  to { width: 100% }
-  `;
+export const type = keyframes`
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    border: none;
+  }
+`;
 
-const blink = keyframes`
-  from, to { border-color: transparent }
-  50% { border-color: #FF4C29; }
-  `;
+export const type2 = keyframes`
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid orange;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+`;
 
-export const MyName = styled.h1`
-  font-size: 60px;
+export const type3 = keyframes`
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+export const blink = keyframes`
+  50% {
+    border-color: transparent;
+  }
+`;
+
+export const Hello = styled.p` // p
+  font-size: 40px;
   color: white;
   overflow: hidden;
-  border-right: .1em solid #FF4C29;
+  border-right: .5em solid #FF4C29;
+  font-weight: bold;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.1em;
-  font-weight: bold;
-  animation:
-    ${typing} 2s steps(40),
-    ${blink} .75s step-end infinite;
+
+  &:nth-child(1) {
+    width: 375px;
+    animation: ${type} 1s steps(40, end);
+    animation-fill-mode: forwards;
+  };
+
+  &:nth-child(2) {
+    font-size: 80px;
+    width: 800px;
+    opacity: 0;
+    animation: ${type2} 1s steps(40, end);
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  };
+
+  &:nth-child(3) {
+    width: 555px;
+    opacity: 0;
+    animation: ${type3} 1s steps(40, end), ${blink} .5s step-end infinite alternate;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+  }
 `;
 
