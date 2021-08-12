@@ -28,7 +28,9 @@
   "scripts": {
     "heroku-postbuild": "npm install && npm run build",
     "start": "nodemon server.js",
-    "build": "webpack --config ./webpack.config.js --mode development -w",
+    "dev": "webpack serve",
+    "build": "webpack --mode production",
+    // "build": "webpack --config ./webpack.config.js --mode development -w",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
