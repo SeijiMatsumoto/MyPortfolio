@@ -9,8 +9,8 @@ const Landing = (props) => {
       <Terminal className='nameDiv'>
           <TextDiv>
             <Hello>> Hi. My name is</Hello>
-            <Hello>> Seiji Matsumoto...</Hello>
-            <Hello>> Press [ ↵ ] to continue</Hello>
+            <Hello>> Seiji Matsumoto</Hello>
+            <Hello>> Press [ ⏎ ] to continue</Hello>
           </TextDiv>
       </Terminal>
     </LandingContainer>

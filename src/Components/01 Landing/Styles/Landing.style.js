@@ -19,7 +19,7 @@ export const Bg = styled.div`
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1604009506606-fd4989d50e6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background: url('https://images.pexels.com/photos/3909922/pexels-photo-3909922.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=1080&w=1920') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,10 +51,14 @@ export const type = keyframes`
   0% {
     width: 0;
   }
+  1% {
+    opacity: 1;
+  }
   99.9% {
     border-right: .15em solid orange;
   }
   100% {
+    opacity: 1;
     border: none;
   }
 `;
@@ -103,10 +107,20 @@ export const Hello = styled.p` // p
   margin: 0 auto;
   letter-spacing: 0.1em;
 
+  position: absolute;
+  left: 0;
+  right: 0;
+
   &:nth-child(1) {
     width: 375px;
+    opacity: 0;
     animation: ${type} 1s steps(40, end);
     animation-fill-mode: forwards;
+    animation-delay: 1s;
+    top: 200px;
+    /* top: 100px;
+    left: 20px; */
+;
   };
 
   &:nth-child(2) {
@@ -114,21 +128,23 @@ export const Hello = styled.p` // p
     width: 800px;
     opacity: 0;
     animation: ${type2} 1s steps(40, end);
-    animation-delay: 1s;
+    animation-delay: 2.4s;
     animation-fill-mode: forwards;
+    top: 240px;
+    /* top: 200px;
+    left: 20px; */
   };
 
   &:nth-child(3) {
     width: 555px;
     opacity: 0;
     animation: ${type3} 1s steps(40, end), ${blink} .5s step-end infinite alternate;
-    animation-delay: 4s;
+    animation-delay: 5s;
     animation-fill-mode: forwards;
-    position: absolute;
+
+    bottom: 30px;
     margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 20px;
+    /* left: 20px; */
   }
 `;
 
