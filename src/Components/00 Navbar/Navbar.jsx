@@ -7,7 +7,6 @@ const Navbar = (props) => {
 
   return (
     <NavbarContainer id='navbar'>
-      {/* <i className="fas fa-bars"></i> */}
       <Links>
         <Link>01. <A href='#about'>About</A></Link>
         <Link>02. <A href='#projects'>Projects</A></Link>
