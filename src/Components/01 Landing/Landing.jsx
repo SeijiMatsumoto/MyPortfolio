@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { LandingContainer, Bg, Terminal, MyNameDiv, MyName } from './Styles/Landing.style';
 import anime from 'animejs';
 
-const Landing = () => {
+const Landing = (props) => {
   return (
-    <LandingContainer>
+    <LandingContainer id='landing'>
       <Bg></Bg>
       <Terminal className='nameDiv'>
         <MyNameDiv>

@@ -6,8 +6,8 @@ export const LandingContainer = styled.div`
   margin: 0px;
   padding: 0px;
   height: 100vh;
-  width: 100%;
-  background-color: #082032;
+  width: 100vw;
+  /* background-color : #082032; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,12 +20,16 @@ export const Bg = styled.div`
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('https://images.unsplash.com/photo-1604009506606-fd4989d50e6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background: url('https://images.unsplash.com/photo-1604009506606-fd4989d50e6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   filter: blur(8px);
   -webkit-filter: blur(8px);
   z-index: 0;
   position: absolute;
-
+  object-fit: stretch;
 `;
 
 export const Terminal = styled.div`
