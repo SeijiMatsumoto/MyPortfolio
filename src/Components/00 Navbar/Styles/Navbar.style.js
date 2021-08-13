@@ -83,7 +83,6 @@ export const MenuOpen = styled.div`
   height: 100vh;
   background-color: white;
   animation: ${MenuSlideIn} 0.5s;
-  display: ${prop => prop.display };
   display: flex;
   justify-content: center;
   align-items: center;

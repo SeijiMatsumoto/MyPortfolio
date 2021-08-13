@@ -7,20 +7,27 @@ const Navbar = (props) => {
 
   const showMenu = () => {
     toggleMenu(!menuOpen);
+    // if (menuOpen) {
+    //   document.getElementById('menuOpen').classList.add('MenuOpen');
+    // } else {
+    //   document.getElementById('menuOpen').classList.add('MenuClose');
+    // }
     console.log('Hamburger click');
   }
 
   return (
     <NavbarContainer id='navbar'>
       <HamburgerDiv><Hamburger src='https://i.imgur.com/tyD5MsH.png' onClick={showMenu} /></HamburgerDiv>
-      {menuOpen ? <MenuOpen display={menuOpen}>
-        <MenuLinks>
-          <MenuLink><MenuA onClick={showMenu} href='#about'>About</MenuA></MenuLink>
-          <MenuLink><MenuA onClick={showMenu} href='#projects'>Projects</MenuA></MenuLink>
-          <MenuLink><MenuA onClick={showMenu} href='#experience'>Experience</MenuA></MenuLink>
-          <MenuLink><MenuA onClick={showMenu} href='#Contact'>Contact</MenuA></MenuLink>
-        </MenuLinks>
-      </MenuOpen> : null }
+      {menuOpen ?
+        <MenuOpen>
+          <MenuLinks>
+            <MenuLink><MenuA onClick={showMenu} href='#about'>About</MenuA></MenuLink>
+            <MenuLink><MenuA onClick={showMenu} href='#projects'>Projects</MenuA></MenuLink>
+            <MenuLink><MenuA onClick={showMenu} href='#experience'>Experience</MenuA></MenuLink>
+            <MenuLink><MenuA onClick={showMenu} href='#Contact'>Contact</MenuA></MenuLink>
+          </MenuLinks>
+        </MenuOpen>
+        : null}
       <Links>
         <Link>01. <A href='#about'>About</A></Link>
         <Link>02. <A href='#projects'>Projects</A></Link>
