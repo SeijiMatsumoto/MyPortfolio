@@ -26,8 +26,7 @@
     "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "heroku-postbuild": "npm install && npm run build",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "dev": "webpack serve",
     "build2": "webpack --config ./webpack.config.js --mode development -w",
     "build": "webpack --mode production",
