@@ -97,7 +97,7 @@ export const blink = keyframes`
   }
 `;
 
-export const Hello = styled.p` // p
+export const Hello = styled.p`
   font-size: 40px;
   color: white;
   overflow: hidden;
@@ -114,37 +114,30 @@ export const Hello = styled.p` // p
   &:nth-child(1) {
     width: 375px;
     opacity: 0;
-    animation: ${type} 1s steps(40, end);
+    animation: ${type} 0.5s steps(40, end);
     animation-fill-mode: forwards;
     animation-delay: 1s;
     top: 200px;
-    /* top: 100px;
-    left: 20px; */
-;
   };
 
   &:nth-child(2) {
     font-size: 80px;
     width: 800px;
     opacity: 0;
-    animation: ${type2} 1s steps(40, end);
-    animation-delay: 2.4s;
+    animation: ${type2} 0.5s steps(40, end);
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     top: 240px;
-    /* top: 200px;
-    left: 20px; */
   };
 
   &:nth-child(3) {
     width: 555px;
     opacity: 0;
-    animation: ${type3} 1s steps(40, end), ${blink} .5s step-end infinite alternate;
-    animation-delay: 5s;
+    animation: ${type3} 0.5s steps(40, end), ${blink} .5s step-end infinite alternate;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
-
     bottom: 30px;
     margin: auto;
-    /* left: 20px; */
   }
 `;
 

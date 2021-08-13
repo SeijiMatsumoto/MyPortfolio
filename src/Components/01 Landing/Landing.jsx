@@ -8,7 +8,7 @@ const Landing = (props) => {
       <Bg></Bg>
       <Terminal className='nameDiv'>
           <TextDiv>
-            <Hello>> Hi. My name is</Hello>
+            <Hello>> Hi, my name is</Hello>
             <Hello>> Seiji Matsumoto</Hello>
             <Hello>> Press [ ⏎ ] to continue</Hello>
           </TextDiv>

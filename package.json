@@ -29,8 +29,8 @@
     "heroku-postbuild": "npm install && npm run build",
     "start": "nodemon server.js",
     "dev": "webpack serve",
+    "build2": "webpack --config ./webpack.config.js --mode development -w",
     "build": "webpack --mode production",
-    // "build": "webpack --config ./webpack.config.js --mode development -w",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -56,3 +56,4 @@
     "babel-plugin-styled-components": "^1.13.2"
   }
 }
+
