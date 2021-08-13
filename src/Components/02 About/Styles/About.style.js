@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const AboutContainer = styled.div`
   margin: 0px;
   max-width: 100vw;
-  height: 70vh;
+  height: 100vh;
   background-color: #334756;
   display: flex;
   align-items: center;
@@ -20,6 +20,7 @@ export const MidDiv = styled.div`
   flex-wrap: none;
   align-items: center;
   position: relative;
+  margin-top: -100px;
 `;
 
 export const TitleContainer = styled.div`
@@ -34,12 +35,28 @@ export const TextContainer = styled.div`
   margin: 5px;
   margin-top: 70px;
   margin-right: 20px;
+  position: relative;
+`;
+
+export const Technologies = styled.div`
+  position: absolute;
+  margin-left: -40px;
+  margin-top: -10px;
+`;
+
+export const TechnologiesList = styled.div`
+  float: left;
+`;
+
+export const UL = styled.ul`
+  list-style: none;
 `;
 
 export const MyPictureContainer = styled.div`
   width: 274px;
   height: 365px;
   object-fit: cover;
+  margin-top: 120px;
 `;
 
 export const MyPicture = styled.img`
