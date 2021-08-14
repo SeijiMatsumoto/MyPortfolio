@@ -27,6 +27,5 @@ export const MenuA = styled.a`
   overflow: none;
   &:hover {
     color: #FF4C29;
-
   }
 `;

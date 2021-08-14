@@ -3,12 +3,13 @@ import styled from 'styled-components';
 export const AboutContainer = styled.div`
   margin: 0px;
   max-width: 100vw;
-  height: 100vh;
   background-color: #334756;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
 `;
 
 export const MidDiv = styled.div`
