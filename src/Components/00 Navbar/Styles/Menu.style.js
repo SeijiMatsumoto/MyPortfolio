@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MenuDiv = styled.div`
-  background-color: white;
+  background-color: #334756;
   width: 100%;
   height: 100%;
   display: flex;
@@ -10,18 +10,20 @@ export const MenuDiv = styled.div`
 `;
 
 export const MenuLinks = styled.ul`
+  position: absolute;
+  margin-right: 50px;
 `;
 
 export const MenuLink = styled.li`
   padding: 25px;
-  font-size: 70px;
+  font-size: 60px;
   color: #FF4C29;
   list-style: none;
-    text-align: center;
+  text-align: center;
 `;
 
 export const MenuA = styled.a`
-  color: black;
+  color: white;
   transition: 0.1s ease-in;
   text-decoration: none;
   overflow: none;
