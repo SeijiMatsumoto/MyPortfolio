@@ -22,6 +22,5 @@ export const MenuDiv = styled.div`
   height: 100vh;
   z-index: 6;
   position: absolute;
-  left: 1000px;
+  left: 800px;
 `;
-
