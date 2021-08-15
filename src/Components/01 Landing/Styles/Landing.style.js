@@ -80,7 +80,6 @@ export const DownButton = styled.div`
   right: 0;
   width: 60px;
   height: 60px;
-  /* border: 1px solid black; */
   background-color: transparent;
   position: absolute;
   transition: 0.2s ease-in;

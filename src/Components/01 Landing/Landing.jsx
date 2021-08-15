@@ -6,7 +6,6 @@ const Landing = (props) => {
   var [fontSize, setFont] = useState('90px');
   var [margin, setMargin] = useState('200px');
   var [display, setDisplay] = useState('block');
-  var [showDown, toggleDown] = useState(false);
   var [marginTop, setMarginTop] = useState('200px');
 
   useEffect(() => {
@@ -16,35 +15,30 @@ const Landing = (props) => {
   }, [])
 
   const responsiveChange = () => {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 500) {
       setFont('40px');
       setMargin('10vw');
       setDisplay('none');
-      toggleDown(true);
       setMarginTop('-100px');
-    } else if (window.innerWidth <= 960 && window.innerWidth > 600) {
+    } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
       setFont('70px');
       setMargin('10vw');
       setDisplay('none');
-      toggleDown(true);
       setMarginTop('-100px');
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
       setMargin('13vw');
       setDisplay('block');
-      toggleDown(false);
       setMarginTop('200px');
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
       setFont('120px');
       setMargin('13vw');
       setDisplay('block');
-      toggleDown(false);
       setMarginTop('200px');
     } else {
       setFont('120px');
       setMargin('13vw');
       setDisplay('block');
-      toggleDown(false);
       setMarginTop('200px');
     }
   };
@@ -91,7 +85,7 @@ const Landing = (props) => {
           <Continue id='text3' display={display}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>
       </MainDiv>
-      {showDown ? <DownButton onClick={scrollDown} /> : null}
+      <DownButton onClick={scrollDown} />
     </LandingContainer>
   );
 };
