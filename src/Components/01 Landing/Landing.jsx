@@ -14,7 +14,11 @@ const Landing = (props) => {
   }, [])
 
   const responsiveChange = () => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 499) {
+      setFont('35px');
+      setMargin('10vw');
+      setDisplay('none');
+    } else if (window.innerWidth <= 960 && window.innerWidth > 499) {
       setFont('55px');
       setMargin('18vw');
       setDisplay('none');

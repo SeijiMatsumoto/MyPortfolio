@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const LinksUl = styled.ul`
   position: absolute;
-  padding: 20px;
-  right: 150px;
+  /* padding: 15px; */
+  right: 140px;
   display: inline-block;
   top: 0;
 `;
@@ -14,8 +14,7 @@ export const Link = styled.li`
   list-style: none;
   color: #FF4C29;
   font-size: 22px;
-  margin-right: 10px;
-  `;
+`;
 
 export const A = styled.a`
   font-size: 20px;
@@ -35,10 +34,8 @@ export const Resume = styled.button`
   background-color: black;
   color: #FF4C29;
   border: 1px solid #FF4C29;
-  margin-left: 10px;
-  margin-right: 20px;
   position: absolute;
-  top: 0;
+  top: 5px;
   width: 110px;
   height: 45px;
   cursor: pointer;
