@@ -25,8 +25,8 @@ export const Bg = styled.div`
 
 export const MainDiv = styled.div`
   margin: ${props => props.margin || '200px'};
+  margin-top: ${props => props.marginTop || '200px'};
   padding: 0;
-
   background-color: transparent;
   border-radius: 1%;
   position: relative;
@@ -75,7 +75,7 @@ export const Continue = styled.p`
 
 export const DownButton = styled.div`
   margin: auto;
-  bottom: 25px;
+  bottom: 70px;
   left: 0;
   right: 0;
   width: 60px;

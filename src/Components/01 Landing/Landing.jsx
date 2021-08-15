@@ -7,6 +7,7 @@ const Landing = (props) => {
   var [margin, setMargin] = useState('200px');
   var [display, setDisplay] = useState('block');
   var [showDown, toggleDown] = useState(false);
+  var [marginTop, setMarginTop] = useState('200px');
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -20,27 +21,32 @@ const Landing = (props) => {
       setMargin('10vw');
       setDisplay('none');
       toggleDown(true);
+      setMarginTop('-100px');
     } else if (window.innerWidth <= 960 && window.innerWidth > 600) {
       setFont('70px');
       setMargin('10vw');
       setDisplay('none');
       toggleDown(true);
+      setMarginTop('-100px');
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
       setMargin('13vw');
       setDisplay('block');
       toggleDown(false);
+      setMarginTop('200px');
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
       setFont('120px');
       setMargin('13vw');
       setDisplay('block');
       toggleDown(false);
+      setMarginTop('200px');
     }
     else {
       setFont('120px');
       setMargin('13vw');
       setDisplay('block');
       toggleDown(false);
+      setMarginTop('200px');
     }
   };
 
@@ -79,7 +85,7 @@ const Landing = (props) => {
   return (
     <LandingContainer id='landing'>
       <Bg></Bg>
-      <MainDiv margin={margin} className='nameDiv'>
+      <MainDiv margin={margin} marginTop={marginTop} className='nameDiv'>
           <TextDiv font={fontSize}>
             <Hello id='text1'>Hi, my name is</Hello>
             <MyName id='text2'>Seiji Matsumoto.</MyName>
