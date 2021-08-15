@@ -5,44 +5,37 @@ export const AboutContainer = styled.div`
   max-width: 100vw;
   background-color: #334756;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 `;
 
-export const MidDiv = styled.div`
-  width: 800px;
-  /* border: 1px black solid; */
-  padding: 20px;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: none;
-  align-items: center;
-  position: relative;
-  margin-top: -100px;
+export const MainDiv = styled.div`
+  width: 80%;
 `;
 
 export const TitleContainer = styled.div`
   position: absolute;
   font-size: 35px;
-  top: 10px;
-  width: 100%;
+`;
+
+export const TopDiv = styled.div`
+`;
+
+export const BottomDiv = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  font-size: 20px;
-  margin: 5px;
-  margin-top: 70px;
-  margin-right: 20px;
-  position: relative;
 `;
 
+export const ImageDiv = styled.div``;
+
 export const Technologies = styled.div`
-  position: absolute;
-  margin-left: -40px;
-  margin-top: -10px;
+  position: relative;
+  left: 0;
 `;
 
 export const TechnologiesList = styled.div`
@@ -54,15 +47,9 @@ export const UL = styled.ul`
 `;
 
 export const MyPictureContainer = styled.div`
-  width: 274px;
-  height: 365px;
-  object-fit: cover;
-  margin-top: 120px;
+  margin-top: 70px;
 `;
 
 export const MyPicture = styled.img`
-  width: 274px;
-  height: 365px;
-  overflow: none;
-  border-radius: 5%;
+
 `;
