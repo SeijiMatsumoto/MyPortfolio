@@ -31,7 +31,7 @@ const Links = (props) => {
       easing: 'spring',
       opacity: [0, 1],
       duration: 300,
-    })
+    }, '+=200')
     .add({
       targets: '#link2',
       translateY: 25,

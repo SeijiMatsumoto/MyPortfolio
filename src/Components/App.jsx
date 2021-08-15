@@ -21,8 +21,7 @@ const App = () => {
   const listenEnter = () => {
     document.addEventListener('keyup', e => {
       if (e.key === 'Enter' && window.scrollY === 0) {
-        var about = document.getElementById('about');
-        about.scrollIntoView();
+        document.getElementById('about').scrollIntoView();
       }
     });
   }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { NavbarContainer, MenuDiv } from './Styles/Navbar.style.js';
+import { NavbarContainer, MenuDiv, Logo } from './Styles/Navbar.style.js';
 import MenuButton from './MenuButton.jsx';
 import Links from './Links.jsx';
 import Menu from './Menu.jsx';
@@ -13,6 +13,7 @@ const Navbar = (props) => {
   useEffect(() => {
     window.addEventListener('resize', displayButton);
     displayButton();
+    animateOnLoad();
   }, [])
 
   const displayButton = () => {
@@ -32,7 +33,6 @@ const Navbar = (props) => {
   useEffect(() => {
     var menu = document.querySelector('.menu');
     if (menuOpen) {
-      console.log('animate')
       anime({
         targets: menu,
         translateX: -1000,
@@ -51,8 +51,27 @@ const Navbar = (props) => {
     }
   }, [menuOpen])
 
+  const animateOnLoad = () => {
+    const timeline = anime.timeline({
+      autoplay: false
+    })
+    .add({
+      targets: '#logo',
+      translateY: 25,
+      easing: 'spring',
+      opacity: [0, 1],
+      duration: 300,
+    })
+    timeline.play()
+  }
+
+  const scrollToTop = () => {
+    document.getElementById('landing').scrollIntoView();
+  }
+
   return (
     <NavbarContainer id='navbar'>
+      <Logo id='logo' onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
       <Links />
       {showButton ? <MenuButton clickHandler={menuClickHandler}/> : null}
       {showMenu ? <MenuDiv className='menu'><Menu showMenu={menuClickHandler}/></MenuDiv> : null }

@@ -8,8 +8,7 @@ export const NavbarContainer = styled.nav`
   position: fixed;
   transition: top 0.3s;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: row;
   z-index: 5;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
@@ -21,4 +20,13 @@ export const MenuDiv = styled.div`
   position: absolute;
   top: 0;
   left: 1000px;
+`;
+
+export const Logo = styled.img`
+  width: 80px;
+  height: 70px;
+  position: absolute;
+  margin: 10px;
+  left: 50px;
+  cursor: pointer;
 `;

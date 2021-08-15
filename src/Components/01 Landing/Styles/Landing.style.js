@@ -87,6 +87,6 @@ export const DownButton = styled.div`
   background-image: url('https://i.imgur.com/AJrt9vn.png');
   background-size: 80px 80px;
   &:hover{
-    transform: translateY(40px);
+    transform: translateY(20px);
   }
 `;

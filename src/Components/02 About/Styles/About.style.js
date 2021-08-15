@@ -13,7 +13,7 @@ export const AboutContainer = styled.div`
 export const MainDiv = styled.div`
   width: ${props => props.width || '1000px'};
   margin: 100px;
-  margin-top: 35px;
+  margin-top: 50px;
   margin-bottom: 140px;
   padding: 20px;
   display: flex;
