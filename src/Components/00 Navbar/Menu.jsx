@@ -12,9 +12,9 @@ const Menu = (props) => {
 
   const displayButton = () => {
     if (window.innerWidth <= 500) {
-      setPadding('20px');
+      setPadding('10px');
     } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
-      setPadding('10px;');
+      setPadding('5px;');
     }
   };
 
