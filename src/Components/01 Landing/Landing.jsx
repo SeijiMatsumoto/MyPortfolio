@@ -16,41 +16,36 @@ const Landing = (props) => {
   }, [])
 
   const responsiveChange = () => {
-    if (window.matchMedia("(orientation: landscape)").matches){
-      alert("Please use Landscape!");
-      setFont('10px');
+    if (window.innerWidth <= 600) {
+      setFont('40px');
+      setMargin('10vw');
+      setDisplay('none');
+      toggleDown(true);
+      setMarginTop('-100px');
+    } else if (window.innerWidth <= 960 && window.innerWidth > 600) {
+      setFont('70px');
+      setMargin('10vw');
+      setDisplay('none');
+      toggleDown(true);
+      setMarginTop('-100px');
+    } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
+      setFont('100px');
+      setMargin('13vw');
+      setDisplay('block');
+      toggleDown(false);
+      setMarginTop('200px');
+    } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
+      setFont('120px');
+      setMargin('13vw');
+      setDisplay('block');
+      toggleDown(false);
+      setMarginTop('200px');
     } else {
-      if (window.innerWidth <= 600) {
-        setFont('40px');
-        setMargin('10vw');
-        setDisplay('none');
-        toggleDown(true);
-        setMarginTop('-100px');
-      } else if (window.innerWidth <= 960 && window.innerWidth > 600) {
-        setFont('70px');
-        setMargin('10vw');
-        setDisplay('none');
-        toggleDown(true);
-        setMarginTop('-100px');
-      } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
-        setFont('100px');
-        setMargin('13vw');
-        setDisplay('block');
-        toggleDown(false);
-        setMarginTop('200px');
-      } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
-        setFont('120px');
-        setMargin('13vw');
-        setDisplay('block');
-        toggleDown(false);
-        setMarginTop('200px');
-      } else {
-        setFont('120px');
-        setMargin('13vw');
-        setDisplay('block');
-        toggleDown(false);
-        setMarginTop('200px');
-      }
+      setFont('120px');
+      setMargin('13vw');
+      setDisplay('block');
+      toggleDown(false);
+      setMarginTop('200px');
     }
   };
 
@@ -58,27 +53,27 @@ const Landing = (props) => {
     const timeline = anime.timeline({
       autoplay: true
     })
-    .add({
-      targets: '#text1',
-      translateY: -50,
-      easing: 'spring',
-      opacity: [0, 1],
-      duration: 500,
-    }, '+=600')
-    .add({
-      targets: '#text2',
-      translateY: -50,
-      easing: 'spring',
-      opacity: [0, 1],
-      duration: 500,
-    }, '-=1500')
-    .add({
-      targets: '#text3',
-      translateY: -50,
-      easing: 'spring',
-      opacity: [0, 1],
-      duration: 500,
-    }, '-=1500');
+      .add({
+        targets: '#text1',
+        translateY: -50,
+        easing: 'spring',
+        opacity: [0, 1],
+        duration: 500,
+      }, '+=600')
+      .add({
+        targets: '#text2',
+        translateY: -50,
+        easing: 'spring',
+        opacity: [0, 1],
+        duration: 500,
+      }, '-=1500')
+      .add({
+        targets: '#text3',
+        translateY: -50,
+        easing: 'spring',
+        opacity: [0, 1],
+        duration: 500,
+      }, '-=1500');
     timeline.play();
   }
 
@@ -90,13 +85,13 @@ const Landing = (props) => {
     <LandingContainer id='landing'>
       <Bg></Bg>
       <MainDiv margin={margin} marginTop={marginTop} className='nameDiv'>
-          <TextDiv font={fontSize}>
-            <Hello id='text1'>Hi, my name is</Hello>
-            <MyName id='text2'>Seiji Matsumoto.</MyName>
-            <Continue id='text3' display={display}>Press [ ⏎ ] to continue</Continue>
-          </TextDiv>
+        <TextDiv font={fontSize}>
+          <Hello id='text1'>Hi, my name is</Hello>
+          <MyName id='text2'>Seiji Matsumoto.</MyName>
+          <Continue id='text3' display={display}>Press [ ⏎ ] to continue</Continue>
+        </TextDiv>
       </MainDiv>
-      {showDown ? <DownButton onClick={scrollDown}/> : null}
+      {showDown ? <DownButton onClick={scrollDown} /> : null}
     </LandingContainer>
   );
 };
