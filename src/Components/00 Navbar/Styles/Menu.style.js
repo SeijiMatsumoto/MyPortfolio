@@ -6,12 +6,12 @@ export const MenuDiv = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: flex-start; */
 `;
 
 export const MenuLinks = styled.ul`
   position: absolute;
-  margin-right: 50px;
+  text-align: left;
 `;
 
 export const MenuLink = styled.li`
@@ -19,7 +19,7 @@ export const MenuLink = styled.li`
   font-size: 60px;
   color: #FF4C29;
   list-style: none;
-  text-align: center;
+  text-align: left;
 `;
 
 export const MenuA = styled.a`
