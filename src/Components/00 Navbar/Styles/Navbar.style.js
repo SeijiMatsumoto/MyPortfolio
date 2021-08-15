@@ -27,6 +27,6 @@ export const Logo = styled.img`
   height: 70px;
   position: absolute;
   margin: 10px;
-  left: 50px;
+  left: ${props => props.iconLeft || '50px'};
   cursor: pointer;
 `;

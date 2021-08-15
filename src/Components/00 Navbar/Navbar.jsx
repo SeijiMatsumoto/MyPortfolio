@@ -9,6 +9,7 @@ const Navbar = (props) => {
   var [showButton, setButton] = useState(false);
   var [showMenu, setMenu] = useState(false);
   var [menuOpen, toggleMenu] = useState(false);
+  var [iconLeft, setIconLeft] = useState('50px');
 
   useEffect(() => {
     window.addEventListener('resize', displayButton);
@@ -20,9 +21,11 @@ const Navbar = (props) => {
     if (window.innerWidth <= 960) {
       setButton(true);
       setMenu(true);
+      setIconLeft('20px');
     } else {
       setButton(false);
       setMenu(false);
+      setIconLeft('50px');
     }
   };
 
@@ -71,7 +74,7 @@ const Navbar = (props) => {
 
   return (
     <NavbarContainer id='navbar'>
-      <Logo id='logo' onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
+      <Logo id='logo' iconLeft={iconLeft} onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
       <Links />
       {showButton ? <MenuButton clickHandler={menuClickHandler}/> : null}
       {showMenu ? <MenuDiv className='menu'><Menu showMenu={menuClickHandler}/></MenuDiv> : null }

@@ -4,7 +4,7 @@ import { ButtonContainer, Button } from './Styles/MenuButton.style';
 const MenuButton = (props) => {
   return (
     <ButtonContainer>
-      <Button onClick={props.clickHandler} src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png' />
+      <Button onClick={props.clickHandler} src='https://i.imgur.com/pw5CtKG.png' />
     </ButtonContainer>
   );
 };
