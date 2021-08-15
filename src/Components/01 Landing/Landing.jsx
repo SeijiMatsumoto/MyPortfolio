@@ -16,37 +16,41 @@ const Landing = (props) => {
   }, [])
 
   const responsiveChange = () => {
-    if (window.innerWidth <= 600) {
-      setFont('40px');
-      setMargin('10vw');
-      setDisplay('none');
-      toggleDown(true);
-      setMarginTop('-100px');
-    } else if (window.innerWidth <= 960 && window.innerWidth > 600) {
-      setFont('70px');
-      setMargin('10vw');
-      setDisplay('none');
-      toggleDown(true);
-      setMarginTop('-100px');
-    } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
-      setFont('100px');
-      setMargin('13vw');
-      setDisplay('block');
-      toggleDown(false);
-      setMarginTop('200px');
-    } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
-      setFont('120px');
-      setMargin('13vw');
-      setDisplay('block');
-      toggleDown(false);
-      setMarginTop('200px');
-    }
-    else {
-      setFont('120px');
-      setMargin('13vw');
-      setDisplay('block');
-      toggleDown(false);
-      setMarginTop('200px');
+    if (window.matchMedia("(orientation: landscape)").matches){
+      alert("Please use Landscape!");
+      setFont('10px');
+    } else {
+      if (window.innerWidth <= 600) {
+        setFont('40px');
+        setMargin('10vw');
+        setDisplay('none');
+        toggleDown(true);
+        setMarginTop('-100px');
+      } else if (window.innerWidth <= 960 && window.innerWidth > 600) {
+        setFont('70px');
+        setMargin('10vw');
+        setDisplay('none');
+        toggleDown(true);
+        setMarginTop('-100px');
+      } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
+        setFont('100px');
+        setMargin('13vw');
+        setDisplay('block');
+        toggleDown(false);
+        setMarginTop('200px');
+      } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
+        setFont('120px');
+        setMargin('13vw');
+        setDisplay('block');
+        toggleDown(false);
+        setMarginTop('200px');
+      } else {
+        setFont('120px');
+        setMargin('13vw');
+        setDisplay('block');
+        toggleDown(false);
+        setMarginTop('200px');
+      }
     }
   };
 
