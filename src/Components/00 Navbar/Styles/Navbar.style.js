@@ -12,3 +12,12 @@ export const NavbarContainer = styled.nav`
   justify-content: flex-end;
   z-index: 5;
 `;
+
+export const MenuDiv = styled.div`
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  left: 1000px;
+`;

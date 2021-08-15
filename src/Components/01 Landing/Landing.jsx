@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LandingContainer, Bg, Terminal, TextDiv, Hello, MyName, Continue } from './Styles/Landing.style';
+import { LandingContainer, Bg, MainDiv, TextDiv, Hello, MyName, Continue } from './Styles/Landing.style';
 import anime, { timeline } from 'animejs';
 
 const Landing = (props) => {
@@ -16,15 +16,20 @@ const Landing = (props) => {
   const responsiveChange = () => {
     if (window.innerWidth <= 960) {
       setFont('55px');
-      setMargin('10vw');
+      setMargin('18vw');
       setDisplay('none');
-    } else if (window.innerWidth <= 1400 && window.innerWidth > 960) {
-      setFont('75px');
-      setMargin('9vw');
-      setDisplay('block');
-    } else {
+    } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
-      setMargin('170px');
+      setMargin('12vw');
+      setDisplay('block');
+    } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
+      setFont('100px');
+      setMargin('12vw');
+      setDisplay('block');
+    }
+    else {
+      setFont('120px');
+      setMargin('13vw');
       setDisplay('block');
     }
   };
@@ -39,7 +44,7 @@ const Landing = (props) => {
       easing: 'spring',
       opacity: [0, 1],
       duration: 500,
-    }, '+=800')
+    }, '+=600')
     .add({
       targets: '#text2',
       translateY: -50,
@@ -61,13 +66,13 @@ const Landing = (props) => {
   return (
     <LandingContainer id='landing'>
       <Bg></Bg>
-      <Terminal margin={margin} className='nameDiv'>
+      <MainDiv margin={margin} className='nameDiv'>
           <TextDiv font={fontSize}>
             <Hello id='text1'>Hi, my name is</Hello>
-            <MyName id='text2'>Seiji Matsumoto</MyName>
+            <MyName id='text2'>Seiji Matsumoto.</MyName>
             <Continue id='text3' display={display}>Press [ ⏎ ] to continue</Continue>
           </TextDiv>
-      </Terminal>
+      </MainDiv>
     </LandingContainer>
   );
 };

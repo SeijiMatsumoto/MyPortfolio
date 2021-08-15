@@ -23,7 +23,7 @@ export const Bg = styled.div`
   position: absolute;
 `;
 
-export const Terminal = styled.div`
+export const MainDiv = styled.div`
   margin: ${props => props.margin || '200px'};
   padding: 0;
 

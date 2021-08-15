@@ -16,7 +16,7 @@ export const MenuLinks = styled.ul`
 
 export const MenuLink = styled.li`
   padding: 25px;
-  font-size: 60px;
+  font-size: 50px;
   color: #FF4C29;
   list-style: none;
   text-align: left;

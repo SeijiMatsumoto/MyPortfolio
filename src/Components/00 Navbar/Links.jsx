@@ -23,42 +23,42 @@ const Links = (props) => {
 
   const animateOnLoad = () => {
     const timeline = anime.timeline({
-      autoplay: true
+      autoplay: false
     })
     .add({
       targets: '#link1',
       translateY: 25,
       easing: 'spring',
       opacity: [0, 1],
-      duration: 500,
+      duration: 300,
     })
     .add({
       targets: '#link2',
       translateY: 25,
       easing: 'spring',
       opacity: [0, 1],
-      duration: 500,
+      duration: 300,
     }, '-=1500')
     .add({
       targets: '#link3',
       translateY: 25,
       easing: 'spring',
       opacity: [0, 1],
-      duration: 500,
+      duration: 300,
     }, '-=1500')
     .add({
       targets: '#link4',
       translateY: 25,
       easing: 'spring',
       opacity: [0, 1],
-      duration: 500,
+      duration: 300,
     }, '-=1500')
     .add({
       targets: '#resume',
       translateY: 25,
       easing: 'spring',
       opacity: [0, 1],
-      duration: 500,
+      duration: 300,
     }, '-=1500')
     timeline.play();
   }
