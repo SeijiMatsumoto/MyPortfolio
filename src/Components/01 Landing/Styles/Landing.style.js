@@ -200,7 +200,7 @@ export const Hello = styled.p`
 
     &:nth-child(2) {
       font-size: 80px;
-      width: 800px;
+      width: 820px;
       opacity: 0;
       animation: ${type2} 0.5s steps(40, end);
       animation-delay: 2s;
