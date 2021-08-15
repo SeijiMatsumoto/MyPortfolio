@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { LandingContainer, Bg, MainDiv, TextDiv, Hello, MyName, Continue } from './Styles/Landing.style';
+import { LandingContainer, Bg, MainDiv, TextDiv, Hello, MyName, Continue, DownButton } from './Styles/Landing.style';
 import anime, { timeline } from 'animejs';
 
 const Landing = (props) => {
   var [fontSize, setFont] = useState('90px');
   var [margin, setMargin] = useState('200px');
   var [display, setDisplay] = useState('block');
+  var [showDown, toggleDown] = useState(false);
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -18,23 +19,28 @@ const Landing = (props) => {
       setFont('40px');
       setMargin('10vw');
       setDisplay('none');
+      toggleDown(true);
     } else if (window.innerWidth <= 960 && window.innerWidth > 600) {
       setFont('70px');
       setMargin('10vw');
       setDisplay('none');
+      toggleDown(true);
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
       setMargin('13vw');
       setDisplay('block');
+      toggleDown(false);
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
       setFont('120px');
       setMargin('13vw');
       setDisplay('block');
+      toggleDown(false);
     }
     else {
       setFont('120px');
       setMargin('13vw');
       setDisplay('block');
+      toggleDown(false);
     }
   };
 
@@ -66,6 +72,9 @@ const Landing = (props) => {
     timeline.play();
   }
 
+  const scrollDown = () => {
+    document.getElementById('about').scrollIntoView();
+  }
 
   return (
     <LandingContainer id='landing'>
@@ -77,6 +86,7 @@ const Landing = (props) => {
             <Continue id='text3' display={display}>Press [ ⏎ ] to continue</Continue>
           </TextDiv>
       </MainDiv>
+      {showDown ? <DownButton onClick={scrollDown}/> : null}
     </LandingContainer>
   );
 };

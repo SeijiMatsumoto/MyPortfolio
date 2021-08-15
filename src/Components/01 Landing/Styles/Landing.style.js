@@ -70,7 +70,24 @@ export const Continue = styled.p`
   margin: 0 auto;
   margin-top: 30px;
   letter-spacing: 0.1em;
-  display: ${props => props.display || 'block'}
+  display: ${props => props.display || 'block'};
 `;
 
-
+export const DownButton = styled.div`
+  margin: auto;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  /* border: 1px solid black; */
+  background-color: transparent;
+  position: absolute;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  background-image: url('https://korumaine.com/wp-content/uploads/2019/02/kisspng-arrow-symbol-icon-down-arrow-png-pic-5a756e2591b7b9.1532686215176453495969.png');
+  background-size: 60px 60px;
+  &:hover{
+    transform: translateY(20px);
+  }
+`;
