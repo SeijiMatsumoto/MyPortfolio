@@ -27,7 +27,6 @@ const Navbar = (props) => {
 
   const menuClickHandler = () => {
     toggleMenu(!menuOpen);
-    console.log('hello')
   }
 
   useEffect(() => {
@@ -40,6 +39,7 @@ const Navbar = (props) => {
         easing: 'linear',
         duration: 300
       });
+      document.querySelector('#main').classList.add('stop-scrolling');
     } else if (!menuOpen) {
       anime({
         targets: menu,
@@ -47,6 +47,7 @@ const Navbar = (props) => {
         easing: 'linear',
         duration: 300
       });
+      document.querySelector('#main').classList.remove('stop-scrolling');
     }
   }, [menuOpen])
 

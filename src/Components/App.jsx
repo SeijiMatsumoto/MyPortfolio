@@ -28,7 +28,7 @@ const App = () => {
   }
 
   return (
-    <Main>
+    <Main id='main'>
       <Navbar />
       <Landing />
       <About />
