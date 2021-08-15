@@ -11,6 +11,7 @@ export const MenuDiv = styled.div`
 
 export const MenuLinks = styled.ul`
   position: absolute;
+  left: -30px;
   text-align: left;
 `;
 

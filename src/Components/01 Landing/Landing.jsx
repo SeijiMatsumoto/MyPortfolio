@@ -7,6 +7,7 @@ const Landing = (props) => {
   var [margin, setMargin] = useState('200px');
   var [display, setDisplay] = useState('block');
   var [marginTop, setMarginTop] = useState('200px');
+  var [downPosition, setPosition] = useState('60px');
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -20,26 +21,34 @@ const Landing = (props) => {
       setMargin('10vw');
       setDisplay('none');
       setMarginTop('-100px');
+      setPosition('150px');
     } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
       setFont('70px');
       setMargin('10vw');
       setDisplay('none');
       setMarginTop('-100px');
+      setPosition('150px');
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
       setMargin('13vw');
       setDisplay('block');
       setMarginTop('200px');
+      setPosition('60px');
+
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
       setFont('120px');
       setMargin('13vw');
       setDisplay('block');
       setMarginTop('200px');
+      setPosition('60px');
+
     } else {
       setFont('120px');
       setMargin('13vw');
       setDisplay('block');
       setMarginTop('200px');
+      setPosition('60px');
+
     }
   };
 
@@ -85,7 +94,7 @@ const Landing = (props) => {
           <Continue id='text3' display={display}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>
       </MainDiv>
-      <DownButton onClick={scrollDown} />
+      <DownButton bottom={downPosition} onClick={scrollDown} />
     </LandingContainer>
   );
 };
