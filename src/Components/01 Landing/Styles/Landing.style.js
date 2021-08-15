@@ -73,16 +73,18 @@ export const Continue = styled.p`
 
 export const IAMDiv = styled.div`
   font-size: ${props => props.font || '30px'};
+  padding-right: 20px;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 15px;
   letter-spacing: 0.1em;
-  display: flex;
+  display: ${props => props.display || 'flex'};
+  position: absolute;
 `;
 
 export const Text = styled.p`
   margin-right: 16px;
   color: ${props => props.color || '#FF4C29'};
-  display: flex;
+  white-space: nowrap;
 `;
 
 export const DownButton = styled.div`
