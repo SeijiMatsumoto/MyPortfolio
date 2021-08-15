@@ -2,7 +2,7 @@ import styled from 'styled-components';
 const keyframes = require('styled-components').keyframes
 
 export const NavbarContainer = styled.nav`
-  background-color: #2C394B;
+  background-color: #1E242A;
   width: 100%;
   height: 140px;
   position: fixed;

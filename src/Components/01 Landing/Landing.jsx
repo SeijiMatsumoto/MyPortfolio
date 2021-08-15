@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { LandingContainer, Bg, MainDiv, TextDiv, Hello, MyName, Continue, DownButton } from './Styles/Landing.style';
-import anime, { timeline } from 'animejs';
+import anime from 'animejs';
 
 const Landing = (props) => {
   var [fontSize, setFont] = useState('90px');

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const AboutContainer = styled.div`
   margin: 0;
   max-width: 100vw;
-  background-color: #334756;
+  background-color: #283134;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,8 @@ export const AboutContainer = styled.div`
 export const MainDiv = styled.div`
   width: ${props => props.width || '1000px'};
   margin: 100px;
-  margin-top: 170px;
+  margin-top: 35px;
+  margin-bottom: 140px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +26,7 @@ export const MainDiv = styled.div`
 
 export const TitleContainer = styled.div`
   position: absolute;
-  top: 100px;
+  top: 0;
   font-size: 35px;
 `;
 
@@ -37,6 +38,7 @@ export const TextContainer = styled.div`
 export const MyPictureContainer = styled.div`
   position: relative;
   top: ${props => props.top || '50px'};
+  /* left: 50px; */
   width: 300px;
 `;
 

@@ -5,5 +5,5 @@ export const ContactContainer = styled.div`
   padding: 0px;
   max-width: 100vw;
   height: 100vh;
-  background-color: #2C394B;
+  background-color: #1E242A;
 `;

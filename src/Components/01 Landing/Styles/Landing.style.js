@@ -18,7 +18,7 @@ export const Bg = styled.div`
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #2C394B;
+  background-color: #1E242A;
   z-index: 0;
   position: absolute;
 `;
