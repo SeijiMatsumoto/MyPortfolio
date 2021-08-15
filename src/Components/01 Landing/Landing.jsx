@@ -14,21 +14,21 @@ const Landing = (props) => {
   }, [])
 
   const responsiveChange = () => {
-    if (window.innerWidth <= 499) {
-      setFont('35px');
+    if (window.innerWidth <= 600) {
+      setFont('40px');
       setMargin('10vw');
       setDisplay('none');
-    } else if (window.innerWidth <= 960 && window.innerWidth > 499) {
-      setFont('55px');
+    } else if (window.innerWidth <= 960 && window.innerWidth > 600) {
+      setFont('70px');
       setMargin('10vw');
       setDisplay('none');
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
-      setMargin('12vw');
+      setMargin('13vw');
       setDisplay('block');
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
-      setFont('100px');
-      setMargin('12vw');
+      setFont('120px');
+      setMargin('13vw');
       setDisplay('block');
     }
     else {

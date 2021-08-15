@@ -5,16 +5,21 @@ export const AboutContainer = styled.div`
   max-width: 100vw;
   background-color: #334756;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: row; */
   align-items: center;
   justify-content: center;
+  /* flex-wrap: wrap; */
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
 `;
 
 export const MainDiv = styled.div`
-  width: 80%;
+  width: ${props => props.width || '50vw'};
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
 `;
 
 export const TitleContainer = styled.div`
@@ -22,16 +27,11 @@ export const TitleContainer = styled.div`
   font-size: 35px;
 `;
 
-export const TopDiv = styled.div`
-`;
-
-export const BottomDiv = styled.div`
-`;
-
 export const TextContainer = styled.div`
 `;
 
-export const ImageDiv = styled.div``;
+export const ImageDiv = styled.div`
+`;
 
 export const Technologies = styled.div`
   position: relative;
