@@ -20,7 +20,7 @@ const Landing = (props) => {
       setDisplay('none');
     } else if (window.innerWidth <= 960 && window.innerWidth > 499) {
       setFont('55px');
-      setMargin('18vw');
+      setMargin('10vw');
       setDisplay('none');
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');

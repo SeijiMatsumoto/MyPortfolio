@@ -6,7 +6,7 @@ export const MenuDiv = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: flex-start; */
+  padding: ${props => props.padding || '10px'};
 `;
 
 export const MenuLinks = styled.ul`
