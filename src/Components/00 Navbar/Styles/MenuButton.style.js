@@ -8,6 +8,7 @@ export const ButtonContainer = styled.div`
   padding: 0;
   right: 0;
   z-index: 8;
+  top: 0;
 `;
 
 export const Button = styled.img`

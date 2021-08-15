@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const LinksUl = styled.ul`
   position: absolute;
   padding: 20px;
-  right: 0;
+  right: 150px;
   display: inline-block;
+  top: 0;
 `;
 
 export const Link = styled.li`
@@ -13,7 +14,7 @@ export const Link = styled.li`
   list-style: none;
   color: #FF4C29;
   font-size: 22px;
-
+  margin-right: 10px;
   `;
 
 export const A = styled.a`
@@ -25,7 +26,6 @@ export const A = styled.a`
   overflow: none;
   &:hover {
     color: #FF4C29;
-
   }
 `;
 
@@ -37,7 +37,8 @@ export const Resume = styled.button`
   border: 1px solid #FF4C29;
   margin-left: 10px;
   margin-right: 20px;
-  position: relative;
+  position: absolute;
+  top: 0;
   width: 110px;
   height: 45px;
   cursor: pointer;
