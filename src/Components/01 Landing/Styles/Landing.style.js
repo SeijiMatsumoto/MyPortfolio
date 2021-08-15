@@ -51,7 +51,6 @@ export const Hello = styled.p`
   font-weight: bold;
   margin: 0 auto;
   letter-spacing: 0.1em;
-
 `;
 
 export const MyName = styled.p`
@@ -60,7 +59,6 @@ export const MyName = styled.p`
   margin: 0 auto;
   margin-top: 20px;
   letter-spacing: 0.1em;
-
 `;
 
 export const Continue = styled.p`
@@ -71,6 +69,20 @@ export const Continue = styled.p`
   margin-top: 30px;
   letter-spacing: 0.1em;
   display: ${props => props.display || 'block'};
+`;
+
+export const IAMDiv = styled.div`
+  font-size: ${props => props.font || '30px'};
+  font-weight: bold;
+  margin-top: 20px;
+  letter-spacing: 0.1em;
+  display: flex;
+`;
+
+export const Text = styled.p`
+  margin-right: 16px;
+  color: ${props => props.color || '#FF4C29'};
+  display: flex;
 `;
 
 export const DownButton = styled.div`
