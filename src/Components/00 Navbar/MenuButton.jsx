@@ -34,7 +34,7 @@ const MenuButton = (props) => {
       console.log('animate')
       anime({
         targets: menu,
-        translateX: -960,
+        translateX: -1000,
         easing: 'linear',
         duration: 300
       });
