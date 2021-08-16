@@ -70,9 +70,10 @@ const Navbar = (props) => {
     .add({
       targets: '#logo',
       translateY: 25,
+      rotate: 360,
       easing: 'spring',
       opacity: [0, 1],
-      duration: 300,
+      duration: 500,
     })
     timeline.play()
   }

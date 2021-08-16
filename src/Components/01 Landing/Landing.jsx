@@ -13,7 +13,6 @@ const Landing = (props) => {
   var [continueTop, setTop] = useState('100px');
 
   var [iAmFont, setIfont] = useState('30px');
-  var [iAmDisplay, setIdisplay] = useState('flex');
   var [showIAm, setShow] = useState(true);
 
   useEffect(() => {
