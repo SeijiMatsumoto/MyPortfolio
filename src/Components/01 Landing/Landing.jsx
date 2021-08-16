@@ -87,7 +87,7 @@ const Landing = (props) => {
       setShow(true);
     } else if (window.innerHeight < 800) {
       setFont('60px');
-      setPosition('8px');
+      setPosition('15px');
       setDownSize('30px');
       setMarginTop('200px');
       setShow(false);
