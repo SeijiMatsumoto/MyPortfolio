@@ -25,7 +25,7 @@ const Landing = (props) => {
 
   const responsiveChange = () => {
     if (window.innerWidth <= 500) {
-      setFont('50px');
+      setFont('40px');
       setMargin('10vw');
       setDisplay('none');
       setMarginTop('-100px');

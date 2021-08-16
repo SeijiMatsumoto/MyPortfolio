@@ -8,6 +8,7 @@ const Social = () => {
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
+    responsiveChange();
     animateOnLoad();
   }, [])
 
