@@ -107,7 +107,7 @@ const Navbar = (props) => {
       <Logo id='logo' iconLeft={iconLeft} onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
       <Links isDark={props.isDark}/>
       {showButton ? <MenuButton clickHandler={menuClickHandler} isDark={props.isDark}/> : null}
-      {showMenu ? <MenuDiv className='menu'><Menu isDark={props.isDark} showMenu={menuClickHandler}/></MenuDiv> : null }
+      {showMenu ? <MenuDiv className='menu'><Menu isDark={props.isDark} toggleDark={props.toggleDark} showMenu={menuClickHandler}/></MenuDiv> : null }
     </NavbarContainer>
   );
 };

@@ -23,8 +23,8 @@ export const MenuLink = styled.li`
 `;
 
 export const MenuA = styled.a`
-    color: ${props => props.color || '#283134'};
-
+  color: ${props => props.color || '#283134'};
+  cursor: pointer;
   transition: 0.1s ease-in;
   text-decoration: none;
   overflow: none;

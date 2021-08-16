@@ -4,7 +4,7 @@ const keyframes = require('styled-components').keyframes
 export const NavbarContainer = styled.nav`
   background-color: ${props => props.bgColor || '#1E242A'};
   width: 100%;
-  height: 140px;
+  height: 130px;
   position: fixed;
   transition: top 0.3s;
   display: flex;

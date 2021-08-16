@@ -4,8 +4,11 @@ import anime from 'animejs/lib/anime.es.js';
 
 const Light = (props) => {
   var [bg, setBg] = useState('#1E242A');
+  var [showButton, setShow] = useState(true);
 
   useEffect(() => {
+    window.addEventListener('resize', displayButton);
+    displayButton();
     animateOnLoad();
   }, [])
 
@@ -25,6 +28,14 @@ const Light = (props) => {
     }
   }
 
+  const displayButton = () => {
+    if (window.innerWidth <= 960) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  }
+
   const animateOnLoad = () => {
     const timeline = anime.timeline({
       autoplay: false
@@ -41,9 +52,9 @@ const Light = (props) => {
 
   return (
     <Main id='button'>
-      <Button onClick={toggle}  bg={bg} >
+      {showButton ? <Button onClick={toggle}  bg={bg} >
       {props.isDark ? <Switch id='moon' className='fas fa-moon fa-3x'/> : <Switch id='sun' className='fas fa-sun fa-3x' color={'white'}/>}
-      </Button>
+      </Button> : null }
     </Main>
   );
 };

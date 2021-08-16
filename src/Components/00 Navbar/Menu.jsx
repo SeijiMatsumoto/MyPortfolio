@@ -29,6 +29,15 @@ const Menu = (props) => {
     }
   };
 
+  const toggle = () => {
+    if (props.isDark) {
+      props.toggleDark(false);
+    } else {
+      props.toggleDark(true);
+    }
+    props.showMenu();
+  }
+
   return (
     <MenuDiv bg={bg} padding={padding}>
       <MenuLinks>
@@ -36,6 +45,7 @@ const Menu = (props) => {
         <MenuLink><MenuA color={color} onClick={props.showMenu} href='#projects'>Projects</MenuA></MenuLink>
         <MenuLink><MenuA color={color} onClick={props.showMenu} href='#experience'>Experience</MenuA></MenuLink>
         <MenuLink><MenuA color={color} onClick={props.showMenu} href='#contact'>Contact</MenuA></MenuLink>
+        <MenuLink><MenuA color={color} onClick={toggle}>Light/Dark Mode</MenuA></MenuLink>
       </MenuLinks>
     </MenuDiv>
   );

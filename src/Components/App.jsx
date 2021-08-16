@@ -33,7 +33,7 @@ const App = () => {
     <Main id='main'>
       <Social isDark={isDark} />
       <Light isDark={isDark}  toggleDark={toggleDark}/>
-      <Navbar isDark={isDark}/>
+      <Navbar isDark={isDark} toggleDark={toggleDark}/>
       <Landing isDark={isDark} />
       <About isDark={isDark} />
       <Projects isDark={isDark} />
