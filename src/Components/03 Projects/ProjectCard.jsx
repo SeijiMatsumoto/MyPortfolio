@@ -9,6 +9,7 @@ const ProjectCard = (props) => {
   var [direction, setDirection] = useState('row');
   var [textLeft, setLeft] = useState('170px');
   var [imgRight, setRight] = useState('50px');
+  var [width, setWidth] = useState('420px');
 
   var [shown, setShown] = useState(false);
   var url = props.url;
@@ -67,23 +68,30 @@ const ProjectCard = (props) => {
   }
 
   const responsiveChange = () => {
-    if (window.innerWidth < 990) {
+    if (window.innerWidth <= 550) {
       setDirection('column');
       setLeft('110px');
       setRight('100px');
+      setWidth('380px');
+    } else if (window.innerWidth < 990 && window.innerWidth > 550) {
+      setDirection('column');
+      setLeft('110px');
+      setRight('100px');
+      setWidth('500px');
     } else {
       setDirection('row');
       setLeft('170px');
       setRight('50px');
+      setWidth('420px');
     }
   }
 
   return (
     <CardContainer id={'project' + props.i} direction={direction}>
-      <ImageDiv id={'pic' + props.i} right={imgRight}>
-        <ProjImage src={url} />
+      <ImageDiv id={'pic' + props.i} right={imgRight} width={width}>
+        <ProjImage src={url}  width={width}/>
       </ImageDiv>
-      <InfoCont id={'projInfo' + props.i} left={textLeft}>
+      <InfoCont id={'projInfo' + props.i} left={textLeft} width={width}>
         <Title color={props.color}>{title}</Title>
         <Description>{description}</Description>
         <StackCont>

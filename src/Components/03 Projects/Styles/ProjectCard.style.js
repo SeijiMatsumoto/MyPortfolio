@@ -6,11 +6,10 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: ${props => props.direction};
   align-items: center;
-  align-items: center;
 `;
 
 export const ImageDiv = styled.div`
-  width: 420px;
+  width: ${props => props.width};
   height: 310px;
   position: relative;
   right: ${props => props.right};
@@ -19,7 +18,7 @@ export const ImageDiv = styled.div`
 `;
 
 export const ProjImage = styled.img`
-  width: 420px;
+  width: ${props => props.width};
   height: 100%;
   object-fit: cover;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
@@ -34,7 +33,7 @@ export const InfoCont = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 420px;
+  width: ${props => props.width};
   margin-left: -20px;
   position: relative;
   left: ${props => props.left};
@@ -60,6 +59,7 @@ export const StackCont = styled.div`
   align-items: center;
   height: 100px;
   position: relative;
+  flex-wrap: wrap;
 `;
 
 export const Stack = styled.div`
