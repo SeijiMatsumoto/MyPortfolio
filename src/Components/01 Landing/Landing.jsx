@@ -128,7 +128,6 @@ const Landing = (props) => {
 
   return (
     <LandingContainer id='landing'>
-      <Bg></Bg>
       <MainDiv margin={margin} marginTop={marginTop} className='nameDiv'>
         <TextDiv font={fontSize}>
           <Hello id='text1'>Hi, my name is</Hello>
@@ -137,13 +136,13 @@ const Landing = (props) => {
             <Text>I am </Text>
             <Text2 id='iam'>
               <Typewriter
-                words={['a full-stack software engineer.', 'a problem solver.', 'a creative individual.', 'a team player.', 'a critical thinker.', 'me.']}
+                words={['a full-stack software engineer.', 'a problem solver.', 'a creative individual.', 'an IT geek.', 'a team player.', 'a critical thinker.', 'always learning.', 'me.']}
                 loop={0}
                 cursor
                 cursorStyle='_'
                 typeSpeed={40}
                 deleteSpeed={20}
-                delaySpeed={3000}
+                delaySpeed={2000}
               />
             </Text2>
           </IAMDiv>

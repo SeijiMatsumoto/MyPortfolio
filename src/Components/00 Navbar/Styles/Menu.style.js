@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MenuDiv = styled.div`
-  background-color: #283134;
+  background-color: ${props => props.bg || '#283134'};
   width: 100%;
   height: 100%;
   display: flex;
@@ -18,13 +18,13 @@ export const MenuLinks = styled.ul`
 export const MenuLink = styled.li`
   padding: 25px;
   font-size: 50px;
-  color: #FF4C29;
   list-style: none;
   text-align: left;
 `;
 
 export const MenuA = styled.a`
-  color: white;
+    color: ${props => props.color || '#283134'};
+
   transition: 0.1s ease-in;
   text-decoration: none;
   overflow: none;

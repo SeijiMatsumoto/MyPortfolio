@@ -46,6 +46,7 @@ const Social = () => {
         <IconsDiv id='icons' >
           <Icons alt='Github' className='fab fa-github fa-lg' href='https://github.com/SeijiMatsumoto' target="_blank" />
           <Icons alt='LinkedIn' className='fab fa-linkedin fa-lg' href='https://www.linkedin.com/in/matsumoto-seiji/' target="_blank" />
+          <Icons alt='Twitter' className='fab fa-twitter fa-lg' href='https://twitter.com/ItsSayG' target="_blank" />
           <Icons alt='Instagram' className='fab fa-instagram fa-lg' href='https://www.instagram.com/sejmoto/' target="_blank" />
           <Icons alt='Email' className='far fa-envelope fa-lg' href='mailto:seijim27@gmail.com' target="_blank" />
         </IconsDiv>

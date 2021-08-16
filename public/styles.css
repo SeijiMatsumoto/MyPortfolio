@@ -24,7 +24,12 @@ body {
   overflow: hidden;
 }
 
-/* body::-webkit-scrollbar {
+.light-div {
+  color: #1E242A;
+  background-color: white;
+}
+
+body::-webkit-scrollbar {
   width: 0.5em;
   background-color: transparent;
 }
@@ -32,4 +37,4 @@ body {
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
-} */
+}

@@ -11,16 +11,7 @@ export const LandingContainer = styled.div`
   justify-content: center;
   z-index: 1;
   overflow: hidden;
-`;
-
-export const Bg = styled.div`
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
   background-color: #1E242A;
-  z-index: 0;
-  position: absolute;
 `;
 
 export const MainDiv = styled.div`

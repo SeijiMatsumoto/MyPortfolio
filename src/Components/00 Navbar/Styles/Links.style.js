@@ -19,7 +19,7 @@ export const Link = styled.li`
 export const A = styled.a`
   font-size: 20px;
   text-decoration: none;
-  color: white;
+  color: ${props => props.color || 'white'};
   transition: 0.1s ease-in;
   text-transform: capitalize;
   overflow: none;
@@ -31,8 +31,8 @@ export const A = styled.a`
 export const Resume = styled.button`
   transition: 0.2s ease-in;
   border-radius: 3px;
-  background-color: black;
-  color: #FF4C29;
+  background-color: ${props => props.bg || 'black'};
+  color: ${props => props.color};
   border: 1px solid #FF4C29;
   position: absolute;
   top: 5px;

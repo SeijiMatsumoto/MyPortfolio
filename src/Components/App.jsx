@@ -13,6 +13,8 @@ import Experience from './04 Experience/Experience.jsx'
 import Contact from './05 Contact/Contact.jsx';
 
 const App = () => {
+  var [isDark, toggleDark] = useState(true);
+
   useEffect(() => {
     navBarScroll();
     listenEnter();
@@ -28,13 +30,13 @@ const App = () => {
 
   return (
     <Main id='main'>
-      <Overlay />
-      <Navbar />
-      <Landing />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact />
+      <Overlay isDark={isDark} />
+      <Navbar isDark={isDark} toggleDark={toggleDark}/>
+      <Landing isDark={isDark} />
+      <About isDark={isDark} />
+      <Projects isDark={isDark} />
+      <Experience isDark={isDark} />
+      <Contact isDark={isDark} />
     </Main>
   )
 

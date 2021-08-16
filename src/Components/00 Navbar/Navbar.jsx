@@ -80,14 +80,21 @@ const Navbar = (props) => {
 
   const scrollToTop = () => {
     document.getElementById('landing').scrollIntoView();
+    if (props.isDark) {
+      props.toggleDark(false);
+      setBg('#f0f0f0');
+    } else {
+      props.toggleDark(true);
+      setBg('#1E242A');
+    }
   }
 
   return (
-    <NavbarContainer id='navbar' color={navBg}>
+    <NavbarContainer id='navbar' bgColor={navBg}>
       <Logo id='logo' iconLeft={iconLeft} onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
-      <Links />
-      {showButton ? <MenuButton clickHandler={menuClickHandler}/> : null}
-      {showMenu ? <MenuDiv className='menu'><Menu showMenu={menuClickHandler}/></MenuDiv> : null }
+      <Links isDark={props.isDark}/>
+      {showButton ? <MenuButton clickHandler={menuClickHandler} isDark={props.isDark}/> : null}
+      {showMenu ? <MenuDiv className='menu'><Menu isDark={props.isDark} showMenu={menuClickHandler}/></MenuDiv> : null }
     </NavbarContainer>
   );
 };

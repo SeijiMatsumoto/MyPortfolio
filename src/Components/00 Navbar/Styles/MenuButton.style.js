@@ -11,10 +11,11 @@ export const ButtonContainer = styled.div`
   top: 10px;
 `;
 
-export const Button = styled.img`
+export const Button = styled.i`
   width: 50px;
   height: 50px;
   margin: 25px;
   background-color: transparent;
+  color: ${props => props.color || 'white'};
 `;
 
