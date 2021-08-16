@@ -25,7 +25,7 @@ const Landing = (props) => {
 
   const responsiveChange = () => {
     if (window.innerWidth <= 500) {
-      setFont('30px');
+      setFont('40px');
       setMargin('10vw');
       setDisplay('none');
       setMarginTop('-100px');
@@ -70,7 +70,17 @@ const Landing = (props) => {
       setIdisplay('flex');
       setTop('100px');
     }
-    if (window.innerHeight < 800) {
+
+    if (window.innerWidth <= 500) {
+      setFont('40px');
+      setMargin('10vw');
+      setDisplay('none');
+      setMarginTop('-100px');
+      setPosition('150px');
+      setIfont('20px');
+      setIdisplay('block');
+      setTop('130px');
+    } else if (window.innerHeight < 800) {
       setFont('60px');
     }
   };
