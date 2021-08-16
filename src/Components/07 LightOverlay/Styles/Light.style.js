@@ -9,6 +9,8 @@ export const Main = styled.div`
   right: -85px;
   z-index: 5;
   text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
   `;
 
 export const Button = styled.button`

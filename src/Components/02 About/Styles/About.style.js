@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const AboutContainer = styled.div`
   margin: 0;
   max-width: 100vw;
-  background-color: #283134;
+  background-color: ${props => props.bg || '#283134'};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +21,7 @@ export const MainDiv = styled.div`
   justify-content: center;
   flex-direction: row;
   align-self: center;
+  color: ${props => props.color};
   /* border: 1px solid black; */
 `;
 
@@ -28,6 +29,7 @@ export const TitleContainer = styled.div`
   position: absolute;
   top: 0;
   font-size: 35px;
+  color: #FF4C29;
 `;
 
 export const TextContainer = styled.div`
@@ -38,7 +40,7 @@ export const TextContainer = styled.div`
 export const MyPictureContainer = styled.div`
   position: relative;
   top: ${props => props.top || '50px'};
-  /* left: 50px; */
+  right: 0;
   width: 300px;
 `;
 
@@ -48,6 +50,7 @@ export const MyPicture = styled.img`
   width: 300px;
   height: 300px;
   object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 `;
 
 export const TechDiv = styled.div`

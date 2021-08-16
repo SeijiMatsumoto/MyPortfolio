@@ -3,7 +3,7 @@ import { AboutContainer, TitleContainer, TechDiv, TechnologiesList, UL, MainDiv,
 import anime from 'animejs';
 const inView = require('in-view');
 
-const About = () => {
+const About = (props) => {
 
   var [imgTop, setImgTop] = useState('50px');
   var [imgMargin, setImgMargin] = useState('40px');
@@ -11,6 +11,9 @@ const About = () => {
   var [textWidth, setTextWidth] = useState('700px');
   var [techWidth, setTechWidth] = useState('600px');
   var [fontSize, setFont] = useState('20px');
+  var [bg, setBg] = useState('#283134');
+  var [color, setColor] = useState('#1E242A');
+  var [shown, setShown] = useState(false);
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -18,10 +21,24 @@ const About = () => {
     window.addEventListener('scroll', checkInView);
   }, [])
 
+  useEffect(() => {
+    if (!props.isDark) {
+      setBg('#f0f0f0');
+      setColor('#1E242A')
+    } else {
+      setBg('#283134');
+      setColor('white');
+    }
+  }, [props.isDark])
+
   const checkInView = () => {
-    const aboutEl = document.querySelector('#about');
-    if (inView.is(aboutEl)) {
-      animateOnLoad();
+    if (!shown) {
+      const aboutEl = document.getElementById('aboutTitle');
+      if (inView.is(aboutEl)) {
+        console.log('in view')
+        animateOnLoad();
+      }
+      setShown(true);
     }
   }
 
@@ -60,30 +77,30 @@ const About = () => {
       autoplay: true
     })
     .add({
-      targets: '#mainDiv',
+      targets: '#mainDiv1',
       translateY: 75,
       easing: 'linear',
       opacity: [0, 1],
-      duration: 600,
+      duration: 500,
     }, '+= 700')
     .add({
-      targets: '#title',
-      translateY: 55,
+      targets: '#aboutTitle',
+      translateY: 65,
       easing: 'linear',
       opacity: [0, 1],
-      duration: 600,
-    }, '-= 900')
+      duration: 500,
+    }, '-= 1000')
     timeline.play();
     window.removeEventListener('scroll', checkInView);
 
   }
 
   return (
-    <AboutContainer id='about'>
-      <TitleContainer id='title'>
+    <AboutContainer id='about' bg={bg}>
+      <TitleContainer id='aboutTitle'>
         About Me
       </TitleContainer>
-      <MainDiv id='mainDiv' width={divWidth}>
+      <MainDiv id='mainDiv1' color={color} width={divWidth}>
         <TextContainer id='mainText' width={textWidth} font={fontSize}>
           Hi! I'm Seiji Matsumoto.
           <br /><br />

@@ -148,7 +148,7 @@ const Landing = (props) => {
             <Text color={color}>I am </Text>
             <Text2 id='iam'>
               <Typewriter
-                words={['a full-stack software engineer.', 'a problem solver.', 'a creator.', 'an IT geek.', 'a team player.', 'a critical thinker.', 'always learning.', 'me.']}
+                words={['a full-stack engineer.', 'a problem solver.', 'a creator.', 'an IT geek.', 'a team player.', 'a critical thinker.', 'always learning.', 'me.']}
                 loop={0}
                 cursor
                 cursorStyle='_'
