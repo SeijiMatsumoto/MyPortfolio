@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const OverlayDiv = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100px;
+  height: 370px;
   position: fixed;
-  z-index: 100;
+  bottom: 0;
+  z-index: 5;
+  /* border: 1px solid black; */
 `;

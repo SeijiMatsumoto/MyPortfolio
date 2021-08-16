@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive'
 import { navBarScroll } from '../helperFunctions.js';
 
 import { Main } from '../Styles/App.style.js'
