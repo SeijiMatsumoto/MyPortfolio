@@ -49,23 +49,24 @@ const About = (props) => {
       setWidth('80vw');
       setTextWidth('70vw');
       setTechWidth('70vw');
-      setFont('15px');
+      setFont('18px');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
       setWidth('80vw');
-      setTextWidth('70vw');
+      setImgMargin('0');
+      setTextWidth('80vw');
       setTechWidth('70vw');
-      setFont('15px');
-    } else if (window.innerWidth <= 1239 && window.innerWidth > 850) {
+      setFont('18px');
+    } else if (window.innerWidth <= 1249 && window.innerWidth > 850) {
       setImgTop('10px');
       setImgMargin('0');
-      setWidth('1000px');
+      setWidth('80vw');
       setTextWidth('700px');
       setTechWidth('600px');
       setFont('20px');
     } else {
       setImgTop('50px');
       setImgMargin('40px');
-      setWidth('1000px');
+      setWidth('80vw');
       setTextWidth('700px');
       setTechWidth('600px');
       setFont('20px');

@@ -6,7 +6,7 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: ${props => props.direction};
   align-items: center;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 export const ImageDiv = styled.div`
