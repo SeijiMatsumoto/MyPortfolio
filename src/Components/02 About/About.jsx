@@ -87,9 +87,9 @@ const About = () => {
         <TextContainer id='mainText' width={textWidth} font={fontSize}>
           Hi! I'm Seiji Matsumoto.
           <br /><br />
-          I am a 25-year-old aspiring software engineer based in the Greater New York area with a passion for writing clean and efficient code. Fresh out of an intensive Software Engineering Immersive at Hack Reactor, I am eager to begin my software development journey and apply my knowledge.
+          I am a 25-year-old aspiring software engineer based in the Greater New York area with a passion for writing clean and efficient code. Fresh out of an intensive Software Engineering Immersive at Hack Reactor, I am eager to begin my full-stack software development journey and apply my knowledge.
           <br /><br />
-          During my time as an IT professional, I spent a considerable amount of time writing scripts that could either automate or speed up repetitive tasks. Scripting reignited the passion I had for programming that I had tucked away years ago. Over the past year, I have built several full-stack web applications and other program.
+          During my time as an IT professional, I spent a considerable amount of time writing scripts that could either automate or speed up repetitive tasks. Scripting reignited the passion I had for programming that I had tucked away years ago. Over the past year, I have built full-stack web applications and several other programs.
           <br /><br />
           Some of the technologies I use are:
           <TechDiv width={techWidth}>
