@@ -66,7 +66,7 @@ export const Continue = styled.p`
   font-size: 30px;
   font-weight: bold;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: ${props => props.top || '100px'};
   letter-spacing: 0.1em;
   display: ${props => props.display || 'block'};
 `;

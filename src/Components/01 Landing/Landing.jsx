@@ -9,6 +9,7 @@ const Landing = (props) => {
   var [display, setDisplay] = useState('block');
   var [marginTop, setMarginTop] = useState('200px');
   var [downPosition, setPosition] = useState('60px');
+  var [continueTop, setTop] = useState('100px');
 
   var [iAm, setIAm] = useState('a software developer.');
   var [iAmFont, setIfont] = useState('30px');
@@ -23,10 +24,7 @@ const Landing = (props) => {
   }, [])
 
   const responsiveChange = () => {
-    if (window.innerHeight < 800) {
-      setFont('60px');
-      setMarginTop('250px');
-    } else if (window.innerWidth <= 500) {
+    if (window.innerWidth <= 500) {
       setFont('50px');
       setMargin('10vw');
       setDisplay('none');
@@ -34,6 +32,7 @@ const Landing = (props) => {
       setPosition('150px');
       setIfont('20px');
       setIdisplay('block');
+      setTop('130px');
     } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
       setFont('70px');
       setMargin('10vw');
@@ -42,6 +41,7 @@ const Landing = (props) => {
       setPosition('150px');
       setIfont('20px');
       setIdisplay('block');
+      setTop('130px');
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
       setMargin('13vw');
@@ -50,6 +50,7 @@ const Landing = (props) => {
       setPosition('60px');
       setIfont('30px');
       setIdisplay('flex');
+      setTop('100px');
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
       setFont('120px');
       setMargin('13vw');
@@ -58,6 +59,7 @@ const Landing = (props) => {
       setPosition('60px');
       setIfont('30px');
       setIdisplay('flex');
+      setTop('100px');
     } else {
       setFont('120px');
       setMargin('13vw');
@@ -66,6 +68,10 @@ const Landing = (props) => {
       setPosition('60px');
       setIfont('30px');
       setIdisplay('flex');
+      setTop('100px');
+    }
+    if (window.innerHeight < 800) {
+      setFont('60px');
     }
   };
 
@@ -119,17 +125,17 @@ const Landing = (props) => {
             <Text>I am </Text>
             <Text2 id='iam'>
               <Typewriter
-                words={['a software developer.', 'a problem solver.', 'a creative individual.', 'a team player.', 'a critical thinker.', 'me.']}
+                words={['a software engineer.', 'a problem solver.', 'a creative individual.', 'a team player.', 'a critical thinker.', 'me.']}
                 loop={0}
                 cursor
                 cursorStyle='_'
                 typeSpeed={40}
                 deleteSpeed={20}
-                delaySpeed={4000}
+                delaySpeed={3000}
               />
             </Text2>
           </IAMDiv>
-          <Continue id='text4' display={display}>Press [ ⏎ ] to continue</Continue>
+          <Continue id='text4' top={continueTop} display={display}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>
       </MainDiv>
       <DownButton bottom={downPosition} onClick={scrollDown} />
