@@ -31,7 +31,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  font-size: 20px;
+  font-size: ${props => props.font || '20px'};
   width: ${props => props.width || '700px'};
 `;
 

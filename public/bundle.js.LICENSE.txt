@@ -4,6 +4,12 @@ object-assign
 @license MIT
 */
 
+/*!
+ * in-view 0.6.1 - Get notified when a DOM element enters or exits the viewport.
+ * Copyright (c) 2016 Cam Wiegert <cam@camwiegert.com> - https://camwiegert.github.io/in-view
+ * License: MIT
+ */
+
 /** @license React v0.20.2
  * scheduler.production.min.js
  *

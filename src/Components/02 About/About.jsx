@@ -10,6 +10,7 @@ const About = () => {
   var [divWidth, setWidth] = useState('1000px');
   var [textWidth, setTextWidth] = useState('700px');
   var [techWidth, setTechWidth] = useState('600px');
+  var [fontSize, setFont] = useState('20px');
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -31,22 +32,26 @@ const About = () => {
       setWidth('80vw');
       setTextWidth('70vw');
       setTechWidth('70vw');
+      setFont('15px');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
       setWidth('80vw');
       setTextWidth('70vw');
       setTechWidth('70vw');
+      setFont('15px');
     } else if (window.innerWidth <= 1239 && window.innerWidth > 850) {
       setImgTop('10px');
       setImgMargin('0');
       setWidth('1000px');
       setTextWidth('700px');
       setTechWidth('600px');
+      setFont('20px');
     } else {
       setImgTop('50px');
       setImgMargin('40px');
       setWidth('1000px');
       setTextWidth('700px');
       setTechWidth('600px');
+      setFont('20px');
     }
   };
 
@@ -79,7 +84,7 @@ const About = () => {
         About Me
       </TitleContainer>
       <MainDiv id='mainDiv' width={divWidth}>
-        <TextContainer id='mainText' width={textWidth}>
+        <TextContainer id='mainText' width={textWidth} font={fontSize}>
           Hi! I'm Seiji Matsumoto.
           <br /><br />
           I am a 25-year-old aspiring software engineer based in the Greater New York area with a passion for writing clean and efficient code. Fresh out of an intensive Software Engineering Immersive at Hack Reactor, I am eager to begin my software development journey and apply my knowledge.
@@ -95,8 +100,8 @@ const About = () => {
               <UL>➢ Styled Components</UL>
             </TechnologiesList>
             <TechnologiesList>
-              <UL>➢ PostgreSQL</UL>
-              <UL>➢ Mongoose</UL>
+              <UL>➢ SQL / PostgreSQL</UL>
+              <UL>➢ MongoDB / Mongoose</UL>
               <UL>➢ Jest / Enzyme</UL>
               <UL>➢ AWS</UL>
             </TechnologiesList>

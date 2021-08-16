@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { LandingContainer, Bg, MainDiv, TextDiv, Hello, MyName, Continue, IAMDiv, Text, DownButton } from './Styles/Landing.style';
-import anime, { set } from 'animejs';
+import { LandingContainer, Bg, MainDiv, TextDiv, Hello, MyName, Continue, IAMDiv, Text, Text2, DownButton } from './Styles/Landing.style';
+import anime from 'animejs';
 
 const Landing = (props) => {
   var [fontSize, setFont] = useState('90px');
@@ -39,7 +39,7 @@ const Landing = (props) => {
 
   const responsiveChange = () => {
     if (window.innerWidth <= 500) {
-      setFont('30px');
+      setFont('50px');
       setMargin('10vw');
       setDisplay('none');
       setMarginTop('-100px');
@@ -127,9 +127,9 @@ const Landing = (props) => {
         <TextDiv font={fontSize}>
           <Hello id='text1'>Hi, my name is</Hello>
           <MyName id='text2'>Seiji Matsumoto.</MyName>
-          <IAMDiv id='text3' font={iAmFont}>
-            <Text color='white'>I am </Text>
-            <Text id='iam'>{iAm}</Text>
+          <IAMDiv id='text3' font={iAmFont} display={iAmDisplay}>
+            <Text>I am </Text>
+            <Text2 id='iam'>{iAm}</Text2>
           </IAMDiv>
           <Continue id='text4' display={display}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>

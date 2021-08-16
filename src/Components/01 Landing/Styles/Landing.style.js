@@ -66,7 +66,7 @@ export const Continue = styled.p`
   font-size: 30px;
   font-weight: bold;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 100px;
   letter-spacing: 0.1em;
   display: ${props => props.display || 'block'};
 `;
@@ -75,7 +75,7 @@ export const IAMDiv = styled.div`
   font-size: ${props => props.font || '30px'};
   padding-right: 20px;
   font-weight: bold;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   letter-spacing: 0.1em;
   display: ${props => props.display || 'flex'};
   position: absolute;
@@ -83,8 +83,13 @@ export const IAMDiv = styled.div`
 
 export const Text = styled.p`
   margin-right: 16px;
-  color: ${props => props.color || '#FF4C29'};
+  color: white;
   white-space: nowrap;
+`;
+
+export const Text2 = styled.p`
+  color: #FF4C29;
+  white-space: normal;
 `;
 
 export const DownButton = styled.div`
@@ -92,14 +97,14 @@ export const DownButton = styled.div`
   bottom: ${props => props.bottom || '60px'};
   left: 0;
   right: 0;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background-color: transparent;
   position: absolute;
   transition: 0.2s ease-in;
   cursor: pointer;
   background-image: url('https://i.imgur.com/AJrt9vn.png');
-  background-size: 80px 80px;
+  background-size: 60px 60px;
   &:hover{
     transform: translateY(20px);
   }
