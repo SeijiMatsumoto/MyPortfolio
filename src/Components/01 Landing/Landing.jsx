@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { LandingContainer, Bg, MainDiv, TextDiv, Hello, MyName, Continue, IAMDiv, Text, Text2, DownButton } from './Styles/Landing.style';
 import anime from 'animejs';
+import { Typewriter, useTypewriter } from 'react-simple-typewriter';
 
 const Landing = (props) => {
   var [fontSize, setFont] = useState('90px');
@@ -8,34 +9,18 @@ const Landing = (props) => {
   var [display, setDisplay] = useState('block');
   var [marginTop, setMarginTop] = useState('200px');
   var [downPosition, setPosition] = useState('60px');
+
   var [iAm, setIAm] = useState('a software developer.');
   var [iAmFont, setIfont] = useState('30px');
   var [iAmDisplay, setIdisplay] = useState('flex');
 
-  const me = [
-    'a problem solver.',
-    'a creative individual.',
-    'a team player.',
-    'a critical thinker.',
-    'me.',
-    'a software developer.'
-  ]
+  var meSplit = [];
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
     responsiveChange();
     animateOnLoad();
   }, [])
-
-  useEffect(() => {
-    setTimeout(() => {
-      var i = me.indexOf(iAm) + 1;
-      if (i === me.length) {
-        i = 0;
-      }
-      setIAm(me[i]);
-    }, 2000)
-  }, [iAm])
 
   const responsiveChange = () => {
     if (window.innerWidth <= 500) {
@@ -129,7 +114,17 @@ const Landing = (props) => {
           <MyName id='text2'>Seiji Matsumoto.</MyName>
           <IAMDiv id='text3' font={iAmFont} display={iAmDisplay}>
             <Text>I am </Text>
-            <Text2 id='iam'>{iAm}</Text2>
+            <Text2 id='iam'>
+              <Typewriter
+                words={['a software developer.', 'a problem solver.', 'a creative individual.', 'a team player.', 'a critical thinker.', 'me.']}
+                loop={0}
+                cursor
+                cursorStyle='|'
+                typeSpeed={60}
+                deleteSpeed={20}
+                delaySpeed={4000}
+              />
+            </Text2>
           </IAMDiv>
           <Continue id='text4' display={display}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>
