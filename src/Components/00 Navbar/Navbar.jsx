@@ -47,7 +47,7 @@ const Navbar = (props) => {
       }
     }
 
-    if (window.innerHeight < 790) {
+    if (window.innerHeight < 500) {
       setBg('transparent');
     } else {
       if (!props.isDark) {

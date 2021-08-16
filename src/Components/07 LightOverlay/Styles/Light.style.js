@@ -9,9 +9,8 @@ export const Main = styled.div`
   right: -85px;
   z-index: 5;
   text-align: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
-  `;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+`;
 
 export const Button = styled.button`
   border-radius: 10%;
@@ -25,6 +24,7 @@ export const Button = styled.button`
   &:hover {
     transform: scale(1.05);
   }
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
 
 export const Switch = styled.i`
