@@ -23,7 +23,10 @@ const Landing = (props) => {
   }, [])
 
   const responsiveChange = () => {
-    if (window.innerWidth <= 500) {
+    if (window.innerHeight < 800) {
+      setFont('60px');
+      setMarginTop('250px');
+    } else if (window.innerWidth <= 500) {
       setFont('50px');
       setMargin('10vw');
       setDisplay('none');
@@ -119,8 +122,8 @@ const Landing = (props) => {
                 words={['a software developer.', 'a problem solver.', 'a creative individual.', 'a team player.', 'a critical thinker.', 'me.']}
                 loop={0}
                 cursor
-                cursorStyle='|'
-                typeSpeed={60}
+                cursorStyle='_'
+                typeSpeed={40}
                 deleteSpeed={20}
                 delaySpeed={4000}
               />
