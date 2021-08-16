@@ -87,13 +87,12 @@ export const DownButton = styled.i`
   margin: auto;
   bottom: ${props => props.bottom || '60px'};
   color: ${props => props.color || 'white'};
-  /* left: 0;
-  right: 0; */
   background-color: transparent;
   position: absolute;
   transition: 0.2s ease-in;
   cursor: pointer;
   z-index: 2;
+
   &:hover{
     transform: translateY(20px);
     color: #FF4C29;

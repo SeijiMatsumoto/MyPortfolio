@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { LandingContainer, Bg, MainDiv, TextDiv, Hello, MyName, Continue, IAMDiv, Text, Text2, DownButton } from './Styles/Landing.style';
+import { LandingContainer, MainDiv, TextDiv, Hello, MyName, Continue, IAMDiv, Text, Text2, DownButton } from './Styles/Landing.style';
 import anime from 'animejs';
-import { Typewriter, useTypewriter } from 'react-simple-typewriter';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Landing = (props) => {
   var [fontSize, setFont] = useState('90px');
@@ -9,7 +9,6 @@ const Landing = (props) => {
   var [display, setDisplay] = useState('block');
   var [marginTop, setMarginTop] = useState('200px');
   var [downPosition, setPosition] = useState('60px');
-  var [downSize, setDownSize] = useState('60px');
   var [continueTop, setTop] = useState('100px');
   var [bg, setBg] = useState('#1E242A');
   var [color, setColor] = useState('white');
@@ -39,7 +38,6 @@ const Landing = (props) => {
       setDisplay('none');
       setMarginTop('-100px');
       setPosition('150px');
-      setDownSize('30px');
       setIfont('20px');
       setTop('130px');
     } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
@@ -48,7 +46,6 @@ const Landing = (props) => {
       setDisplay('none');
       setMarginTop('-100px');
       setPosition('150px');
-      setDownSize('30px');
       setIfont('20px');
       setTop('130px');
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
@@ -57,7 +54,6 @@ const Landing = (props) => {
       setDisplay('flex');
       setMarginTop('200px');
       setPosition('60px');
-      setDownSize('60px');
       setIfont('30px');
       setTop('100px');
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
@@ -66,7 +62,6 @@ const Landing = (props) => {
       setDisplay('flex');
       setMarginTop('200px');
       setPosition('60px');
-      setDownSize('60px');
       setIfont('30px');
       setTop('100px');
     } else {
@@ -75,7 +70,6 @@ const Landing = (props) => {
       setDisplay('flex');
       setMarginTop('200px');
       setPosition('60px');
-      setDownSize('60px');
       setIfont('30px');
       setTop('100px');
     }
@@ -86,14 +80,12 @@ const Landing = (props) => {
       setDisplay('none');
       setMarginTop('-100px');
       setPosition('150px');
-      setDownSize('30px');
       setIfont('20px');
       setTop('130px');
     } else if (window.innerHeight < 800) {
       setFont('60px');
       setIfont('20px');
       setPosition('15px');
-      setDownSize('30px');
       setMarginTop('200px');
       setTop('70px');
     }
