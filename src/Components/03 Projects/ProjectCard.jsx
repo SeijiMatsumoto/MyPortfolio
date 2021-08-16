@@ -7,6 +7,8 @@ const ProjectCard = (props) => {
   var [btnBg, setBg] = useState('#1E242A');
   var [btnFont, setColor] = useState('white');
   var [direction, setDirection] = useState('row');
+  var [textLeft, setLeft] = useState('170px');
+  var [imgRight, setRight] = useState('50px');
 
   var [shown, setShown] = useState(false);
   var url = props.url;
@@ -67,17 +69,21 @@ const ProjectCard = (props) => {
   const responsiveChange = () => {
     if (window.innerWidth < 990) {
       setDirection('column');
+      setLeft('110px');
+      setRight('100px');
     } else {
       setDirection('row');
+      setRight('50px');
+      setLeft('170px');
     }
   }
 
   return (
     <CardContainer id={'project' + props.i} direction={direction}>
-      <ImageDiv id={'pic' + props.i}>
+      <ImageDiv id={'pic' + props.i} right={imgRight}>
         <ProjImage src={url} />
       </ImageDiv>
-      <InfoCont id={'projInfo' + props.i}>
+      <InfoCont id={'projInfo' + props.i} left={textLeft}>
         <Title color={props.color}>{title}</Title>
         <Description>{description}</Description>
         <StackCont>

@@ -13,7 +13,7 @@ export const ImageDiv = styled.div`
   width: 420px;
   height: 310px;
   position: relative;
-  right: 100px;
+  right: ${props => props.right};
   margin: 20px;
   cursor: pointer;
 `;
@@ -37,7 +37,7 @@ export const InfoCont = styled.div`
   width: 420px;
   margin-left: -20px;
   position: relative;
-  left: 120px;
+  left: ${props => props.left};
 `;
 
 export const Title = styled.div`
