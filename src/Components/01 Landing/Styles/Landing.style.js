@@ -77,7 +77,7 @@ export const IAMDiv = styled.div`
   font-weight: bold;
   /* margin-top: 15px; */
   letter-spacing: 0.1em;
-  display: ${props => props.display || 'flex'};
+  display: flex;
   position: absolute;
 `;
 
@@ -97,14 +97,14 @@ export const DownButton = styled.div`
   bottom: ${props => props.bottom || '60px'};
   left: 0;
   right: 0;
-  width: 60px;
-  height: 60px;
+  width: ${props => props.size || '60px'};
+  height: ${props => props.size || '60px'};
   background-color: transparent;
   position: absolute;
   transition: 0.2s ease-in;
   cursor: pointer;
   background-image: url('https://i.imgur.com/AJrt9vn.png');
-  background-size: 60px 60px;
+  background-size: ${props => props.bgSize || '60px '} ${props => props.bgSize || '60px'};
   &:hover{
     transform: translateY(20px);
   }

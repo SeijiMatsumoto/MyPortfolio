@@ -10,6 +10,7 @@ const Navbar = (props) => {
   var [showMenu, setMenu] = useState(false);
   var [menuOpen, toggleMenu] = useState(false);
   var [iconLeft, setIconLeft] = useState('50px');
+  var [navBg, setBg] = useState('#1E242A');
 
   useEffect(() => {
     window.addEventListener('resize', displayButton);
@@ -22,10 +23,18 @@ const Navbar = (props) => {
       setButton(true);
       setMenu(true);
       setIconLeft('20px');
+      setBg('#1E242A')
     } else {
       setButton(false);
       setMenu(false);
       setIconLeft('50px');
+      setBg('#1E242A');
+    }
+
+    if (window.innerHeight < 800) {
+      setBg('transparent');
+    } else {
+      setBg('#1E242A');
     }
   };
 
@@ -73,7 +82,7 @@ const Navbar = (props) => {
   }
 
   return (
-    <NavbarContainer id='navbar'>
+    <NavbarContainer id='navbar' color={navBg}>
       <Logo id='logo' iconLeft={iconLeft} onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
       <Links />
       {showButton ? <MenuButton clickHandler={menuClickHandler}/> : null}

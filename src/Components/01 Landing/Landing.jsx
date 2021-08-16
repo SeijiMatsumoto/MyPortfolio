@@ -9,13 +9,12 @@ const Landing = (props) => {
   var [display, setDisplay] = useState('block');
   var [marginTop, setMarginTop] = useState('200px');
   var [downPosition, setPosition] = useState('60px');
+  var [downSize, setDownSize] = useState('60px');
   var [continueTop, setTop] = useState('100px');
 
-  var [iAm, setIAm] = useState('a software developer.');
   var [iAmFont, setIfont] = useState('30px');
   var [iAmDisplay, setIdisplay] = useState('flex');
-
-  var meSplit = [];
+  var [showIAm, setShow] = useState(true);
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -30,45 +29,50 @@ const Landing = (props) => {
       setDisplay('none');
       setMarginTop('-100px');
       setPosition('150px');
+      setDownSize('30px');
       setIfont('20px');
-      setIdisplay('block');
       setTop('130px');
+      setShow(true);
     } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
       setFont('70px');
       setMargin('10vw');
       setDisplay('none');
       setMarginTop('-100px');
       setPosition('150px');
+      setDownSize('30px');
       setIfont('20px');
-      setIdisplay('block');
       setTop('130px');
+      setShow(true);
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
       setMargin('13vw');
-      setDisplay('block');
+      setDisplay('flex');
       setMarginTop('200px');
       setPosition('60px');
+      setDownSize('60px');
       setIfont('30px');
-      setIdisplay('flex');
       setTop('100px');
+      setShow(true);
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
       setFont('120px');
       setMargin('13vw');
-      setDisplay('block');
+      setDisplay('flex');
       setMarginTop('200px');
       setPosition('60px');
+      setDownSize('60px');
       setIfont('30px');
-      setIdisplay('flex');
       setTop('100px');
+      setShow(true);
     } else {
       setFont('120px');
       setMargin('13vw');
-      setDisplay('block');
+      setDisplay('flex');
       setMarginTop('200px');
       setPosition('60px');
+      setDownSize('60px');
       setIfont('30px');
-      setIdisplay('flex');
       setTop('100px');
+      setShow(true);
     }
 
     if (window.innerWidth <= 500) {
@@ -77,11 +81,16 @@ const Landing = (props) => {
       setDisplay('none');
       setMarginTop('-100px');
       setPosition('150px');
+      setDownSize('30px');
       setIfont('20px');
-      setIdisplay('block');
       setTop('130px');
+      setShow(true);
     } else if (window.innerHeight < 800) {
       setFont('60px');
+      setPosition('8px');
+      setDownSize('30px');
+      setMarginTop('200px');
+      setShow(false);
     }
   };
 
@@ -131,7 +140,7 @@ const Landing = (props) => {
         <TextDiv font={fontSize}>
           <Hello id='text1'>Hi, my name is</Hello>
           <MyName id='text2'>Seiji Matsumoto.</MyName>
-          <IAMDiv id='text3' font={iAmFont} display={iAmDisplay}>
+          {showIAm ? <IAMDiv id='text3' font={iAmFont}>
             <Text>I am </Text>
             <Text2 id='iam'>
               <Typewriter
@@ -144,11 +153,11 @@ const Landing = (props) => {
                 delaySpeed={3000}
               />
             </Text2>
-          </IAMDiv>
+          </IAMDiv> : null}
           <Continue id='text4' top={continueTop} display={display}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>
       </MainDiv>
-      <DownButton bottom={downPosition} onClick={scrollDown} />
+      <DownButton bottom={downPosition} onClick={scrollDown} size={downSize} bgSize={downSize}/>
     </LandingContainer>
   );
 };
