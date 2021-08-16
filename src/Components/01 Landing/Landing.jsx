@@ -13,7 +13,6 @@ const Landing = (props) => {
   var [continueTop, setTop] = useState('100px');
 
   var [iAmFont, setIfont] = useState('30px');
-  var [showIAm, setShow] = useState(true);
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -31,7 +30,6 @@ const Landing = (props) => {
       setDownSize('30px');
       setIfont('20px');
       setTop('130px');
-      setShow(true);
     } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
       setFont('70px');
       setMargin('10vw');
@@ -41,7 +39,6 @@ const Landing = (props) => {
       setDownSize('30px');
       setIfont('20px');
       setTop('130px');
-      setShow(true);
     } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
       setFont('100px');
       setMargin('13vw');
@@ -51,7 +48,6 @@ const Landing = (props) => {
       setDownSize('60px');
       setIfont('30px');
       setTop('100px');
-      setShow(true);
     } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
       setFont('120px');
       setMargin('13vw');
@@ -61,7 +57,6 @@ const Landing = (props) => {
       setDownSize('60px');
       setIfont('30px');
       setTop('100px');
-      setShow(true);
     } else {
       setFont('120px');
       setMargin('13vw');
@@ -71,10 +66,9 @@ const Landing = (props) => {
       setDownSize('60px');
       setIfont('30px');
       setTop('100px');
-      setShow(true);
     }
 
-    if (window.innerWidth <= 500) {
+    if (window.innerWidth < 500) {
       setFont('40px');
       setMargin('10vw');
       setDisplay('none');
@@ -83,13 +77,13 @@ const Landing = (props) => {
       setDownSize('30px');
       setIfont('20px');
       setTop('130px');
-      setShow(true);
     } else if (window.innerHeight < 800) {
       setFont('60px');
+      setIfont('20px');
       setPosition('15px');
       setDownSize('30px');
       setMarginTop('200px');
-      setShow(false);
+      setTop('70px');
     }
   };
 
@@ -139,11 +133,11 @@ const Landing = (props) => {
         <TextDiv font={fontSize}>
           <Hello id='text1'>Hi, my name is</Hello>
           <MyName id='text2'>Seiji Matsumoto.</MyName>
-          {showIAm ? <IAMDiv id='text3' font={iAmFont}>
+          <IAMDiv id='text3' font={iAmFont}>
             <Text>I am </Text>
             <Text2 id='iam'>
               <Typewriter
-                words={['a software engineer.', 'a problem solver.', 'a creative individual.', 'a team player.', 'a critical thinker.', 'me.']}
+                words={['a full-stack software engineer.', 'a problem solver.', 'a creative individual.', 'a team player.', 'a critical thinker.', 'me.']}
                 loop={0}
                 cursor
                 cursorStyle='_'
@@ -152,7 +146,7 @@ const Landing = (props) => {
                 delaySpeed={3000}
               />
             </Text2>
-          </IAMDiv> : null}
+          </IAMDiv>
           <Continue id='text4' top={continueTop} display={display}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>
       </MainDiv>

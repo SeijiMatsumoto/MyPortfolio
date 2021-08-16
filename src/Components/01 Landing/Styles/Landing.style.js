@@ -75,7 +75,6 @@ export const IAMDiv = styled.div`
   font-size: ${props => props.font || '30px'};
   padding-right: 20px;
   font-weight: bold;
-  /* margin-top: 15px; */
   letter-spacing: 0.1em;
   display: flex;
   position: absolute;
@@ -103,6 +102,7 @@ export const DownButton = styled.div`
   position: absolute;
   transition: 0.2s ease-in;
   cursor: pointer;
+  z-index: 2;
   background-image: url('https://i.imgur.com/AJrt9vn.png');
   background-size: ${props => props.bgSize || '60px '} ${props => props.bgSize || '60px'};
   &:hover{
