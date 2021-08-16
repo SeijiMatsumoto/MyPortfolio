@@ -5,6 +5,7 @@ import { navBarScroll } from '../helperFunctions.js';
 
 import { Main } from '../Styles/App.style.js'
 
+import Overlay from './Overlay/Overlay.jsx';
 import Navbar from './00 Navbar/Navbar.jsx';
 import Landing from './01 Landing/Landing.jsx';
 import About from './02 About/About.jsx';
@@ -28,6 +29,7 @@ const App = () => {
 
   return (
     <Main id='main'>
+      <Overlay />
       <Navbar />
       <Landing />
       <About />
