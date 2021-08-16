@@ -12,9 +12,8 @@ export const AboutContainer = styled.div`
 
 export const MainDiv = styled.div`
   width: ${props => props.width || '1000px'};
-  margin: 100px;
   margin-top: 50px;
-  margin-bottom: 140px;
+  margin-bottom: 100px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -22,12 +21,11 @@ export const MainDiv = styled.div`
   flex-direction: row;
   align-self: center;
   color: ${props => props.color};
-  /* border: 1px solid black; */
 `;
 
 export const TitleContainer = styled.div`
   position: absolute;
-  top: 0;
+  top: 0px;
   font-size: 35px;
   color: #FF4C29;
 `;

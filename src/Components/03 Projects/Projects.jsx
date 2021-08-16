@@ -17,7 +17,7 @@ const Projects = (props) => {
 
   const checkInView = () => {
     if (!shown) {
-      const aboutEl = document.getElementById('projectsTitle');
+      const aboutEl = document.getElementById('projects');
       if (inView.is(aboutEl)) {
         console.log('in view')
         animateOnLoad();
@@ -81,7 +81,7 @@ const Projects = (props) => {
       <Title id='projectsTitle'>Projects</Title>
       <ProjDiv id='mainDiv2' color={color}>
         {projects.map((project, i) => {
-          return <ProjectCard key={project.url} i={i} title={project.title} url={project.url} description={project.description} stack={project.stack}></ProjectCard>
+          return <ProjectCard key={project.url} color={color} i={i} title={project.title} url={project.url} description={project.description} stack={project.stack} isDark={props.isDark}></ProjectCard>
         })}
       </ProjDiv>
     </ProjectsContainer>
