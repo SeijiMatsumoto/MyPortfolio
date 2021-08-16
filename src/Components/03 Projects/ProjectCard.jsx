@@ -69,12 +69,12 @@ const ProjectCard = (props) => {
   const responsiveChange = () => {
     if (window.innerWidth < 990) {
       setDirection('column');
-      setLeft('110px');
+      setLeft('140px');
       setRight('100px');
     } else {
       setDirection('row');
-      setRight('50px');
       setLeft('170px');
+      setRight('50px');
     }
   }
 

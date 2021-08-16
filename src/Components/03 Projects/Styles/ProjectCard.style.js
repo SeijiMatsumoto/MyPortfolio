@@ -6,7 +6,7 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: ${props => props.direction};
   align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 export const ImageDiv = styled.div`
@@ -38,6 +38,7 @@ export const InfoCont = styled.div`
   margin-left: -20px;
   position: relative;
   left: ${props => props.left};
+  font-size: 18px;
 `;
 
 export const Title = styled.div`
@@ -45,6 +46,7 @@ export const Title = styled.div`
   font-weight: bold;
   border-bottom: 2px solid black;
   border-color: ${props => props.color};
+
 `;
 
 export const Description = styled.div`
