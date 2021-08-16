@@ -31,9 +31,9 @@ export const A = styled.a`
 export const Resume = styled.button`
   transition: 0.2s ease-in;
   border-radius: 3px;
-  background-color: ${props => props.bg || 'black'};
+  background-color: transparent;
   color: ${props => props.color};
-  border: 1px solid #FF4C29;
+  border: 2px solid #FF4C29;
   position: absolute;
   top: 5px;
   width: 110px;

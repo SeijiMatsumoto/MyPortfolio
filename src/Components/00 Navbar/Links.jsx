@@ -17,10 +17,9 @@ const Links = (props) => {
   useEffect(() => {
     if (!props.isDark) {
       setColor('#1E242A');
-      setResumeColor('white');
     } else {
       setColor('white');
-      setResumeColor('black');
+      setResumeColor('white');
     }
   }, [props.isDark])
 
@@ -83,7 +82,7 @@ const Links = (props) => {
         <Link id='link2'>02.<A color={color} href='#projects'>Projects</A></Link>
         <Link id='link3'>03.<A color={color} href='#experience'>Experience</A></Link>
         <Link id='link4'>04.<A color={color} href='#contact'>Contact</A></Link>
-        <Link id='resume'><Resume color={resumeColor} bg={color}>Resume</Resume></Link>
+        <Link id='resume'><Resume color={color}>Resume</Resume></Link>
       </LinksUl>
       : null }
     </div>

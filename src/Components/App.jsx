@@ -4,7 +4,8 @@ import { navBarScroll } from '../helperFunctions.js';
 
 import { Main } from '../Styles/App.style.js'
 
-import Overlay from './Overlay/Overlay.jsx';
+import Social from './06 SocialOverlay/Social.jsx';
+import Light from './07 LightOverlay/Light.jsx'
 import Navbar from './00 Navbar/Navbar.jsx';
 import Landing from './01 Landing/Landing.jsx';
 import About from './02 About/About.jsx';
@@ -13,7 +14,7 @@ import Experience from './04 Experience/Experience.jsx'
 import Contact from './05 Contact/Contact.jsx';
 
 const App = () => {
-  var [isDark, toggleDark] = useState(true);
+  var [isDark, toggleDark] = useState(false);
 
   useEffect(() => {
     navBarScroll();
@@ -30,8 +31,9 @@ const App = () => {
 
   return (
     <Main id='main'>
-      <Overlay isDark={isDark} />
-      <Navbar isDark={isDark} toggleDark={toggleDark}/>
+      <Social isDark={isDark} />
+      <Light isDark={isDark}  toggleDark={toggleDark}/>
+      <Navbar isDark={isDark}/>
       <Landing isDark={isDark} />
       <About isDark={isDark} />
       <Projects isDark={isDark} />

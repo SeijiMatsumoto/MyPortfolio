@@ -11,6 +11,8 @@ const Landing = (props) => {
   var [downPosition, setPosition] = useState('60px');
   var [downSize, setDownSize] = useState('60px');
   var [continueTop, setTop] = useState('100px');
+  var [bg, setBg] = useState('#1E242A');
+  var [color, setColor] = useState('white');
 
   var [iAmFont, setIfont] = useState('30px');
 
@@ -19,6 +21,16 @@ const Landing = (props) => {
     responsiveChange();
     animateOnLoad();
   }, [])
+
+  useEffect(() => {
+    if (!props.isDark) {
+      setBg('#f0f0f0');
+      setColor('#1E242A');
+    } else {
+      setBg('#1E242A');
+      setColor('white');
+    }
+  }, [props.isDark])
 
   const responsiveChange = () => {
     if (window.innerWidth <= 500) {
@@ -127,29 +139,29 @@ const Landing = (props) => {
   }
 
   return (
-    <LandingContainer id='landing'>
+    <LandingContainer id='landing' bg={bg}>
       <MainDiv margin={margin} marginTop={marginTop} className='nameDiv'>
         <TextDiv font={fontSize}>
           <Hello id='text1'>Hi, my name is</Hello>
-          <MyName id='text2'>Seiji Matsumoto.</MyName>
+          <MyName id='text2' color={color}>Seiji Matsumoto.</MyName>
           <IAMDiv id='text3' font={iAmFont}>
-            <Text>I am </Text>
+            <Text color={color}>I am </Text>
             <Text2 id='iam'>
               <Typewriter
-                words={['a full-stack software engineer.', 'a problem solver.', 'a creative individual.', 'an IT geek.', 'a team player.', 'a critical thinker.', 'always learning.', 'me.']}
+                words={['a full-stack software engineer.', 'a problem solver.', 'a creator.', 'an IT geek.', 'a team player.', 'a critical thinker.', 'always learning.', 'me.']}
                 loop={0}
                 cursor
                 cursorStyle='_'
-                typeSpeed={40}
+                typeSpeed={30}
                 deleteSpeed={20}
                 delaySpeed={2000}
               />
             </Text2>
           </IAMDiv>
-          <Continue id='text4' top={continueTop} display={display}>Press [ ⏎ ] to continue</Continue>
+          <Continue id='text4' top={continueTop} display={display} color={color}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>
       </MainDiv>
-      <DownButton bottom={downPosition} onClick={scrollDown} size={downSize} bgSize={downSize}/>
+      <DownButton bottom={downPosition} onClick={scrollDown} color={color} className='fas fa-angle-double-down fa-4x'/>
     </LandingContainer>
   );
 };

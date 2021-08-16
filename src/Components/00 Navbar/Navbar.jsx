@@ -18,23 +18,43 @@ const Navbar = (props) => {
     animateOnLoad();
   }, [])
 
+  useEffect(() => {
+    if (!props.isDark) {
+      setBg('#f0f0f0');
+    } else {
+      setBg('#1E242A');
+    }
+  }, [props.isDark])
+
   const displayButton = () => {
     if (window.innerWidth <= 960) {
       setButton(true);
       setMenu(true);
       setIconLeft('20px');
-      setBg('#1E242A')
+      if (!props.isDark) {
+        setBg('#f0f0f0');
+      } else {
+        setBg('#1E242A');
+      }
     } else {
       setButton(false);
       setMenu(false);
       setIconLeft('50px');
-      setBg('#1E242A');
+      if (!props.isDark) {
+        setBg('#f0f0f0');
+      } else {
+        setBg('#1E242A');
+      }
     }
 
     if (window.innerHeight < 800) {
       setBg('transparent');
     } else {
-      setBg('#1E242A');
+      if (!props.isDark) {
+        setBg('#f0f0f0');
+      } else {
+        setBg('#1E242A');
+      }
     }
   };
 
@@ -80,13 +100,6 @@ const Navbar = (props) => {
 
   const scrollToTop = () => {
     document.getElementById('landing').scrollIntoView();
-    if (props.isDark) {
-      props.toggleDark(false);
-      setBg('#f0f0f0');
-    } else {
-      props.toggleDark(true);
-      setBg('#1E242A');
-    }
   }
 
   return (

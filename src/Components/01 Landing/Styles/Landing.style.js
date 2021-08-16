@@ -11,7 +11,7 @@ export const LandingContainer = styled.div`
   justify-content: center;
   z-index: 1;
   overflow: hidden;
-  background-color: #1E242A;
+  background-color: ${props => props.bg || '#1E242A'};
 `;
 
 export const MainDiv = styled.div`
@@ -45,7 +45,7 @@ export const Hello = styled.p`
 `;
 
 export const MyName = styled.p`
-  color: white;
+  color: ${props => props.color || 'white'};
   font-weight: bold;
   margin: 0 auto;
   margin-top: 20px;
@@ -53,7 +53,7 @@ export const MyName = styled.p`
 `;
 
 export const Continue = styled.p`
-  color: white;
+  color: ${props => props.color || 'white'};
   font-size: 30px;
   font-weight: bold;
   margin: 0 auto;
@@ -69,11 +69,12 @@ export const IAMDiv = styled.div`
   letter-spacing: 0.1em;
   display: flex;
   position: absolute;
+  color: ${props => props.color || 'white'};
 `;
 
 export const Text = styled.p`
   margin-right: 16px;
-  color: white;
+  color: ${props => props.color || 'white'};
   white-space: nowrap;
 `;
 
@@ -82,21 +83,19 @@ export const Text2 = styled.p`
   white-space: normal;
 `;
 
-export const DownButton = styled.div`
+export const DownButton = styled.i`
   margin: auto;
   bottom: ${props => props.bottom || '60px'};
-  left: 0;
-  right: 0;
-  width: ${props => props.size || '60px'};
-  height: ${props => props.size || '60px'};
+  color: ${props => props.color || 'white'};
+  /* left: 0;
+  right: 0; */
   background-color: transparent;
   position: absolute;
   transition: 0.2s ease-in;
   cursor: pointer;
   z-index: 2;
-  background-image: url('https://i.imgur.com/AJrt9vn.png');
-  background-size: ${props => props.bgSize || '60px '} ${props => props.bgSize || '60px'};
   &:hover{
     transform: translateY(20px);
+    color: #FF4C29;
   }
 `;
