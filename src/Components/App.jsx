@@ -12,6 +12,7 @@ import About from './02 About/About.jsx';
 import Projects from './03 Projects/Projects.jsx';
 import Experience from './04 Experience/Experience.jsx'
 import Contact from './05 Contact/Contact.jsx';
+import Footer from './08 Footer/Footer.jsx';
 
 const App = () => {
   var [isDark, toggleDark] = useState(false);
@@ -55,6 +56,7 @@ const App = () => {
       <Projects isDark={isDark} />
       <Experience isDark={isDark} />
       <Contact isDark={isDark} />
+      <Footer isDark={isDark} />
     </Main>
   )
 

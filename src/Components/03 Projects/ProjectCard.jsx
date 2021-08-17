@@ -108,7 +108,7 @@ const ProjectCard = (props) => {
   }
 
   const openGithub = () => {
-    const newWindow = window.open(github, '_blank')
+    const newWindow = window.open(github, '_blank');
     if (newWindow) newWindow.opener = null
   }
 
