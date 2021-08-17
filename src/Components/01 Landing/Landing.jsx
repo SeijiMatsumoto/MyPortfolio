@@ -5,14 +5,14 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Landing = (props) => {
   var [fontSize, setFont] = useState('90px');
-  var [margin, setMargin] = useState('200px');
-  var [display, setDisplay] = useState('block');
+  var [margin, setMargin] = useState('0');
   var [marginTop, setMarginTop] = useState('200px');
-  var [downPosition, setPosition] = useState('60px');
+  var [display, setDisplay] = useState('block');
   var [continueTop, setTop] = useState('100px');
+  var [downPosition, setPosition] = useState('60px');
+
   var [bg, setBg] = useState('#1E242A');
   var [color, setColor] = useState('white');
-
   var [iAmFont, setIfont] = useState('30px');
 
   useEffect(() => {
@@ -32,61 +32,43 @@ const Landing = (props) => {
   }, [props.isDark])
 
   const responsiveChange = () => {
-    if (window.innerWidth <= 500) {
-      setFont('40px');
-      setMargin('10vw');
-      setDisplay('none');
-      setMarginTop('-100px');
-      setPosition('150px');
-      setIfont('20px');
-      setTop('130px');
-    } else if (window.innerWidth <= 839 && window.innerWidth > 500) {
-      setFont('70px');
-      setMargin('10vw');
-      setDisplay('none');
-      setMarginTop('-100px');
-      setPosition('150px');
-      setIfont('20px');
-      setTop('130px');
-    } else if (window.innerWidth <= 1000 && window.innerHeight <= 450) {
-      setFont('55px');
-      setIfont('20px');
-      setDisplay('none');
-      setPosition('30px');
-      setMargin('10vw');
-      setMarginTop('60px');
-      setTop('70px');
-    } else if (window.innerWidth <= 1500 && window.innerWidth > 839) {
-      setFont('90px');
-      setMargin('13vw');
-      setDisplay('flex');
-      setMarginTop('200px');
-      setPosition('60px');
-      setIfont('30px');
-      setTop('100px');
-    } else if (window.innerWidth <= 1850 && window.innerWidth > 1500) {
-      setFont('120px');
-      setMargin('13vw');
-      setDisplay('flex');
-      setMarginTop('200px');
-      setPosition('60px');
-      setIfont('30px');
-      setTop('100px');
-    } else if (window.innerWidth <=839 && window.innerHeight < 800) {
-      setFont('60px');
-      setIfont('20px');
-      setDisplay('flex');
-      setPosition('15px');
-      setMarginTop('0');
-      setTop('70px');
-    } else if (window.innerWidth > 839 && window.innerHeight < 800) {
-      setFont('80px');
-      setIfont('20px');
-      setDisplay('flex');
-      setPosition('15px');
-      setMarginTop('150px');
-      setTop('70px');
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+
+    /*
+    setFont(''); // of my name
+    setMargin(''); // of all text
+    setMarginTop(''); // of all text
+    setIfont(''); // of I AM
+    setDisplay(''); // continue display
+    setPosition(''); // of arrow
+    setTop(''); // of Continue
+    */
+    // Mobile portrait
+    if (width < 500 && height > 700) {
+      setFont('50px'); // of my name
+      setMargin(''); // of all text
+      setMarginTop('-10px'); // of all text
+      setIfont('25px'); // of I AM
+      setDisplay('none'); // continue display
+      setPosition('100px'); // of arrow
     }
+    // Mobile Landscape
+    if (width > 700 && height < 500) {
+      setFont('50px'); // of my name
+      setMargin('60px 120px 270px 60px'); // of all text
+      setMarginTop('');
+      setIfont('20px'); // of I AM
+      setDisplay('none'); // continue display
+      setPosition('40px'); // of arrow
+    }
+    // Large Screen
+
+    // Normal 1080p screen
+
+    // Macbook
+
+    // iPad screen
   };
 
   const animateOnLoad = () => {
