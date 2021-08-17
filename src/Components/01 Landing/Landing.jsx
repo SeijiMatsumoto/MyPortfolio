@@ -110,14 +110,14 @@ const Landing = (props) => {
       setMarginTop('-10px'); // of all text
       setIfont('25px'); // of I AM
       setDisplay('none'); // continue display
-      setPosition('100px'); // of arrow
+      setPosition('130px'); // of arrow
     } else if (width > 700 && height < 500) { // Mobile Landscape
       setFont('50px'); // of my name
       setMargin('60px 120px 270px 60px'); // of all text
       setMarginTop('');
       setIfont('20px'); // of I AM
       setDisplay('none'); // continue display
-      setPosition('40px'); // of arrow
+      setPosition('45px'); // of arrow
     }
   };
 

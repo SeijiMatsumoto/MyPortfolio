@@ -146,7 +146,7 @@ const About = (props) => {
               <UL>➢ SQL / PostgreSQL</UL>
               <UL>➢ MongoDB / Mongoose</UL>
               <UL>➢ Jest / Enzyme</UL>
-              <UL>➢ AWS</UL>
+              <UL>➢ Python</UL>
             </TechnologiesList>
           </TechDiv>
         </TextContainer>
