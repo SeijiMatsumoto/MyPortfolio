@@ -8,6 +8,9 @@ const Projects = (props) => {
   var [bg, setBg] = useState('#1E242A');
   var [color, setColor] = useState('white');
   var [shown, setShown] = useState(false);
+  var [width, setWidth] = useState('1200px')
+
+  var [titleFont, setTitleFont] = useState('35px');
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -42,7 +45,22 @@ const Projects = (props) => {
   }
 
   const responsiveChange = () => {
-
+    if (window.innerWidth <= 500) {
+      setTitleFont('35px');
+      setWidth('1000px');
+    } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
+      setTitleFont('35px');
+      setWidth('1000px');
+    } else if (window.innerWidth <= 1249 && window.innerWidth > 850) {
+      setTitleFont('35px');
+      setWidth('1000px');
+    } else if (window.innerWidth > 1920) {
+      setTitleFont('50px');
+      setWidth('60vw');
+    } else {
+      setTitleFont('35px');
+      setWidth('1200px');
+    }
   }
 
   useEffect(() => {
@@ -78,8 +96,8 @@ const Projects = (props) => {
 
   return (
     <ProjectsContainer id='projects' bg={bg}>
-      <Title id='projectsTitle'>Projects</Title>
-      <ProjDiv id='mainDiv2' color={color}>
+      <Title id='projectsTitle' font={titleFont}>Projects</Title>
+      <ProjDiv id='mainDiv2' color={color} width={width}>
         {projects.map((project, i) => {
           return <ProjectCard key={project.url} color={color} i={i} title={project.title} url={project.url} description={project.description} stack={project.stack} isDark={props.isDark}></ProjectCard>
         })}

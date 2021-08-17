@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
 
 export const ImageDiv = styled.div`
   width: ${props => props.width};
-  height: 310px;
+  height: ${props=> props.height};
   position: relative;
   right: ${props => props.right};
   margin: 20px;
@@ -41,14 +41,14 @@ export const InfoCont = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 23px;
+  font-size: ${props => props.font};
   font-weight: bold;
   border-bottom: 2px solid black;
   border-color: ${props => props.color};
-
 `;
 
 export const Description = styled.div`
+  font-size: ${props => props.font};
   width: 100%;
 `;
 

@@ -10,6 +10,8 @@ const ProjectCard = (props) => {
   var [textLeft, setLeft] = useState('170px');
   var [imgRight, setRight] = useState('50px');
   var [width, setWidth] = useState('420px');
+  var [font, setFont] = useState('23px');
+  var [titleFont, setTitleFont] = useState('26px');
 
   var [shown, setShown] = useState(false);
   var url = props.url;
@@ -73,27 +75,40 @@ const ProjectCard = (props) => {
       setLeft('110px');
       setRight('100px');
       setWidth('350px');
+      setFont('21px');
+      setTitleFont('25px');
     } else if (window.innerWidth < 990 && window.innerWidth > 550) {
       setDirection('column');
       setLeft('110px');
       setRight('100px');
       setWidth('500px');
+      setFont('21px');
+      setTitleFont('25px');
+    } else if(window.innerWidth > 1240) {
+      setDirection('row');
+      setLeft('110px');
+      setRight('100px');
+      setWidth('580px');
+      setFont('20px');
+      setTitleFont('25px');
     } else {
       setDirection('row');
       setLeft('170px');
       setRight('50px');
       setWidth('420px');
+      setFont('21px');
+      setTitleFont('25px');
     }
   }
 
   return (
     <CardContainer id={'project' + props.i} direction={direction}>
-      <ImageDiv id={'pic' + props.i} right={imgRight} width={width}>
+      <ImageDiv id={'pic' + props.i} right={imgRight} width={width} height={width/1.77}>
         <ProjImage src={url}  width={width}/>
       </ImageDiv>
       <InfoCont id={'projInfo' + props.i} left={textLeft} width={width}>
-        <Title color={props.color}>{title}</Title>
-        <Description>{description}</Description>
+        <Title font={titleFont} color={props.color}>{title}</Title>
+        <Description font={font}>{description}</Description>
         <StackCont>
           {stack.map(item => <Stack bg={btnBg} color={btnFont}>{item}</Stack>)}
         </StackCont>

@@ -13,7 +13,7 @@ export const ProjectsContainer = styled.div`
 export const Title = styled.div`
   position: absolute;
   top: -10px;
-  font-size: 35px;
+  font-size: ${props => props.font};
   color: #FF4C29;
 `;
 
@@ -22,9 +22,8 @@ export const ProjDiv = styled.div`
   margin-top: 80px;
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-self: center;
   color: ${props => props.color};
 `;

@@ -21,12 +21,13 @@ export const MainDiv = styled.div`
   flex-direction: row;
   align-self: center;
   color: ${props => props.color};
+  /* border: 1px solid black; */
 `;
 
 export const TitleContainer = styled.div`
   position: absolute;
   top: 0px;
-  font-size: 35px;
+  font-size: ${props => props.font};
   color: #FF4C29;
 `;
 
@@ -38,15 +39,15 @@ export const TextContainer = styled.div`
 export const MyPictureContainer = styled.div`
   position: relative;
   top: ${props => props.top || '50px'};
-  right: 0;
-  width: 300px;
+  right: ${props => props.right};
+  width: ${props => props.width};
 `;
 
 export const MyPicture = styled.img`
   border-radius: 10px;
   margin: ${props => props.margin || '40px'};
-  width: 300px;
-  height: 300px;
+  width: ${props => props.width};
+  height: ${props => props.width};
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 `;

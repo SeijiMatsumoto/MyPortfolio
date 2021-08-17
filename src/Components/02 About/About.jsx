@@ -10,7 +10,10 @@ const About = (props) => {
   var [divWidth, setWidth] = useState('1000px');
   var [textWidth, setTextWidth] = useState('700px');
   var [techWidth, setTechWidth] = useState('600px');
+  var [imgWidth, setImgWidth] = useState('300px');
+  var [imgRight, setImgRight] = useState('0px');
   var [fontSize, setFont] = useState('20px');
+  var [titleFont, setTitleFont] = useState('35px');
   var [bg, setBg] = useState('#283134');
   var [color, setColor] = useState('#1E242A');
   var [shown, setShown] = useState(false);
@@ -50,12 +53,18 @@ const About = (props) => {
       setTextWidth('70vw');
       setTechWidth('70vw');
       setFont('18px');
+      setImgWidth('300px');
+      setImgRight('0');
+      setTitleFont('35px');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
       setWidth('90vw');
       setImgMargin('0');
       setTextWidth('80vw');
       setTechWidth('70vw');
       setFont('18px');
+      setImgWidth('300px');
+      setImgRight('0');
+      setTitleFont('35px');
     } else if (window.innerWidth <= 1249 && window.innerWidth > 850) {
       setImgTop('10px');
       setImgMargin('0');
@@ -63,6 +72,19 @@ const About = (props) => {
       setTextWidth('700px');
       setTechWidth('600px');
       setFont('20px');
+      setImgWidth('300px');
+      setImgRight('0');
+      setTitleFont('35px');
+    } else if (window.innerWidth > 1920) {
+      setImgTop('200px');
+      setImgMargin('0');
+      setWidth('80vw');
+      setTextWidth('50vw');
+      setTechWidth('600px');
+      setFont('30px');
+      setImgWidth('20vw');
+      setImgRight('-2vw');
+      setTitleFont('50px');
     } else {
       setImgTop('50px');
       setImgMargin('40px');
@@ -70,6 +92,9 @@ const About = (props) => {
       setTextWidth('700px');
       setTechWidth('600px');
       setFont('20px');
+      setImgWidth('300px');
+      setImgRight('0');
+      setTitleFont('35px');
     }
   };
 
@@ -98,7 +123,7 @@ const About = (props) => {
 
   return (
     <AboutContainer id='about' bg={bg}>
-      <TitleContainer id='aboutTitle'>
+      <TitleContainer id='aboutTitle' font={titleFont}>
         About Me
       </TitleContainer>
       <MainDiv id='mainDiv1' color={color} width={divWidth}>
@@ -125,8 +150,8 @@ const About = (props) => {
             </TechnologiesList>
           </TechDiv>
         </TextContainer>
-        <MyPictureContainer id='photo' top={imgTop}>
-          <MyPicture margin={imgMargin} src='https://i.imgur.com/uEfo6Po.jpg' alt='seiji' />
+        <MyPictureContainer id='photo' top={imgTop} width={imgWidth} right={imgRight}>
+          <MyPicture margin={imgMargin} src='https://i.imgur.com/uEfo6Po.jpg' alt='seiji'  width={imgWidth}/>
         </MyPictureContainer>
       </MainDiv>
     </AboutContainer>
