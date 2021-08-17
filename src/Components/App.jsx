@@ -19,7 +19,31 @@ const App = () => {
   useEffect(() => {
     navBarScroll();
     listenEnter();
+    checkDark();
   }, [])
+
+  const checkDark = () => {
+    if (localStorage.getItem('mode') === 'dark') {
+      toggleDark(true);
+    } else if (localStorage.getItem('mode') === 'light') {
+      toggleDark(false);
+    } else {
+      if (isDark) {
+        localStorage.setItem('mode', 'dark');
+      } else {
+        localStorage.setItem('mode', 'light');
+      }
+      console.log(localStorage);
+    }
+  }
+
+  useEffect(() => {
+    if (isDark) {
+      localStorage.setItem('mode', 'dark');
+    } else {
+      localStorage.setItem('mode', 'light');
+    }
+  }, [isDark])
 
   return (
     <Main id='main'>
