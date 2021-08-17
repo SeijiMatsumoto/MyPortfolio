@@ -21,7 +21,7 @@ const Footer = (props) => {
 
   return (
     <FooterDiv bg={bg}>
-      <Text color={color}>Designed and Coded by <Name onClick={openLink}>Seiji Matsumoto</Name></Text>
+      <Text color={color}>Designed and Coded by <Name>Seiji Matsumoto</Name></Text>
     </FooterDiv>
   );
 };

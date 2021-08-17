@@ -18,5 +18,5 @@ export const Text = styled.div`
 
 export const Name = styled.div`
   color: #FF4C29;
-  cursor: pointer;
+  /* cursor: pointer; */
 `;
