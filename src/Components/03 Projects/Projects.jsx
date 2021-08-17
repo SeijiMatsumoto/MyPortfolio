@@ -56,7 +56,7 @@ const Projects = (props) => {
       setWidth('1000px');
     } else if (window.innerWidth > 1920) {
       setTitleFont('50px');
-      setWidth('60vw');
+      setWidth('80vw');
     } else {
       setTitleFont('35px');
       setWidth('1200px');

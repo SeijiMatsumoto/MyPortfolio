@@ -75,29 +75,34 @@ const ProjectCard = (props) => {
       setLeft('110px');
       setRight('100px');
       setWidth('350px');
-      setFont('21px');
-      setTitleFont('25px');
+      setFont('20px');
+      setTitleFont('24px');
     } else if (window.innerWidth < 990 && window.innerWidth > 550) {
       setDirection('column');
       setLeft('110px');
       setRight('100px');
       setWidth('500px');
-      setFont('21px');
-      setTitleFont('25px');
-    } else if(window.innerWidth > 1240) {
-      setDirection('row');
-      setLeft('110px');
-      setRight('100px');
-      setWidth('580px');
       setFont('20px');
-      setTitleFont('25px');
-    } else {
+      setTitleFont('24px');
+    } else if (window.innerWidth <= 1240) {
       setDirection('row');
+      setWidth('400px');
+      setFont('16px');
+      setTitleFont('20px');
+    } else if (window.innerWidth > 1240 && window.innerWidth <= 1920) {
+      setDirection('row');
+      setWidth('500px');
+      setFont('20px');
       setLeft('170px');
       setRight('50px');
-      setWidth('420px');
-      setFont('21px');
-      setTitleFont('25px');
+      setTitleFont('26px');
+    } else {
+      setDirection('row');
+      setWidth('37vw');
+      setFont('30px');
+      setLeft('170px');
+      setRight('50px');
+      setTitleFont('40px');
     }
   }
 

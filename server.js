@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 const port =  process.env.PORT || 3001;
-const { pki } = require('./pki.js');
-
 
 app.use(express.static('public'));
 app.use(express.json());
