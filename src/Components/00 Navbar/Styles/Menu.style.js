@@ -12,14 +12,16 @@ export const MenuDiv = styled.div`
 export const MenuLinks = styled.ul`
   position: absolute;
   left: -30px;
+  top: 150px;
   text-align: left;
 `;
 
 export const MenuLink = styled.li`
-  padding: 25px;
-  font-size: 50px;
+  padding: 20px;
+  font-size: 30px;
   list-style: none;
   text-align: left;
+  z-index: 5;
 `;
 
 export const MenuA = styled.a`

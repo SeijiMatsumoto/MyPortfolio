@@ -40,7 +40,7 @@ const Landing = (props) => {
       setPosition('150px');
       setIfont('20px');
       setTop('130px');
-    } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
+    } else if (window.innerWidth <= 839 && window.innerWidth > 500) {
       setFont('70px');
       setMargin('10vw');
       setDisplay('none');
@@ -48,7 +48,7 @@ const Landing = (props) => {
       setPosition('150px');
       setIfont('20px');
       setTop('130px');
-    } else if (window.innerWidth <= 1500 && window.innerWidth > 960) {
+    } else if (window.innerWidth <= 1500 && window.innerWidth > 839) {
       setFont('100px');
       setMargin('13vw');
       setDisplay('flex');
@@ -82,11 +82,17 @@ const Landing = (props) => {
       setPosition('150px');
       setIfont('20px');
       setTop('130px');
-    } else if (window.innerHeight < 800) {
+    } else if (window.innerWidth <=839 && window.innerHeight < 800) {
       setFont('60px');
       setIfont('20px');
       setPosition('15px');
-      setMarginTop('200px');
+      setMarginTop('0');
+      setTop('70px');
+    } else if (window.innerWidth > 839 && window.innerHeight < 800) {
+      setFont('80px');
+      setIfont('20px');
+      setPosition('15px');
+      setMarginTop('150px');
       setTop('70px');
     }
   };

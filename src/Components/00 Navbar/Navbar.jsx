@@ -83,7 +83,7 @@ const Navbar = (props) => {
         easing: 'linear',
         duration: 300
       });
-      document.querySelector('#main').classList.add('stop-scrolling');
+      document.querySelector('body').classList.add('stop-scrolling');
     } else if (!menuOpen) {
       anime({
         targets: menu,
@@ -91,7 +91,7 @@ const Navbar = (props) => {
         easing: 'linear',
         duration: 300
       });
-      document.querySelector('#main').classList.remove('stop-scrolling');
+      document.querySelector('body').classList.remove('stop-scrolling');
     }
   }, [menuOpen])
 
