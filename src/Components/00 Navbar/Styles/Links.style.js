@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const LinksUl = styled.ul`
   position: absolute;
-  /* padding: 15px; */
   right: 140px;
   display: inline-block;
   top: 0;

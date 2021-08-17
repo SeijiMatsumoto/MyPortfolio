@@ -6,7 +6,6 @@ const Links = (props) => {
 
   var [showLinks, setLinks] = useState(true);
   var [color, setColor] = useState('white');
-  var [resumeColor, setResumeColor] = useState('#FF4C29');
 
   useEffect(() => {
     window.addEventListener('resize', displayLinks)
@@ -19,7 +18,6 @@ const Links = (props) => {
       setColor('#1E242A');
     } else {
       setColor('white');
-      setResumeColor('white');
     }
   }, [props.isDark])
 

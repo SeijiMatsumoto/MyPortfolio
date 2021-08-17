@@ -72,7 +72,7 @@ const ProjectCard = (props) => {
       setDirection('column');
       setLeft('110px');
       setRight('100px');
-      setWidth('380px');
+      setWidth('350px');
     } else if (window.innerWidth < 990 && window.innerWidth > 550) {
       setDirection('column');
       setLeft('110px');

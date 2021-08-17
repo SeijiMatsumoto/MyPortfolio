@@ -13,7 +13,7 @@ const MenuButton = (props) => {
   }, [props.isDark])
   return (
     <ButtonContainer>
-      <Button onClick={props.clickHandler} color={color} className='fas fa-bars fa-3x' />
+      <Button onClick={props.clickHandler} color={color} className='fas fa-bars fa-2x' />
     </ButtonContainer>
   );
 };

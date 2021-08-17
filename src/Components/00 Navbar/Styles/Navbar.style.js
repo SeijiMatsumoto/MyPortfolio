@@ -4,7 +4,7 @@ const keyframes = require('styled-components').keyframes
 export const NavbarContainer = styled.nav`
   background-color: ${props => props.bgColor || '#1E242A'};
   width: 100%;
-  height: 130px;
+  height: ${props => props.height};
   position: fixed;
   transition: top 0.3s;
   display: flex;
@@ -23,10 +23,10 @@ export const MenuDiv = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 80px;
-  height: 70px;
+  width: ${props => props.size};
   position: absolute;
   margin: 10px;
+  top: ${props => props.top};
   left: ${props => props.iconLeft || '50px'};
   cursor: pointer;
 `;

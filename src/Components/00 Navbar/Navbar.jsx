@@ -11,6 +11,9 @@ const Navbar = (props) => {
   var [menuOpen, toggleMenu] = useState(false);
   var [iconLeft, setIconLeft] = useState('50px');
   var [navBg, setBg] = useState('#1E242A');
+  var [height, setHeight] = useState('130px');
+  var [logoSize, setSize] = useState('80px');
+  var [logoTop, setTop] = useState('0px');
 
   useEffect(() => {
     window.addEventListener('resize', displayButton);
@@ -30,12 +33,15 @@ const Navbar = (props) => {
     if (window.innerWidth <= 960) {
       setButton(true);
       setMenu(true);
-      setIconLeft('20px');
+      setIconLeft('10px');
       if (!props.isDark) {
         setBg('#f0f0f0');
       } else {
         setBg('#1E242A');
       }
+      setHeight('80px');
+      setSize('50px');
+      setTop('-18px');
     } else {
       setButton(false);
       setMenu(false);
@@ -45,10 +51,16 @@ const Navbar = (props) => {
       } else {
         setBg('#1E242A');
       }
+      setHeight('130px');
+      setSize('80px');
+      setTop('0');
     }
 
     if (window.innerHeight < 500) {
       setBg('transparent');
+      setHeight('80px');
+      setSize('50px');
+      setTop('-18px');
     } else {
       if (!props.isDark) {
         setBg('#f0f0f0');
@@ -103,8 +115,8 @@ const Navbar = (props) => {
   }
 
   return (
-    <NavbarContainer id='navbar' bgColor={navBg}>
-      <Logo id='logo' iconLeft={iconLeft} onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
+    <NavbarContainer id='navbar' bgColor={navBg} height={height}>
+      <Logo id='logo' size={logoSize} top={logoTop} iconLeft={iconLeft} onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
       <Links isDark={props.isDark}/>
       {showButton ? <MenuButton clickHandler={menuClickHandler} isDark={props.isDark}/> : null}
       {showMenu ? <MenuDiv className='menu'><Menu isDark={props.isDark} toggleDark={props.toggleDark} showMenu={menuClickHandler}/></MenuDiv> : null }
