@@ -26,5 +26,5 @@ export const ProjDiv = styled.div`
   flex-direction: column;
   align-self: center;
   color: ${props => props.color};
-  border: 1px solid black;
+  /* border: 1px solid black; */
 `;
