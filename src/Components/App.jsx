@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { navBarScroll } from '../helperFunctions.js';
+import { navBarScroll, listenEnter } from '../helperFunctions.js';
 
 import { Main } from '../Styles/App.style.js'
 
@@ -20,14 +20,6 @@ const App = () => {
     navBarScroll();
     listenEnter();
   }, [])
-
-  const listenEnter = () => {
-    document.addEventListener('keyup', e => {
-      if (e.key === 'Enter' && window.scrollY === 0) {
-        document.getElementById('about').scrollIntoView();
-      }
-    });
-  }
 
   return (
     <Main id='main'>

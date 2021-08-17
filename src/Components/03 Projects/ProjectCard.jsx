@@ -42,7 +42,6 @@ const ProjectCard = (props) => {
     if (!shown) {
       const aboutEl = document.getElementById('project' + props.i);
       if (inView.is(aboutEl)) {
-        console.log('in view')
         animateOnLoad();
       }
       setShown(true);

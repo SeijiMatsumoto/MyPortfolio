@@ -18,7 +18,6 @@ const Experience = (props) => {
     if (!shown) {
       const aboutEl = document.getElementById('expTitle');
       if (inView.is(aboutEl)) {
-        console.log('in view')
         animateOnLoad();
       }
       setShown(true);

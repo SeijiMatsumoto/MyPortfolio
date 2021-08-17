@@ -22,7 +22,6 @@ const Projects = (props) => {
     if (!shown) {
       const aboutEl = document.getElementById('projects');
       if (inView.is(aboutEl)) {
-        console.log('in view')
         animateOnLoad();
       }
       setShown(true);

@@ -18,7 +18,6 @@ const Contact = (props) => {
     if (!shown) {
       const aboutEl = document.getElementById('contactTitle');
       if (inView.is(aboutEl)) {
-        console.log('in view')
         animateOnLoad();
       }
       setShown(true);
