@@ -49,7 +49,7 @@ const Landing = (props) => {
       setIfont('20px');
       setTop('130px');
     } else if (window.innerWidth <= 1500 && window.innerWidth > 839) {
-      setFont('100px');
+      setFont('90px');
       setMargin('13vw');
       setDisplay('flex');
       setMarginTop('200px');
@@ -74,23 +74,24 @@ const Landing = (props) => {
       setTop('100px');
     }
 
-    if (window.innerWidth < 500) {
-      setFont('40px');
-      setMargin('10vw');
-      setDisplay('none');
-      setMarginTop('-100px');
-      setPosition('150px');
+    if (window.innerWidth <= 1000 && window.innerHeight <= 450) {
+      setFont('55px');
       setIfont('20px');
-      setTop('130px');
+      setDisplay('none');
+      setPosition('15px');
+      setMarginTop('60px');
+      setTop('70px');
     } else if (window.innerWidth <=839 && window.innerHeight < 800) {
       setFont('60px');
       setIfont('20px');
+      setDisplay('flex');
       setPosition('15px');
       setMarginTop('0');
       setTop('70px');
     } else if (window.innerWidth > 839 && window.innerHeight < 800) {
       setFont('80px');
       setIfont('20px');
+      setDisplay('flex');
       setPosition('15px');
       setMarginTop('150px');
       setTop('70px');
