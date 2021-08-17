@@ -95,7 +95,7 @@ const ProjectCard = (props) => {
       setFont('20px');
       setLeft('170px');
       setRight('50px');
-      setTitleFont('26px');
+      setTitleFont('22px');
     } else {
       setDirection('row');
       setWidth('37vw');

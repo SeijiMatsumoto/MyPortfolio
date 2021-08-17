@@ -47,6 +47,10 @@ const Light = (props) => {
       opacity: [0, 1],
       duration: 500,
     }, '+=1600')
+    .add({
+      targets: '#sun',
+      rotate: 360
+    }, '-=1500')
     timeline.play()
   }
 
