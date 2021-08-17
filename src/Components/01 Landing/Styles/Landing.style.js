@@ -30,7 +30,7 @@ export const MainDiv = styled.div`
 
 export const TextDiv = styled.div`
   font-size: ${props => props.font || '70px'};
-  width: 100%;
+  width: 82vw;
   height: 80%;
   display: block;
   margin-top: 100px;

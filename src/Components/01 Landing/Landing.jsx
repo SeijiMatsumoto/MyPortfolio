@@ -4,8 +4,8 @@ import anime from 'animejs';
 import { Typewriter } from 'react-simple-typewriter';
 
 const Landing = (props) => {
-  var [fontSize, setFont] = useState('90px');
-  var [margin, setMargin] = useState('0');
+  var [fontSize, setFont] = useState('120px');
+  var [margin, setMargin] = useState('200px');
   var [marginTop, setMarginTop] = useState('200px');
   var [display, setDisplay] = useState('block');
   var [continueTop, setTop] = useState('100px');
@@ -44,6 +44,65 @@ const Landing = (props) => {
     setPosition(''); // of arrow
     setTop(''); // of Continue
     */
+
+    // Under 1440p
+    if (width <= 2560) {
+      setFont('120px'); // of my name
+      setMargin('200px'); // of all text
+      setMarginTop(''); // of all text
+      setIfont('30px'); // of I AM
+      setDisplay('block'); // continue display
+      setPosition('20px'); // of arrow
+      setTop(''); // of Continue
+    }
+
+    if (width <= 1920) {
+      setFont('100px'); // of my name
+      setMargin('200px'); // of all text
+      setIfont('30px'); // of I AM
+      setDisplay('block'); // continue display
+      setPosition('20px'); // of arrow
+      setTop('150px'); // of Continue
+    }
+
+    //
+    if (width <= 960) {
+      setFont('75px'); // of my name
+      setMargin('200px'); // of all text
+      setIfont('30px'); // of I AM
+      setDisplay('block'); // continue display
+      setPosition('20px'); // of arrow
+    }
+
+    if (width <= 600) {
+      setFont('55px'); // of my name
+      setMargin('200px'); // of all text
+      setMarginTop('0'); // of all text
+      setIfont('30px'); // of I AM
+      setDisplay('none'); // continue display
+      setPosition('20px'); // of arrow
+    }
+
+    // Macbook
+    if (height <= 1000) {
+      setFont('69px'); // of my name
+      setMargin('200px'); // of all text
+      setMarginTop('200px'); // of all text
+      setIfont('30px'); // of I AM
+      setDisplay('block'); // continue display
+      setPosition('20px'); // of arrow
+      setTop('100px'); // of Continue
+    }
+    if (height <= 1000 && width <= 960) {
+      setFont('60px'); // of my name
+      setMargin('100px'); // of all text
+      setMarginTop('60px'); // of all text
+      setIfont('30px'); // of I AM
+      setDisplay('none'); // continue display
+      setPosition('20px'); // of arrow
+      setTop('100px'); // of Continue
+    }
+
     // Mobile portrait
     if (width < 500 && height > 700) {
       setFont('50px'); // of my name
@@ -52,9 +111,7 @@ const Landing = (props) => {
       setIfont('25px'); // of I AM
       setDisplay('none'); // continue display
       setPosition('100px'); // of arrow
-    }
-    // Mobile Landscape
-    if (width > 700 && height < 500) {
+    } else if (width > 700 && height < 500) { // Mobile Landscape
       setFont('50px'); // of my name
       setMargin('60px 120px 270px 60px'); // of all text
       setMarginTop('');
@@ -62,13 +119,6 @@ const Landing = (props) => {
       setDisplay('none'); // continue display
       setPosition('40px'); // of arrow
     }
-    // Large Screen
-
-    // Normal 1080p screen
-
-    // Macbook
-
-    // iPad screen
   };
 
   const animateOnLoad = () => {
