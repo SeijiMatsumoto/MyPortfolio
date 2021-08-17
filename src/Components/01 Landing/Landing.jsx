@@ -86,8 +86,8 @@ const Landing = (props) => {
     // Macbook
     if (height <= 1000) {
       setFont('69px'); // of my name
-      setMargin('250px'); // of all text
-      setMarginTop('200px'); // of all text
+      setMargin('250px 250px 250px 350px'); // of all text
+      setMarginTop('300px'); // of all text
       setIfont('30px'); // of I AM
       setDisplay('block'); // continue display
       setPosition('20px'); // of arrow
