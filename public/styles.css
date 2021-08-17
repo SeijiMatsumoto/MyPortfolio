@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   /* background-color: #082032; */
   overflow-x: hidden;
   color: white;
+  overscroll-behavior-y: none;
 }
 
 #root {

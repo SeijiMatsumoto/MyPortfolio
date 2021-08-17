@@ -62,10 +62,10 @@ const Landing = (props) => {
       setIfont('30px'); // of I AM
       setDisplay('block'); // continue display
       setPosition('20px'); // of arrow
-      setTop('150px'); // of Continue
+      setTop('100px'); // of Continue
     }
 
-    //
+
     if (width <= 960) {
       setFont('75px'); // of my name
       setMargin('200px'); // of all text
@@ -86,7 +86,7 @@ const Landing = (props) => {
     // Macbook
     if (height <= 1000) {
       setFont('69px'); // of my name
-      setMargin('200px'); // of all text
+      setMargin('250px'); // of all text
       setMarginTop('200px'); // of all text
       setIfont('30px'); // of I AM
       setDisplay('block'); // continue display
