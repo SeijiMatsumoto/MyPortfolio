@@ -1,0 +1,32 @@
+import styled from 'styled-components';
+
+export const CardContainer = styled.div`
+  width: 100%;
+  margin: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Company = styled.div`
+  font-size: ${props => props.font};
+  border-bottom: 2px solid black;
+  margin-bottom: 5px;
+  padding-bottom: -10px;
+`;
+
+export const Position = styled.div`
+  font-size: ${props => props.font};
+`;
+
+export const Time = styled.div`
+  font-size: ${props => props.font};
+`;
+
+export const Desc = styled.ul`
+
+`;
+
+export const DescLi = styled.li`
+  font-size: ${props => props.font};
+`;

@@ -33,7 +33,7 @@ export const ProjDiv = styled.div`
 `;
 
 export const ViewMore = styled.button`
-  width: 20%;
+  width: ${props => props.width};
   position: absolute;
   font-size: 20px;
   cursor: pointer;

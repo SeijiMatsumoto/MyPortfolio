@@ -183,7 +183,7 @@ const Landing = (props) => {
           <Continue id='text4' top={continueTop} display={display} color={color}>Press [ ⏎ ] to continue</Continue>
         </TextDiv>
       </MainDiv>
-      <DownButton bottom={downPosition} onClick={scrollDown} color={color} className='fas fa-angle-double-down fa-4x'/>
+      <DownButton id='down' bottom={downPosition} onClick={scrollDown} color={color} className='fas fa-angle-double-down fa-4x'/>
     </LandingContainer>
   );
 };

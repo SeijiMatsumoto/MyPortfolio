@@ -101,9 +101,9 @@ const ProjectCard = (props) => {
       setDirection('row');
       setWidth('37vw');
       setFont('30px');
-      setLeft('170px');
-      setRight('50px');
-      setTitleFont('40px');
+      setLeft('120px');
+      setRight('120px');
+      setTitleFont('30px');
     }
   }
 
@@ -122,7 +122,7 @@ const ProjectCard = (props) => {
         <Title font={titleFont} color={props.color}>{title}</Title>
         <Description font={font}>{description}</Description>
         <StackCont>
-          {stack.map(item => <Stack bg={btnBg} color={btnFont}>{item}</Stack>)}
+          {stack.map((item, i) => <Stack key={url + i} bg={btnBg} color={btnFont}>{item}</Stack>)}
         </StackCont>
       </InfoCont>
     </CardContainer>

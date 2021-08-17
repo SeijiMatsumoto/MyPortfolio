@@ -52,7 +52,7 @@ const About = (props) => {
       setTextWidth('70vw');
       setTechWidth('70vw');
       setFont('18px');
-      setImgWidth('300px');
+      setImgWidth('270px');
       setImgRight('0');
       setTitleFont('35px');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
@@ -77,9 +77,9 @@ const About = (props) => {
     } else if (window.innerWidth > 1920) {
       setImgTop('200px');
       setImgMargin('0');
-      setWidth('80vw');
-      setTextWidth('50vw');
-      setTechWidth('600px');
+      setWidth('60vw');
+      setTextWidth('30vw');
+      setTechWidth('800px');
       setFont('30px');
       setImgWidth('20vw');
       setImgRight('-2vw');

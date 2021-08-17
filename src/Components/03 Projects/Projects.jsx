@@ -9,8 +9,8 @@ const Projects = (props) => {
   var [color, setColor] = useState('white');
   var [shown, setShown] = useState(false);
   var [width, setWidth] = useState('1200px')
-
   var [titleFont, setTitleFont] = useState('35px');
+  var [btnWidth, setBtnWidth] = useState('40px');
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -47,18 +47,23 @@ const Projects = (props) => {
     if (window.innerWidth <= 500) {
       setTitleFont('35px');
       setWidth('1000px');
+      setBtnWidth('150px');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
       setTitleFont('35px');
       setWidth('1000px');
+      setBtnWidth('200px');
     } else if (window.innerWidth <= 1249 && window.innerWidth > 850) {
       setTitleFont('35px');
       setWidth('1000px');
+      setBtnWidth('300px');
     } else if (window.innerWidth > 1920) {
       setTitleFont('50px');
-      setWidth('80vw');
+      setWidth('60vw');
+      setBtnWidth('300px');
     } else {
       setTitleFont('35px');
       setWidth('1200px');
+      setBtnWidth('300px');
     }
   }
 
@@ -106,10 +111,10 @@ const Projects = (props) => {
       <Title id='projectsTitle' font={titleFont}>Projects</Title>
       <ProjDiv id='mainDiv2' color={color} width={width}>
         {projects.map((project, i) => {
-          return <ProjectCard key={project.url} color={color} i={i} title={project.title} url={project.url} description={project.description} stack={project.stack} github={project.github} isDark={props.isDark}></ProjectCard>
+          return <ProjectCard key={project.url} color={color} i={i} title={project.title} url={project.url} description={project.description} stack={project.stack} github={project.github} isDark={props.isDark} />
         })}
       </ProjDiv>
-        <ViewMore onClick={openGithub}>View More on Github  <i className="fab fa-github"></i></ViewMore>
+        <ViewMore width={btnWidth} onClick={openGithub}>View More on Github  <i className="fab fa-github"></i></ViewMore>
     </ProjectsContainer>
   );
 };
