@@ -14,7 +14,18 @@ export const ImageDiv = styled.div`
   position: relative;
   right: ${props => props.right};
   margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
   cursor: pointer;
+`;
+
+export const ExternalLink = styled.i`
+  position: absolute;
+  text-align: center;
+  color: #FF4C29;
 `;
 
 export const ProjImage = styled.img`

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CardContainer, ImageDiv, ProjImage, InfoCont, Title, Description, StackCont, Stack } from './Styles/ProjectCard.style';
+import { CardContainer, ImageDiv, ExternalLink, ProjImage, InfoCont, Title, Description, StackCont, Stack } from './Styles/ProjectCard.style';
 import anime from 'animejs';
 const inView = require('in-view');
 
@@ -12,12 +12,14 @@ const ProjectCard = (props) => {
   var [width, setWidth] = useState('420px');
   var [font, setFont] = useState('23px');
   var [titleFont, setTitleFont] = useState('26px');
+  var [showExt, setShow] = useState(false);
 
   var [shown, setShown] = useState(false);
   var url = props.url;
   var title = props.title;
   var description = props.description;
   var stack = props.stack;
+  var github = props.github;
 
   useEffect(() => {
     window.addEventListener('resize', responsiveChange);
@@ -91,7 +93,7 @@ const ProjectCard = (props) => {
       setTitleFont('20px');
     } else if (window.innerWidth > 1240 && window.innerWidth <= 1920) {
       setDirection('row');
-      setWidth('500px');
+      setWidth('520px');
       setFont('20px');
       setLeft('170px');
       setRight('50px');
@@ -106,10 +108,16 @@ const ProjectCard = (props) => {
     }
   }
 
+  const openGithub = () => {
+    const newWindow = window.open(github, '_blank')
+    if (newWindow) newWindow.opener = null
+  }
+
   return (
     <CardContainer id={'project' + props.i} direction={direction}>
-      <ImageDiv id={'pic' + props.i} right={imgRight} width={width} height={width/1.77}>
-        <ProjImage src={url}  width={width}/>
+      <ImageDiv id={'pic' + props.i} right={imgRight} width={width} height={width/1.77} onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+        {showExt ? <ExternalLink onClick={openGithub} className="fas fa-external-link-alt fa-2x" /> : null}
+        <ProjImage onClick={openGithub} src={url} width={width}></ProjImage>
       </ImageDiv>
       <InfoCont id={'projInfo' + props.i} left={textLeft} width={width}>
         <Title font={titleFont} color={props.color}>{title}</Title>
