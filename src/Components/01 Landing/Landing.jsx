@@ -104,7 +104,14 @@ const Landing = (props) => {
     }
 
     // Mobile portrait
-    if (width < 500 && height > 700) {
+    if (width < 400) {
+      setFont('35px'); // of my name
+      setMargin(''); // of all text
+      setMarginTop('-10px'); // of all text
+      setIfont('18px'); // of I AM
+      setDisplay('none'); // continue display
+      setPosition('130px'); // of arrow
+    } else if (width < 500 && height > 700) {
       setFont('50px'); // of my name
       setMargin(''); // of all text
       setMarginTop('-10px'); // of all text

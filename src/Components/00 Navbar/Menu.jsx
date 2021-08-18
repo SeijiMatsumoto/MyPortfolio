@@ -5,6 +5,7 @@ const Menu = (props) => {
   var [padding, setPadding] = useState('1px');
   var [bg, setBg] = useState('#283134');
   var [color, setColor] = useState('white');
+  var [menuTop, setTop] = useState('150px');
 
   useEffect(() => {
     window.addEventListener('resize', displayButton);
