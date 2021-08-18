@@ -20,7 +20,7 @@ export const Title = styled.div`
 export const ExpDiv = styled.div`
   width: ${props => props.width || '1000px'};
   margin-bottom: 140px;
-  margin-top: 20px;
+  margin-top: -20px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;

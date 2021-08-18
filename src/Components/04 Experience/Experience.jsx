@@ -80,7 +80,7 @@ const Experience = (props) => {
       <Title id='expTitle' font={titleFont}>My Experience</Title>
       <ExpDiv id='mainDiv3' color={color} width={width}>
         {myExperience.map((exp, i) => {
-          return <ExpCard i={i} key={exp.company} company={exp.company} position={exp.position} time={exp.time} desc={exp.description}/>
+          return <ExpCard i={i} isDark={props.isDark} key={exp.company} company={exp.company} position={exp.position} time={exp.time} desc={exp.description}/>
         })}
       </ExpDiv>
     </ExperienceContainer>

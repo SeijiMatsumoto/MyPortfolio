@@ -8,6 +8,7 @@ const ExpCard = (props) => {
   var [compFont, setCompFont] = useState('30px');
   var [posFont, setPostFont] = useState('20px');
   var [font, setFont] = useState('18px');
+  var [border, setBorder] = useState('2px solid black');
 
   var company = props.company;
   var position = props.position;
@@ -19,6 +20,14 @@ const ExpCard = (props) => {
     responsiveChange();
     window.addEventListener('scroll', checkInView);
   }, [])
+
+  useEffect(() => {
+    if (!props.isDark) {
+      setBorder('2px solid black');
+    } else {
+      setBorder('2px solid white');
+    }
+  }, [props.isDark])
 
   const checkInView = () => {
     if (!shown) {
@@ -73,7 +82,7 @@ const ExpCard = (props) => {
 
   return (
     <CardContainer id={'exp' + props.i}>
-      <Company font={compFont}>{company}</Company>
+      <Company font={compFont} border={border}>{company}</Company>
       <Position font={posFont}>{position}</Position>
       <Time font={font}>{time}</Time>
       <Desc>{desc.map((each, i) => <DescLi font={font} key={each + i}>{each}</DescLi>)}</Desc>

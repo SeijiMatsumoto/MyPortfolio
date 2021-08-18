@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
 
 export const Company = styled.div`
   font-size: ${props => props.font};
-  border-bottom: 2px solid black;
+  border-bottom: ${props => props.border};
   margin-bottom: 5px;
   padding-bottom: -10px;
 `;
