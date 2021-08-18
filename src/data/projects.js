@@ -1,7 +1,7 @@
 export const projects = [
   {
     title: '01. Windham Wear',
-    url: 'https://im.ezgif.com/tmp/ezgif-1-6188a8412836.gif',
+    url: 'https://i.imgur.com/JDyMBJH.png',
     description: 'Front-end focused e-commerce site built with a group with other engineers. Complete with a product overview section, related products section, and ratings/reviews. All data pull from a clothing store API.',
     stack: ['React', 'Node.js', 'Styled Components'],
     github: 'https://github.com/FEC8-Windham/fec'
@@ -15,7 +15,7 @@ export const projects = [
   },
   {
     title: '03. Instagram Bot',
-    url: 'https://im.ezgif.com/tmp/ezgif-1-fb65bcfe43e5.gif',
+    url: 'https://i.imgur.com/mu0H6rX.png',
     description: 'A bot written in Python using Selenium, which is used to control things in a browser. This bot mimics real human interaction with other accounts and posts, with the goal of naturally gaining followers over time. The bot has increased my dog\'s Instagram following by over 1000.',
     stack: ['Python', 'Selenium'],
     github: 'https://github.com/SeijiMatsumoto/igbotv2_MacOS'
