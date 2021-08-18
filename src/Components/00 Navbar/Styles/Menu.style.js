@@ -12,13 +12,13 @@ export const MenuDiv = styled.div`
 export const MenuLinks = styled.ul`
   position: absolute;
   left: -30px;
-  top: 150px;
+  top: ${props => props.top};
   text-align: left;
+  font-size: ${props => props.size};
 `;
 
 export const MenuLink = styled.li`
-  padding: 20px;
-  font-size: 30px;
+  padding: ${props => props.padding};
   list-style: none;
   text-align: left;
   z-index: 5;

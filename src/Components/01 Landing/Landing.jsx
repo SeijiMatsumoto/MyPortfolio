@@ -118,9 +118,9 @@ const Landing = (props) => {
       setIfont('25px'); // of I AM
       setDisplay('none'); // continue display
       setPosition('130px'); // of arrow
-    } else if (width > 700 && height < 500) { // Mobile Landscape
-      setFont('50px'); // of my name
-      setMargin('60px 120px 270px 60px'); // of all text
+    } else if (width > 600 && height < 500) { // Mobile Landscape
+      setFont('40px'); // of my name
+      setMargin('60px 120px 270px 100px'); // of all text
       setMarginTop('');
       setIfont('20px'); // of I AM
       setDisplay('none'); // continue display

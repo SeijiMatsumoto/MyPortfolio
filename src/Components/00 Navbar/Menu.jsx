@@ -6,6 +6,8 @@ const Menu = (props) => {
   var [bg, setBg] = useState('#283134');
   var [color, setColor] = useState('white');
   var [menuTop, setTop] = useState('150px');
+  var [menuFont, setFont] = useState('30px');
+  var [menuPadding, setMenuPadding] = useState('20px');
 
   useEffect(() => {
     window.addEventListener('resize', displayButton);
@@ -23,10 +25,15 @@ const Menu = (props) => {
   }, [props.isDark])
 
   const displayButton = () => {
-    if (window.innerWidth <= 500) {
+    if (window.innerWidth <= 500) { // portrait
       setPadding('10px');
-    } else if (window.innerWidth <= 960 && window.innerWidth > 500) {
-      setPadding('5px;');
+      setTop('120px');
+      setFont('30px');
+      setMenuPadding('20px');
+    } else if (window.innerWidth <= 960 && window.innerWidth > 500) { // landscape
+      setTop('10px');
+      setFont('25px');
+      setMenuPadding('10px');
     }
   };
 
@@ -41,12 +48,12 @@ const Menu = (props) => {
 
   return (
     <MenuDiv bg={bg} padding={padding}>
-      <MenuLinks>
-        <MenuLink ><MenuA color={color} onClick={props.showMenu} href='#about'>About</MenuA></MenuLink>
-        <MenuLink><MenuA color={color} onClick={props.showMenu} href='#projects'>Projects</MenuA></MenuLink>
-        <MenuLink><MenuA color={color} onClick={props.showMenu} href='#experience'>Experience</MenuA></MenuLink>
-        <MenuLink><MenuA color={color} onClick={props.showMenu} href='#contact'>Contact</MenuA></MenuLink>
-        <MenuLink><MenuA color={color} onClick={toggle}>Light/Dark Mode</MenuA></MenuLink>
+      <MenuLinks top={menuTop} size={menuFont}>
+        <MenuLink padding={menuPadding} ><MenuA color={color} onClick={props.showMenu} href='#about'>About</MenuA></MenuLink>
+        <MenuLink padding={menuPadding}><MenuA color={color} onClick={props.showMenu} href='#projects'>Projects</MenuA></MenuLink>
+        <MenuLink padding={menuPadding}><MenuA color={color} onClick={props.showMenu} href='#experience'>Experience</MenuA></MenuLink>
+        <MenuLink padding={menuPadding}><MenuA color={color} onClick={props.showMenu} href='#contact'>Contact</MenuA></MenuLink>
+        <MenuLink padding={menuPadding}><MenuA color={color} onClick={toggle}>Light/Dark Mode</MenuA></MenuLink>
       </MenuLinks>
     </MenuDiv>
   );
