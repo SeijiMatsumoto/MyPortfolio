@@ -6,7 +6,7 @@ export const Main = styled.div`
   height: 370px;
   position: fixed;
   bottom: 0;
-  z-index: 5;
+  z-index: 8;
 `;
 
 export const DisplayDiv = styled.div`

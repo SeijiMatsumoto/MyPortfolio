@@ -50,15 +50,29 @@ const Social = (props) => {
     timeline.play();
   }
 
+  const clickHandler = (e) => {
+    console.log('click');
+    if (e === 'email') {
+      window.open('mailto:seijim27@gmail.com', '_blank');
+    } else if (e === 'linkedin') {
+      window.open('https://www.linkedin.com/in/matsumoto-seiji/', '_blank');
+    } else if (e === 'twitter') {
+      window.open('https://twitter.com/ItsSayG', '_blank');
+    } else if (e === 'github') {
+      window.open('https://github.com/SeijiMatsumoto', '_blank');
+    } else if (e === 'instagram') {
+      window.open('https://www.instagram.com/sejmoto/', '_blank');
+    }
+  }
+
   return (
     <Main display={showLinks}>
       <DisplayDiv>
         <IconsDiv id='icons' >
-          <Icons color={color} alt='Github' className='fab fa-github fa-lg' href='https://github.com/SeijiMatsumoto' target="_blank" />
-          <Icons color={color} alt='LinkedIn' className='fab fa-linkedin fa-lg' href='https://www.linkedin.com/in/matsumoto-seiji/' target="_blank" />
-          <Icons color={color} alt='Twitter' className='fab fa-twitter fa-lg' href='https://twitter.com/ItsSayG' target="_blank" />
-          {/* <Icons color={color} alt='Instagram' className='fab fa-instagram fa-lg' href='https://www.instagram.com/sejmoto/' target="_blank" /> */}
-          <Icons color={color} alt='Email' className='far fa-envelope fa-lg' href='mailto:seijim27@gmail.com' target="_blank" />
+          <Icons color={color} alt='Github' className='fab fa-github fa-lg' onClick={() => clickHandler('github')} target="_blank" />
+          <Icons color={color} alt='LinkedIn' className='fab fa-linkedin fa-lg' onClick={() => clickHandler('linkedin')} target="_blank" />
+          <Icons color={color} alt='Twitter' className='fab fa-twitter fa-lg' onClick={() => clickHandler('twitter')}  target="_blank" />
+          <Icons color={color} alt='Email' className='far fa-envelope fa-lg' onClick={() => clickHandler('email')} target="_blank" />
         </IconsDiv>
         <LeftSocial id='line' color={color} />
       </DisplayDiv>
@@ -67,3 +81,5 @@ const Social = (props) => {
 };
 
 export default Social;
+
+/* <Icons color={color} alt='Instagram' className='fab fa-instagram fa-lg' href='https://www.instagram.com/sejmoto/' target="_blank" /> */
