@@ -113,14 +113,14 @@ const Contact = (props) => {
       <Title id='contactTitle'>Contact Me</Title>
       <ContactDiv color={color} width={width}>
         <Body font={fontSize} id='body'>
-          Please feel free to reach out to me for any inquiries or follow me at any of the communication mediums below!
+          Please feel free to reach out to me for any inquiries or follow me on any of the platforms below!
         </Body>
         <Links id='links'>
           <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('email')}>Email</Link>
           <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('linkedin')}>LinkedIn</Link>
           <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('twitter')}>Twitter</Link>
           <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('github')}>Github</Link>
-          <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('instagram')}>Instagram</Link>
+          {/* <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('instagram')}>Instagram</Link> */}
         </Links>
       </ContactDiv>
     </ContactContainer>
