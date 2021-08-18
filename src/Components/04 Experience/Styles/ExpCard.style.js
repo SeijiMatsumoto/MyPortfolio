@@ -29,4 +29,5 @@ export const Desc = styled.ul`
 
 export const DescLi = styled.li`
   font-size: ${props => props.font};
+  list-style: none;
 `;

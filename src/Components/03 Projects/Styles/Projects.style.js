@@ -29,15 +29,23 @@ export const ProjDiv = styled.div`
   align-self: center;
   color: ${props => props.color};
   margin-bottom: 30px;
-  /* border: 1px solid black; */
 `;
 
-export const ViewMore = styled.button`
-  width: ${props => props.width};
+export const ViewMore = styled.div`
+  /* width: ${props => props.width}; */
   position: absolute;
   font-size: 20px;
   cursor: pointer;
-  padding: 2px;
-  bottom: 40px;
+  padding: 10px;
+  bottom: 30px;
   color: ${props => props.color};
+  background-color: ${props => props.bg};
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `;

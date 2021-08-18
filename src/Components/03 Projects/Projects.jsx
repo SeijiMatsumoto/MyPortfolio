@@ -7,6 +7,8 @@ const inView = require('in-view');
 
 const Projects = (props) => {
   var [bg, setBg] = useState('#1E242A');
+  var [btnColor, setBtnColor] = useState('white');
+  var [btnBg, setBtnBg] = useState('#1E242A');
   var [color, setColor] = useState('white');
   var [shown, setShown] = useState(false);
   var [width, setWidth] = useState('1200px')
@@ -72,9 +74,13 @@ const Projects = (props) => {
     if (!props.isDark) {
       setBg('#f0f0f0');
       setColor('#1E242A')
+      setBtnBg('#1E242A');
+      setBtnColor('white');
     } else {
       setBg('#1E242A');
       setColor('white');
+      setBtnBg('white');
+      setBtnColor('#1E242A')
     }
   }, [props.isDark])
 
@@ -91,7 +97,7 @@ const Projects = (props) => {
           return <ProjectCard key={project.url} color={color} i={i} title={project.title} url={project.url} description={project.description} stack={project.stack} github={project.github} isDark={props.isDark} />
         })}
       </ProjDiv>
-        <ViewMore width={btnWidth} onClick={openGithub}>View More on Github  <i className="fab fa-github"></i></ViewMore>
+        <ViewMore width={btnWidth} color={btnColor} bg={btnBg} onClick={openGithub}>View More on Github  <i className="fab fa-github"></i></ViewMore>
     </ProjectsContainer>
   );
 };
