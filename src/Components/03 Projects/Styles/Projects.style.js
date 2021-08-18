@@ -32,12 +32,12 @@ export const ProjDiv = styled.div`
 `;
 
 export const ViewMore = styled.div`
-  /* width: ${props => props.width}; */
+  width: ${props => props.width};
   position: absolute;
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  bottom: 30px;
+  bottom: 20px;
   color: ${props => props.color};
   background-color: ${props => props.bg};
   border-radius: 10px;
