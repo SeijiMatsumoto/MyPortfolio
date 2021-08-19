@@ -83,7 +83,7 @@ const ProjectCard = (props) => {
       setLeft('110px');
       setRight('100px');
       setWidth('70vw');
-      setFont('16px');
+      setFont('18px');
       setTitleFont('20px');
     } else if (window.innerWidth <= 1240) {
       setDirection('row');

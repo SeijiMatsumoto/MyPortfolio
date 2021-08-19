@@ -60,8 +60,8 @@ const Contact = (props) => {
 
   const responsiveChange = () => {
     if (window.innerWidth <= 500) {
-      setWidth('90vw');
-      setFont('18px');
+      setWidth('80vw');
+      setFont('16px');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
       setWidth('70vw');
       setFont('18px');

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { LandingContainer, MainDiv, TextDiv, Hello, MyName, Continue, IAMDiv, Text, Text2, DownButton } from './Styles/Landing.style';
 import anime from 'animejs';
 import { Typewriter } from 'react-simple-typewriter';
+import { iAm } from '../../data/iAm.js';
 
 const Landing = (props) => {
   var [fontSize, setFont] = useState('120px');
@@ -78,7 +79,7 @@ const Landing = (props) => {
       setFont('55px'); // of my name
       setMargin('200px'); // of all text
       setMarginTop('0'); // of all text
-      setIfont('30px'); // of I AM
+      setIfont('25px'); // of I AM
       setDisplay('none'); // continue display
       setPosition('20px'); // of arrow
     }
@@ -177,7 +178,7 @@ const Landing = (props) => {
             <Text color={color}>I am </Text>
             <Text2 id='iam'>
               <Typewriter
-                words={['a full-stack engineer.', 'a problem solver.', 'a creator.', 'an IT geek.', 'a team player.', 'a critical thinker.', 'always learning.', 'me.']}
+                words={iAm}
                 loop={0}
                 cursor
                 cursorStyle='_'

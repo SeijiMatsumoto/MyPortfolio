@@ -10,12 +10,3 @@ export var navBarScroll = () => {
     prevScrollpos = currentScrollPos;
   };
 };
-
-export const listenEnter = () => {
-  document.addEventListener('keyup', e => {
-    if (e.key === 'Enter' && window.scrollY === 0) {
-      document.getElementById('about').scrollIntoView();
-    }
-  });
-}
-
