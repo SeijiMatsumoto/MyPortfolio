@@ -12,7 +12,7 @@ export const ExperienceContainer = styled.div`
 
 export const Title = styled.div`
   position: absolute;
-  top: 0;
+  top: 0px;
   font-size: ${props => props.font};
   color: #FF4C29;
 `;

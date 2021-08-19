@@ -71,6 +71,7 @@ export const StackCont = styled.div`
   height: 100px;
   position: relative;
   flex-wrap: wrap;
+  font-size: 16px;
 `;
 
 export const Stack = styled.div`

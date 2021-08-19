@@ -46,43 +46,44 @@ const About = (props) => {
 
   const responsiveChange = () => {
     if (window.innerWidth <= 500) {
-      setImgTop('10px');
+      setImgTop('-15px');
       setImgMargin('0');
       setWidth('90vw');
-      setTextWidth('70vw');
+      setTextWidth('80vw');
       setTechWidth('70vw');
-      setFont('18px');
-      setImgWidth('270px');
+      setFont('16px');
+      setImgWidth('200px');
       setImgRight('0');
       setTitleFont('35px');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
+      setImgTop('-10px');
       setWidth('90vw');
       setImgMargin('0');
       setTextWidth('80vw');
       setTechWidth('70vw');
       setFont('18px');
-      setImgWidth('300px');
+      setImgWidth('270px');
       setImgRight('0');
       setTitleFont('35px');
-    } else if (window.innerWidth <= 1249 && window.innerWidth > 850) {
-      setImgTop('10px');
+    } else if (window.innerWidth <= 1213 && window.innerWidth > 850) {
+      setImgTop('0');
       setImgMargin('0');
       setWidth('80vw');
       setTextWidth('700px');
       setTechWidth('600px');
       setFont('20px');
-      setImgWidth('300px');
+      setImgWidth('270px');
       setImgRight('0');
       setTitleFont('35px');
     } else if (window.innerWidth > 1920) {
       setImgTop('200px');
       setImgMargin('0');
       setWidth('60vw');
-      setTextWidth('30vw');
+      setTextWidth('40vw');
       setTechWidth('800px');
-      setFont('30px');
-      setImgWidth('20vw');
-      setImgRight('-2vw');
+      setFont('28px');
+      setImgWidth('300px');
+      setImgRight('2vw');
       setTitleFont('50px');
     } else {
       setImgTop('50px');
@@ -91,8 +92,8 @@ const About = (props) => {
       setTextWidth('700px');
       setTechWidth('600px');
       setFont('20px');
-      setImgWidth('300px');
-      setImgRight('0');
+      setImgWidth('270px');
+      setImgRight('90px');
       setTitleFont('35px');
     }
   };
@@ -101,20 +102,20 @@ const About = (props) => {
     const timeline = anime.timeline({
       autoplay: true
     })
-    .add({
-      targets: '#mainDiv1',
-      translateY: 75,
-      easing: 'linear',
-      opacity: [0, 1],
-      duration: 500,
-    }, '+= 700')
-    .add({
-      targets: '#aboutTitle',
-      translateY: 65,
-      easing: 'linear',
-      opacity: [0, 1],
-      duration: 500,
-    }, '-= 1000')
+      .add({
+        targets: '#mainDiv1',
+        translateY: 75,
+        easing: 'linear',
+        opacity: [0, 1],
+        duration: 500,
+      }, '+= 700')
+      .add({
+        targets: '#aboutTitle',
+        translateY: 65,
+        easing: 'linear',
+        opacity: [0, 1],
+        duration: 500,
+      }, '-= 1000')
     timeline.play();
     window.removeEventListener('scroll', checkInView);
 
@@ -126,6 +127,9 @@ const About = (props) => {
         About Me
       </TitleContainer>
       <MainDiv id='mainDiv1' color={color} width={divWidth}>
+        <MyPictureContainer id='photo' top={imgTop} width={imgWidth} right={imgRight}>
+          <MyPicture margin={imgMargin} src='https://i.imgur.com/uEfo6Po.jpg' alt='seiji' width={imgWidth} />
+        </MyPictureContainer>
         <TextContainer id='mainText' width={textWidth} font={fontSize}>
           Hi! I'm Seiji Matsumoto.
           <br /><br />
@@ -149,9 +153,7 @@ const About = (props) => {
             </TechnologiesList>
           </TechDiv>
         </TextContainer>
-        <MyPictureContainer id='photo' top={imgTop} width={imgWidth} right={imgRight}>
-          <MyPicture margin={imgMargin} src='https://i.imgur.com/uEfo6Po.jpg' alt='seiji'  width={imgWidth}/>
-        </MyPictureContainer>
+
       </MainDiv>
     </AboutContainer>
   );

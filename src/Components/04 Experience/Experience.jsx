@@ -46,7 +46,7 @@ const Experience = (props) => {
   const responsiveChange = () => {
     if (window.innerWidth <= 500) {
       setTitleFont('35px');
-      setWidth('90vw');
+      setWidth('80vw');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
       setTitleFont('35px');
       setWidth('70vw');

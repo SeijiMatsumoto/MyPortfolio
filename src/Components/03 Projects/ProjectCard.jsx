@@ -75,16 +75,16 @@ const ProjectCard = (props) => {
       setDirection('column');
       setLeft('110px');
       setRight('100px');
-      setWidth('350px');
-      setFont('20px');
-      setTitleFont('24px');
+      setWidth('80vw');
+      setFont('16px');
+      setTitleFont('20px');
     } else if (window.innerWidth < 990 && window.innerWidth > 550) {
       setDirection('column');
       setLeft('110px');
       setRight('100px');
-      setWidth('500px');
-      setFont('20px');
-      setTitleFont('24px');
+      setWidth('70vw');
+      setFont('16px');
+      setTitleFont('20px');
     } else if (window.innerWidth <= 1240) {
       setDirection('row');
       setWidth('400px');

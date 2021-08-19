@@ -13,7 +13,7 @@ export const ContactContainer = styled.div`
 
 export const Title = styled.div`
   position: absolute;
-  top: 0;
+  top: -10px;
   font-size: 35px;
   color: #FF4C29;
 `;
@@ -21,7 +21,7 @@ export const Title = styled.div`
 export const ContactDiv = styled.div`
   width: ${props => props.width || '1000px'};
   margin: 100px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 140px;
   padding: 20px;
   display: flex;
