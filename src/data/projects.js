@@ -8,8 +8,8 @@ export const projects = [
   },
   {
     title: '02. Restaurant Website (WIP)',
-    url: 'https://i.imgur.com/vUWXe1u.png',
-    description: 'Full-stack website created for my father\'s ramen restaurant, Ramen Matsu, that is mobile-friendly and connects with the Square API that allows for placing orders through the website. The original website was created using Square\'s website builder, but was very limited in functionality and creative freedom. This website was created to solve those issues.',
+    url: 'https://i.imgur.com/bv5z0Cu.png',
+    description: 'Full-stack website created for a local ramen restaurant, Ramen Matsu, that is mobile-friendly and connects with the Square API that allows for placing orders through the website. The original website was created using Square\'s website builder, but was very limited in functionality and creative freedom. This website was created to solve those issues.',
     stack: ['React', 'Node.js', 'Express'],
     github: ''
   },
