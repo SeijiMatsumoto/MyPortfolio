@@ -12,7 +12,7 @@ export const ExperienceContainer = styled.div`
 
 export const Title = styled.div`
   position: absolute;
-  top: 0px;
+  top: -10px;
   font-size: ${props => props.font};
   color: #FF4C29;
 `;
@@ -20,7 +20,7 @@ export const Title = styled.div`
 export const ExpDiv = styled.div`
   width: ${props => props.width || '1000px'};
   margin-bottom: 140px;
-  margin-top: -20px;
+  margin-top: -30px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;

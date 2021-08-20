@@ -10,7 +10,6 @@ import Projects from './03 Projects/Projects.jsx';
 import Experience from './04 Experience/Experience.jsx'
 import Contact from './05 Contact/Contact.jsx';
 import Footer from './08 Footer/Footer.jsx';
-const inView = require('in-view');
 
 const App = () => {
   var [isDark, toggleDark] = useState(false);
@@ -20,10 +19,10 @@ const App = () => {
   useEffect(() => {
     navBarScroll();
     checkDark();
-    // listenScroll();
   }, [])
 
   var sections = ['about', 'projects', 'experience', 'contact'];
+
   useEffect(() => {
     listenEnter();
   }, [index])
@@ -48,6 +47,8 @@ const App = () => {
       }
     });
   }
+
+
 
   // const listenScroll = () => {
   //   var landing = document.getElementById('landing');

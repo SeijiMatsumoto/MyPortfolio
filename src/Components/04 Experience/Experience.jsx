@@ -49,7 +49,7 @@ const Experience = (props) => {
       setWidth('80vw');
     } else if (window.innerWidth <= 850 && window.innerWidth > 500) {
       setTitleFont('35px');
-      setWidth('70vw');
+      setWidth('80vw');
     } else if (window.innerWidth <= 1249 && window.innerWidth > 850) {
       setTitleFont('35px');
       setWidth('70vw');

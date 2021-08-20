@@ -10,7 +10,16 @@ const Light = (props) => {
     window.addEventListener('resize', displayButton);
     displayButton();
     animateOnLoad();
+    listenD();
   }, [])
+
+  const listenD = () => {
+    document.addEventListener('keyup', e => {
+      if (e.key === 'd') {
+        document.getElementById('lightButton').click();
+      }
+    })
+  }
 
   useEffect(() => {
     if (!props.isDark) {
@@ -56,7 +65,7 @@ const Light = (props) => {
 
   return (
     <Main id='button'>
-      {showButton ? <Button onClick={toggle}  bg={bg} >
+      {showButton ? <Button id='lightButton' onClick={toggle}  bg={bg} >
       {props.isDark ? <Switch id='moon' className='fas fa-moon fa-3x'/> : <Switch id='sun' className='fas fa-sun fa-3x' color={'white'}/>}
       </Button> : null }
     </Main>

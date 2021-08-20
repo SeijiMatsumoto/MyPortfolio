@@ -12,6 +12,7 @@ export const LandingContainer = styled.div`
   z-index: 1;
   overflow: hidden;
   background-color: ${props => props.bg || '#1E242A'};
+  font-family: Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
 `;
 
 export const MainDiv = styled.div`

@@ -12,8 +12,8 @@ export const AboutContainer = styled.div`
 
 export const MainDiv = styled.div`
   width: ${props => props.width || '1000px'};
-  margin-top: 50px;
-  margin-bottom: 140px;
+  margin-top: 20px;
+  margin-bottom: 160px;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +26,7 @@ export const MainDiv = styled.div`
 
 export const TitleContainer = styled.div`
   position: absolute;
-  top: 0px;
+  top: -30px;
   font-size: ${props => props.font};
   color: #FF4C29;
 `;

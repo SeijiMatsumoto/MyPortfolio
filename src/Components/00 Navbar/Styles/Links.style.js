@@ -21,6 +21,7 @@ export const A = styled.a`
   color: ${props => props.color || 'white'};
   transition: 0.1s ease-in;
   text-transform: capitalize;
+  padding-left: 3px;
   overflow: none;
   &:hover {
     color: #FF4C29;
@@ -29,12 +30,13 @@ export const A = styled.a`
 
 export const Resume = styled.button`
   transition: 0.2s ease-in;
-  border-radius: 3px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
   background-color: transparent;
   color: ${props => props.color};
   border: 2px solid #FF4C29;
   position: absolute;
-  top: 5px;
+  top: 2px;
   width: 110px;
   height: 45px;
   cursor: pointer;
