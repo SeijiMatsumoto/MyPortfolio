@@ -49,32 +49,32 @@ const Contact = (props) => {
     }, '-= 1000')
     .add({
       targets: '#link1',
-      translateY: -75,
-      easing: 'linear',
+      translateY: 70,
+      easing: 'spring',
       opacity: [0, 1],
       duration: 500,
     }, '-= 200')
     .add({
       targets: '#link2',
-      translateY: -75,
-      easing: 'linear',
+      translateY: 70,
+      easing: 'spring',
       opacity: [0, 1],
       duration: 500,
-    }, '-= 300')
+    }, '-= 400')
     .add({
       targets: '#link3',
-      translateY: -75,
-      easing: 'linear',
+      translateY: 70,
+      easing: 'spring',
       opacity: [0, 1],
       duration: 500,
-    }, '-= 300')
+    }, '-= 400')
     .add({
       targets: '#link4',
-      translateY: -75,
-      easing: 'linear',
+      translateY: 70,
+      easing: 'spring',
       opacity: [0, 1],
       duration: 500,
-    }, '-= 300')
+    }, '-= 400')
     timeline.play();
     window.removeEventListener('scroll', checkInView);
   }

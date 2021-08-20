@@ -21,7 +21,7 @@ export const Title = styled.div`
 
 export const ProjDiv = styled.div`
   width: ${props => props.width || '1000px'};
-  margin-top: 50px;
+  margin-top: 70px;
   padding: 20px;
   display: flex;
   flex-direction: column;
