@@ -48,12 +48,33 @@ const Contact = (props) => {
       duration: 500,
     }, '-= 1000')
     .add({
-      targets: '#links',
-      translateY: 75,
+      targets: '#link1',
+      translateY: -75,
       easing: 'linear',
       opacity: [0, 1],
       duration: 500,
     }, '-= 200')
+    .add({
+      targets: '#link2',
+      translateY: -75,
+      easing: 'linear',
+      opacity: [0, 1],
+      duration: 500,
+    }, '-= 300')
+    .add({
+      targets: '#link3',
+      translateY: -75,
+      easing: 'linear',
+      opacity: [0, 1],
+      duration: 500,
+    }, '-= 300')
+    .add({
+      targets: '#link4',
+      translateY: -75,
+      easing: 'linear',
+      opacity: [0, 1],
+      duration: 500,
+    }, '-= 300')
     timeline.play();
     window.removeEventListener('scroll', checkInView);
   }
@@ -115,11 +136,11 @@ const Contact = (props) => {
         <Body font={fontSize} id='body'>
           Please feel free to reach out to me for any inquiries or follow me on any of the platforms below!
         </Body>
-        <Links id='links'>
-          <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('email')}>Email</Link>
-          <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('linkedin')}>LinkedIn</Link>
-          <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('twitter')}>Twitter</Link>
-          <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('github')}>Github</Link>
+        <Links>
+          <Link id='link1' color={btnFont} bg={btnColor} onClick={() => clickHandler('email')}>Email</Link>
+          <Link id='link2' color={btnFont} bg={btnColor} onClick={() => clickHandler('linkedin')}>LinkedIn</Link>
+          <Link id='link3' color={btnFont} bg={btnColor} onClick={() => clickHandler('twitter')}>Twitter</Link>
+          <Link id='link4' color={btnFont} bg={btnColor} onClick={() => clickHandler('github')}>Github</Link>
           {/* <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('instagram')}>Instagram</Link> */}
         </Links>
       </ContactDiv>

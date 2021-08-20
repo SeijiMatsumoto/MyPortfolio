@@ -14,21 +14,21 @@ export const ProjectsContainer = styled.div`
 
 export const Title = styled.div`
   position: absolute;
-  top: -10px;
+  top: -20px;
   font-size: ${props => props.font};
   color: #FF4C29;
 `;
 
 export const ProjDiv = styled.div`
   width: ${props => props.width || '1000px'};
-  margin-top: 80px;
+  margin-top: 50px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
   color: ${props => props.color};
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 
 export const ViewMore = styled.div`
@@ -37,7 +37,7 @@ export const ViewMore = styled.div`
   font-size: 20px;
   cursor: pointer;
   padding: 10px;
-  bottom: 20px;
+  bottom: 40px;
   color: ${props => props.color};
   background-color: ${props => props.bg};
   border-radius: 10px;

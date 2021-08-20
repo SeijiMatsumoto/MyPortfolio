@@ -34,11 +34,11 @@ const Navbar = (props) => {
       setButton(true);
       setMenu(true);
       setIconLeft('10px');
-      if (!props.isDark) {
-        setBg('#f0f0f0');
-      } else {
-        setBg('#1E242A');
-      }
+      // if (!props.isDark) {
+      //   setBg('#f0f0f0');
+      // } else {
+      //   setBg('#1E242A');
+      // }
       setHeight('80px');
       setSize('50px');
       setTop('-18px');
@@ -46,11 +46,11 @@ const Navbar = (props) => {
       setButton(false);
       setMenu(false);
       setIconLeft('50px');
-      if (!props.isDark) {
-        setBg('#f0f0f0');
-      } else {
-        setBg('#1E242A');
-      }
+      // if (!props.isDark) {
+      //   setBg('#f0f0f0');
+      // } else {
+      //   setBg('#1E242A');
+      // }
       setHeight('130px');
       setSize('80px');
       setTop('0');
@@ -62,11 +62,11 @@ const Navbar = (props) => {
       setSize('50px');
       setTop('-18px');
     } else {
-      if (!props.isDark) {
-        setBg('#f0f0f0');
-      } else {
-        setBg('#1E242A');
-      }
+      // if (!props.isDark) {
+      //   setBg('#f0f0f0');
+      // } else {
+      //   setBg('#1E242A');
+      // }
     }
   };
 
