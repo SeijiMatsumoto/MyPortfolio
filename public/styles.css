@@ -1,5 +1,8 @@
 html {
   scroll-behavior: smooth;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -7,11 +10,10 @@ body {
   padding: 0px;
   width: 100vw;
   height: 100vh;
-  font-family: Open Sans;
   /* background-color: #082032; */
   overflow-x: hidden;
   color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overscroll-behavior-y: none;
 }
 
 #root {
@@ -19,7 +21,17 @@ body {
   padding: 0px;
 }
 
-/* body::-webkit-scrollbar {
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.light-div {
+  color: #1E242A;
+  background-color: white;
+}
+
+body::-webkit-scrollbar {
   width: 0.5em;
   background-color: transparent;
 }
@@ -27,4 +39,4 @@ body {
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
-} */
+}

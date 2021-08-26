@@ -1,62 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { ButtonContainer, Button, MenuDiv } from './Styles/MenuButton.style';
-import Menu from './Menu.jsx';
-import anime from 'animejs/lib/anime.es.js';
+import { ButtonContainer, Button } from './Styles/MenuButton.style';
 
 const MenuButton = (props) => {
-
-  var [showButton, setButton] = useState(false);
-  var [showMenu, setMenu] = useState(false);
-  var [menuOpen, toggleMenu] = useState(false);
-  var menu = document.querySelector('.menu');
+  var [color, setColor] = useState('white');
 
   useEffect(() => {
-    window.addEventListener('resize', displayButton);
-    displayButton();
-  }, [])
-
-  const displayButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(true);
-      setMenu(true);
+    if (!props.isDark) {
+      setColor('black');
     } else {
-      setButton(false);
-      setMenu(false);
+      setColor('white');
     }
-  };
-
-  const menuClickHandler = () => {
-    toggleMenu(!menuOpen);
-  }
-
-  useEffect(() => {
-    if (menuOpen) {
-      console.log('animate')
-      anime({
-        targets: menu,
-        translateX: -1000,
-        easing: 'linear',
-        duration: 300
-      });
-    } else if (!menuOpen) {
-      anime({
-        targets: menu,
-        translateX: 0,
-        easing: 'linear',
-        duration: 300
-      });
-    }
-  }, [menuOpen])
-
+  }, [props.isDark])
   return (
-    <div>
-      <ButtonContainer>
-        {showButton ? <Button onClick={menuClickHandler} src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png' /> : null}
-      </ButtonContainer>
-      {showMenu ? <MenuDiv className='menu'>
-        <Menu showMenu={menuClickHandler}/>
-      </MenuDiv> : null }
-    </div>
+    <ButtonContainer>
+      <Button onClick={props.clickHandler} color={color} className='fas fa-bars fa-2x' />
+    </ButtonContainer>
   );
 };
 

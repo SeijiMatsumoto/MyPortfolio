@@ -1,29 +1,32 @@
 import styled from 'styled-components';
 
 export const MenuDiv = styled.div`
-  background-color: #334756;
+  background-color: ${props => props.bg || '#283134'};
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: flex-start; */
+  padding: ${props => props.padding || '5px'};
 `;
 
 export const MenuLinks = styled.ul`
   position: absolute;
+  left: -30px;
+  top: ${props => props.top};
   text-align: left;
+  font-size: ${props => props.size};
 `;
 
 export const MenuLink = styled.li`
-  padding: 25px;
-  font-size: 60px;
-  color: #FF4C29;
+  padding: ${props => props.padding};
   list-style: none;
   text-align: left;
+  z-index: 5;
 `;
 
 export const MenuA = styled.a`
-  color: white;
+  color: ${props => props.color || '#283134'};
+  cursor: pointer;
   transition: 0.1s ease-in;
   text-decoration: none;
   overflow: none;
