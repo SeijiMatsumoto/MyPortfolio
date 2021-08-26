@@ -48,33 +48,33 @@ const Contact = (props) => {
       duration: 500,
     }, '-= 1000')
     .add({
-      targets: '#link1',
+      targets: '#contact1',
       translateY: 70,
-      easing: 'spring',
+      easing: 'linear',
       opacity: [0, 1],
       duration: 500,
     }, '-= 200')
     .add({
-      targets: '#link2',
+      targets: '#contact2',
       translateY: 70,
-      easing: 'spring',
+      easing: 'linear',
       opacity: [0, 1],
       duration: 500,
-    }, '-= 400')
+    }, '-= 350')
     .add({
-      targets: '#link3',
+      targets: '#contact3',
       translateY: 70,
-      easing: 'spring',
+      easing: 'linear',
       opacity: [0, 1],
       duration: 500,
-    }, '-= 400')
+    }, '-= 350')
     .add({
-      targets: '#link4',
+      targets: '#contact4',
       translateY: 70,
-      easing: 'spring',
+      easing: 'linear',
       opacity: [0, 1],
       duration: 500,
-    }, '-= 400')
+    }, '-= 350')
     timeline.play();
     window.removeEventListener('scroll', checkInView);
   }
@@ -137,11 +137,10 @@ const Contact = (props) => {
           Please feel free to reach out to me for any inquiries or follow me on any of the platforms below!
         </Body>
         <Links>
-          <Link id='link1' color={btnFont} bg={btnColor} onClick={() => clickHandler('email')}>Email</Link>
-          <Link id='link2' color={btnFont} bg={btnColor} onClick={() => clickHandler('linkedin')}>LinkedIn</Link>
-          <Link id='link3' color={btnFont} bg={btnColor} onClick={() => clickHandler('twitter')}>Twitter</Link>
-          <Link id='link4' color={btnFont} bg={btnColor} onClick={() => clickHandler('github')}>Github</Link>
-          {/* <Link color={btnFont} bg={btnColor} onClick={() => clickHandler('instagram')}>Instagram</Link> */}
+          <Link id='contact1' color={btnFont} bg={btnColor} onClick={() => clickHandler('email')}>Email</Link>
+          <Link id='contact2' color={btnFont} bg={btnColor} onClick={() => clickHandler('linkedin')}>LinkedIn</Link>
+          <Link id='contact3' color={btnFont} bg={btnColor} onClick={() => clickHandler('twitter')}>Twitter</Link>
+          <Link id='contact4' color={btnFont} bg={btnColor} onClick={() => clickHandler('github')}>Github</Link>
         </Links>
       </ContactDiv>
     </ContactContainer>

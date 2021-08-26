@@ -15,6 +15,11 @@ export const Company = styled.div`
   padding-bottom: -10px;
 `;
 
+export const PosTime = styled.div`
+  display: inline-flex;
+  justify-content: space-between;
+`;
+
 export const Position = styled.div`
   font-size: ${props => props.font};
 `;
@@ -30,4 +35,5 @@ export const Desc = styled.ul`
 export const DescLi = styled.li`
   font-size: ${props => props.font};
   list-style: none;
+
 `;

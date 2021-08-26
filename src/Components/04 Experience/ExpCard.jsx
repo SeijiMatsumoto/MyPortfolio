@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { CardContainer, Company, Position, Time, Desc, DescLi } from './Styles/ExpCard.style.js';
+import { CardContainer, Company, Position, Time, PosTime, Desc, DescLi } from './Styles/ExpCard.style.js';
 import anime from 'animejs';
 const inView = require('in-view');
 
@@ -83,8 +83,10 @@ const ExpCard = (props) => {
   return (
     <CardContainer id={'exp' + props.i}>
       <Company font={compFont} border={border}>{company}</Company>
-      <Position font={posFont}>{position}</Position>
-      <Time font={font}>{time}</Time>
+      <PosTime>
+        <Position font={posFont}>{position}</Position>
+        <Time font={font}>{time}</Time>
+      </PosTime>
       <Desc>{desc.map((each, i) => <DescLi font={font} key={each + i}>{each}</DescLi>)}</Desc>
     </CardContainer>
   );

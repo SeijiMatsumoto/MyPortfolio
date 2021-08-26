@@ -81,4 +81,5 @@ export const Stack = styled.div`
   color: ${props => props.color};
   background-color: ${props => props.bg};
   border-radius: 2px;
+  cursor: default;
 `;
