@@ -1,3 +1,3 @@
 # Seiji Matsumoto's Portfolio
 
-"build": "webpack --config ./webpack.config.js --mode development -w",
+A website to introduce myself, showcase some things that I've worked on, and my past experience.
