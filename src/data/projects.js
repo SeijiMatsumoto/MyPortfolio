@@ -11,7 +11,7 @@ export const projects = [
     url: 'https://i.imgur.com/C2ccZCw.png',
     description: 'Full-stack application created to serve the homeless community and those in need. People or organizations that have items or services that they no longer need are able to post them on this website as a contribution. Those in need can ask for items or services as well as a request. Users are authorized with Google and data is stored in a PostgreSQL database.',
     stack: ['Full-stack', 'React', 'Express', 'Passport.js', 'PostgreSQL'],
-    github: 'https://github.com/Redwood-Interactive/helping-hands/tree/dev'
+    github: 'https://github.com/Redwood-Interactive/helping-hands/tree/master'
   },
   {
     title: '03. Windham Wear',

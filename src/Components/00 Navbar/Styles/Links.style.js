@@ -48,3 +48,8 @@ export const Resume = styled.button`
   }
 
 `;
+
+export const ResumeDownload = styled.a`
+  text-decoration: none;
+  color: ${props => props.color};
+`;

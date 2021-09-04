@@ -76,7 +76,7 @@ const Education = (props) => {
   }, [props.isDark])
 
   return (
-    <ExperienceContainer id='experience' bg={bg}>
+    <ExperienceContainer id='education' bg={bg}>
       <Title id='eduTitle' font={titleFont}>Education</Title>
       <ExpDiv id='mainDiv3' color={color} width={width}>
         {education.map((edu, i) => {

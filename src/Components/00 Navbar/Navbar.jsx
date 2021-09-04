@@ -30,7 +30,7 @@ const Navbar = (props) => {
   }, [props.isDark])
 
   const displayButton = () => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 1050) {
       setButton(true);
       setMenu(true);
       setIconLeft('10px');

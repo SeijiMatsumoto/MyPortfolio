@@ -22,7 +22,7 @@ export const myExperience = [
   {
     company: 'Mercury & Earth, LLC.',
     position: 'Computer Support Specialist',
-    time: 'Sept 2018 - August 2019',
+    time: 'August 2018 - August 2019',
     description: [
       '➢ Provided client satisfaction by troubleshooting and fulfilling an average of 25 technical inquiries daily remotely and in-person with hundreds of clients throughout North and South America'
     ]
