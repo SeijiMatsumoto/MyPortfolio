@@ -10,16 +10,6 @@ export const myExperience = [
     ]
   },
   {
-    company: 'Hack Reactor',
-    position: 'Software Engineering Immersive Student',
-    time: 'May 2021 - Sept 2021',
-    description: [
-      '➢ Developed deep knowledge and understanding of web development through a 900+ hour cirriculum',
-      '➢ Built applications using a wide range of technologies including Javascript (ES6+), React, Express, MongoDB, and Postgres',
-      '➢ Collaborated with other students in making projects working in phases with an agile workflow'
-    ]
-  },
-  {
     company: 'MIC Business Solutions, Inc.',
     position: 'IT Technician Help Desk Support',
     time: 'August 2019 - May 2021',
@@ -34,7 +24,7 @@ export const myExperience = [
     position: 'Computer Support Specialist',
     time: 'Sept 2018 - August 2019',
     description: [
-      '➢ Provided client satisfaction by troubleshooting and fulfilling technical inquiries remotely and in-person with hundreds of clients throughout North and South America'
+      '➢ Provided client satisfaction by troubleshooting and fulfilling an average of 25 technical inquiries daily remotely and in-person with hundreds of clients throughout North and South America'
     ]
   }
 ]

@@ -53,7 +53,7 @@ const Social = (props) => {
   const clickHandler = (e) => {
     console.log('click');
     if (e === 'email') {
-      window.open('mailto:seijim27@gmail.com', '_blank');
+      window.open('mailto:sejmoto@gmail.com', '_blank');
     } else if (e === 'linkedin') {
       window.open('https://www.linkedin.com/in/matsumoto-seiji/', '_blank');
     } else if (e === 'twitter') {

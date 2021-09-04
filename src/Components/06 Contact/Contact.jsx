@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ContactContainer, Title, ContactDiv, Body, Link, Links } from './Styles/Contact.style';
+import { ContactContainer, Title, ContactDiv, Body, Link, Links } from './Styles/Contact.style.js';
 import anime from 'animejs';
 const inView = require('in-view');
 
@@ -108,7 +108,8 @@ const Contact = (props) => {
       setBtnFont('white');
       setBtnColor('#1E242A');
     } else {
-      setBg('#1E242A');
+      setBg('#283134');
+
       setColor('white');
       setBtnFont('#1E242A');
       setBtnColor('white');

@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { navBarScroll } from '../helperFunctions.js';
 import { Main } from '../Styles/App.style.js'
-import Social from './06 SocialOverlay/Social.jsx';
-import Light from './07 LightOverlay/Light.jsx'
 import Navbar from './00 Navbar/Navbar.jsx';
 import Landing from './01 Landing/Landing.jsx';
 import About from './02 About/About.jsx';
 import Projects from './03 Projects/Projects.jsx';
-import Experience from './04 Experience/Experience.jsx'
-import Contact from './05 Contact/Contact.jsx';
-import Footer from './08 Footer/Footer.jsx';
+import Experience from './04 Experience/Experience.jsx';
+import Education from './05 Education/Education.jsx';
+import Social from './08 SocialOverlay/Social.jsx';
+import Light from './07 LightOverlay/Light.jsx'
+import Contact from './06 Contact/Contact.jsx';
+import Footer from './09 Footer/Footer.jsx';
 
 const App = () => {
   var [isDark, toggleDark] = useState(false);
@@ -104,6 +105,7 @@ const App = () => {
       <About isDark={isDark} />
       <Projects isDark={isDark} />
       <Experience isDark={isDark} />
+      <Education isDark={isDark} />
       <Contact isDark={isDark} />
       <Footer isDark={isDark} />
     </Main>
