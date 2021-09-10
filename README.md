@@ -31,3 +31,5 @@ I decided to build this portfolio website.
 * Experiences: A list of my past professional experiences with the job title, company name, time frame, and description.
 * Education: A list of my higher education with the institution name, time frame, and description.
 * Contact Me: Links of ways to contact me that redirect to external links
+=======
+A website to introduce myself, showcase some things that I've worked on, and my past experience.
