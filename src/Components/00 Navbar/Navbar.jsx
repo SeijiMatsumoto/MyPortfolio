@@ -30,7 +30,7 @@ const Navbar = (props) => {
   }, [props.isDark])
 
   const displayButton = () => {
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 1050) {
       setButton(true);
       setMenu(true);
       setIconLeft('10px');
@@ -116,7 +116,7 @@ const Navbar = (props) => {
 
   return (
     <NavbarContainer id='navbar' bgColor={navBg} height={height}>
-      <Logo id='logo' size={logoSize} top={logoTop} iconLeft={iconLeft} onClick={scrollToTop} src='https://i.imgur.com/YbQDUJq.png'/>
+      <Logo id='logo' size={logoSize} top={logoTop} iconLeft={iconLeft} onClick={() => window.open('/', '_self')} src='https://i.imgur.com/YbQDUJq.png'/>
       <Links isDark={props.isDark}/>
       {showButton ? <MenuButton clickHandler={menuClickHandler} isDark={props.isDark}/> : null}
       {showMenu ? <MenuDiv className='menu'><Menu isDark={props.isDark} toggleDark={props.toggleDark} showMenu={menuClickHandler}/></MenuDiv> : null }

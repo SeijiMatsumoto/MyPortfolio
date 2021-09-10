@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { LinksUl, Link, A, Resume } from './Styles/Links.style'
+import { LinksUl, Link, A, Resume, ResumeDownload } from './Styles/Links.style'
 import anime from 'animejs';
 
 const Links = (props) => {
@@ -22,7 +22,7 @@ const Links = (props) => {
   }, [props.isDark])
 
   const displayLinks = () => {
-    if (window.innerWidth > 960) {
+    if (window.innerWidth > 1050) {
       setLinks(true);
       animateOnLoad();
     } else {
@@ -79,8 +79,9 @@ const Links = (props) => {
         <Link id='link1'>01.<A color={color} href='#about'>About</A></Link>
         <Link id='link2'>02.<A color={color} href='#projects'>Projects</A></Link>
         <Link id='link3'>03.<A color={color} href='#experience'>Experience</A></Link>
-        <Link id='link4'>04.<A color={color} href='#contact'>Contact</A></Link>
-        <Link id='resume'><Resume color={color}>Resume</Resume></Link>
+        <Link id='link3'>04.<A color={color} href='#education'>Education</A></Link>
+        <Link id='link4'>05.<A color={color} href='#contact'>Contact</A></Link>
+        <Link id='resume'><Resume color={color}><ResumeDownload color={color}href='https://pdfhost.io/v/H1reU1nwq_Seiji_Matsumoto_Resume_Sept_2021.pdf' target='_blank'>Resume</ResumeDownload></Resume></Link>
       </LinksUl>
       : null }
     </div>
