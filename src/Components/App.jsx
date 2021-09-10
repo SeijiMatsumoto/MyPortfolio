@@ -22,7 +22,7 @@ const App = () => {
     checkDark();
   }, [])
 
-  var sections = ['about', 'projects', 'experience', 'contact'];
+  var sections = ['about', 'projects', 'experience', 'education', 'contact'];
 
   useEffect(() => {
     listenEnter();
@@ -44,6 +44,9 @@ const App = () => {
         } else if (index === 3) {
           document.getElementById(sections[3]).scrollIntoView();
           setIndex(4);
+        } else if (index === 4) {
+          document.getElementById(sections[4]).scrollIntoView();
+          setIndex(5);
         }
       }
     });
