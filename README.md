@@ -1,7 +1,7 @@
 # Seiji Matsumoto's Portfolio
 
-In able to introduce myself and showcase my past experiences/projects in a more interesting way than just LinkedIn, 
-I decided to build this portfolio website. 
+In able to introduce myself and showcase my past experiences/projects in a more interesting way than just LinkedIn,
+I decided to build this portfolio website.
 ### [Deployed Link](https://www.seijimatsumoto.me) [![Netlify Status](https://api.netlify.com/api/v1/badges/6cd9f370-e832-42c2-b069-9ea05fca767f/deploy-status)](https://app.netlify.com/sites/seijimatsumoto/deploys)
 ![](https://i.imgur.com/8MEIt3E.png)
 
@@ -17,7 +17,7 @@ I decided to build this portfolio website.
 
 - Node.js
 - React with Hooks
-- Express 
+- Express
 - styled-components
 - Anime.js
 - React Simple Typewriter
@@ -31,5 +31,3 @@ I decided to build this portfolio website.
 * Experiences: A list of my past professional experiences with the job title, company name, time frame, and description.
 * Education: A list of my higher education with the institution name, time frame, and description.
 * Contact Me: Links of ways to contact me that redirect to external links
-=======
-A website to introduce myself, showcase some things that I've worked on, and my past experience.
