@@ -1,15 +1,5 @@
 export const myExperience = [
   {
-    company: 'Ramen Matsu',
-    position: 'Software Engineer and General Manager',
-    time: 'September 2020 - Current',
-    description: [
-      '➢ Design, develop, and maintain restaurant website, social media pages, and Square POS system',
-      '➢ Oversee employee operations in the front line to ensure compliance with restaurant policies, safety guidelines, and regulations',
-      '➢ Manage and maintain all technologies in the restaurant, including Wi-Fi, VoIP telephone, POS system, printers, etc.'
-    ]
-  },
-  {
     company: 'MIC Business Solutions, Inc.',
     position: 'IT Technician Help Desk Support',
     time: 'August 2019 - May 2021',

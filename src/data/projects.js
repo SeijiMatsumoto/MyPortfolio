@@ -16,7 +16,7 @@ export const projects = [
   {
     title: '03. Windham Wear',
     url: 'https://i.imgur.com/JDyMBJH.png',
-    description: 'Full-stack e-commerce site complete with a product overview section, related products section, and ratings/reviews. Backend designed and optimized using PostgreSQL to get a median response times of <5ms on a database with millions of rows of data.',
+    description: 'Full-stack e-commerce site complete with a product overview section, related products section, and ratings/reviews made with React. Backend designed and optimized using PostgreSQL to get a median response times of <5ms on a database with millions of rows of data.',
     stack: ['Full-stack', 'React', 'Styled Components', 'Express', 'PostgreSQL'],
     github: 'https://github.com/FEC8-Windham/fec'
   },
