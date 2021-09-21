@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { MenuDiv, MenuLinks, MenuLink, MenuA } from './Styles/Menu.style.js';
+import { ResumeDownload } from './Styles/Links.style'
 
 const Menu = (props) => {
   var [padding, setPadding] = useState('1px');
@@ -53,6 +54,7 @@ const Menu = (props) => {
         <MenuLink padding={menuPadding}><MenuA color={color} onClick={props.showMenu} href='#projects'>Projects</MenuA></MenuLink>
         <MenuLink padding={menuPadding}><MenuA color={color} onClick={props.showMenu} href='#experience'>Experience</MenuA></MenuLink>
         <MenuLink padding={menuPadding}><MenuA color={color} onClick={props.showMenu} href='#contact'>Contact</MenuA></MenuLink>
+        <MenuLink padding={menuPadding}><MenuA color={color} onClick={props.showMenu}><ResumeDownload color={color} href='/SeijiMatsumotoResumeSept2021.pdf' download rel="noopener noreferrer" target='_blank'>Resume Download</ResumeDownload></MenuA></MenuLink>
         <MenuLink padding={menuPadding}><MenuA color={color} onClick={toggle}>Light/Dark Mode</MenuA></MenuLink>
       </MenuLinks>
     </MenuDiv>
