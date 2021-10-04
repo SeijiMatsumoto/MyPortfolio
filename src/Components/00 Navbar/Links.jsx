@@ -81,7 +81,7 @@ const Links = (props) => {
         <Link id='link3'>03.<A color={color} href='#experience'>Experience</A></Link>
         <Link id='link3'>04.<A color={color} href='#education'>Education</A></Link>
         <Link id='link4'>05.<A color={color} href='#contact'>Contact</A></Link>
-        <Link id='resume'><Resume color={color}><ResumeDownload color={color}href='https://pdfhost.io/v/H1reU1nwq_Seiji_Matsumoto_Resume_Sept_2021.pdf' target='_blank'>Resume</ResumeDownload></Resume></Link>
+        <Link id='resume'><Resume color={color}><ResumeDownload color={color} href='/FSSeijiMatsumotoResumeSept2021.pdf' download rel="noopener noreferrer" target='_blank'>Resume</ResumeDownload></Resume></Link>
       </LinksUl>
       : null }
     </div>
