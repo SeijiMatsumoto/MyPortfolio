@@ -125,7 +125,7 @@ const Links = (props) => {
             <Resume color={color}>
               <ResumeDownload
                 color={color}
-                href="/SeijiMatsumotoResume2021.pdf"
+                href="/Seiji_Matsumoto_Resume.pdf"
                 download
                 rel="noopener noreferrer"
                 target="_blank"
