@@ -121,7 +121,7 @@ const Links = (props) => {
               Contact
             </A>
           </Link>
-          <Link id="resume">
+          {/* <Link id="resume">
             <Resume color={color}>
               <ResumeDownload
                 color={color}
@@ -133,7 +133,7 @@ const Links = (props) => {
                 Resume
               </ResumeDownload>
             </Resume>
-          </Link>
+          </Link> */}
         </LinksUl>
       ) : null}
     </div>
